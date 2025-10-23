@@ -53,8 +53,8 @@ const Index = () => {
               <Button size="lg" className="text-lg px-8 py-6 font-semibold" onClick={() => scrollToSection('process')}>
                 С чего начать
               </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 py-6 font-semibold border-2" onClick={() => scrollToSection('contact')}>
-                Оставить заявку
+              <Button size="lg" variant="outline" className="text-lg px-8 py-6 font-semibold border-2" asChild>
+                <a href="#contact">Оставить заявку</a>
               </Button>
             </div>
             <p className="text-xs text-muted-foreground pt-4">
@@ -251,7 +251,9 @@ const Index = () => {
                           {service.duration && <p className="text-sm text-muted-foreground">{service.duration}</p>}
                         </div>
                         <p className="text-foreground/80">{service.desc}</p>
-                        <Button variant="outline" className="w-full border-2 font-semibold">Подробнее</Button>
+                        <Button variant="outline" className="w-full border-2 font-semibold" asChild>
+                          <a href="#contact">Подробнее</a>
+                        </Button>
                       </CardContent>
                     </Card>
                   ))}
@@ -301,7 +303,9 @@ const Index = () => {
                           {service.duration && <p className="text-sm text-muted-foreground">{service.duration}</p>}
                         </div>
                         <p className="text-foreground/80">{service.desc}</p>
-                        <Button variant="outline" className="w-full border-2 font-semibold">Подробнее</Button>
+                        <Button variant="outline" className="w-full border-2 font-semibold" asChild>
+                          <a href="#contact">Подробнее</a>
+                        </Button>
                       </CardContent>
                     </Card>
                   ))}
@@ -377,8 +381,8 @@ const Index = () => {
                         </div>
                       ))}
                     </div>
-                    <Button variant={pkg.highlight ? 'default' : 'outline'} className="w-full border-2 font-semibold" onClick={() => scrollToSection('contact')}>
-                      Выбрать
+                    <Button variant={pkg.highlight ? 'default' : 'outline'} className="w-full border-2 font-semibold" asChild>
+                      <a href="#contact">Подробнее</a>
                     </Button>
                   </CardContent>
                 </Card>
@@ -438,9 +442,12 @@ const Index = () => {
       <section id="contact" className="py-24 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-2xl mx-auto space-y-12 animate-fade-in">
-            <div className="text-center space-y-4">
-              <h2 className="text-5xl font-black text-foreground">Контакты + форма заявки</h2>
-              <p className="text-lg text-foreground/80">Оставьте заявку, и я свяжусь с вами в течение 24 часов</p>
+            <div className="text-center space-y-6">
+              <h2 className="text-6xl font-black text-foreground leading-tight">
+                Хватит терять деньги.<br/>
+                <span className="text-primary">Начнём прямо сейчас</span>
+              </h2>
+              <p className="text-xl text-foreground/80 font-medium">Напишите или позвоните — первая консультация покажет, как быстро всё изменить</p>
             </div>
             
             <Card className="border-2">
@@ -494,17 +501,23 @@ const Index = () => {
             </Card>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="outline" className="border-2 font-semibold">
-                <Icon name="MessageCircle" className="mr-2" size={20} />
-                WhatsApp
+              <Button size="lg" variant="default" className="font-semibold text-lg py-6" asChild>
+                <a href="https://wa.me/79182858216" target="_blank" rel="noopener noreferrer">
+                  <Icon name="MessageCircle" className="mr-2" size={20} />
+                  WhatsApp
+                </a>
               </Button>
-              <Button size="lg" variant="outline" className="border-2 font-semibold">
-                <Icon name="Send" className="mr-2" size={20} />
-                Telegram
+              <Button size="lg" variant="default" className="font-semibold text-lg py-6" asChild>
+                <a href="https://t.me/marico_pro" target="_blank" rel="noopener noreferrer">
+                  <Icon name="Send" className="mr-2" size={20} />
+                  Telegram
+                </a>
               </Button>
-              <Button size="lg" variant="outline" className="border-2 font-semibold">
-                <Icon name="Phone" className="mr-2" size={20} />
-                Позвонить
+              <Button size="lg" variant="default" className="font-semibold text-lg py-6" asChild>
+                <a href="tel:+79182858216">
+                  <Icon name="Phone" className="mr-2" size={20} />
+                  Позвонить
+                </a>
               </Button>
             </div>
           </div>
