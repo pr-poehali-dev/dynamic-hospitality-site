@@ -98,39 +98,41 @@ const Blog = () => {
             ) : (
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredPosts.map((post) => (
-                  <Card key={post.id} className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-[1.02] cursor-pointer group">
-                    <div className="aspect-video overflow-hidden">
-                      <img
-                        src={post.image}
-                        alt={post.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                      />
-                    </div>
-                    <CardContent className="p-6 space-y-4">
-                      <div className="flex items-center justify-between text-sm">
-                        <span className="px-3 py-1 bg-primary/20 text-primary rounded-full font-medium">
-                          {post.category}
-                        </span>
-                        <span className="text-muted-foreground flex items-center gap-1">
-                          <Icon name="Clock" size={14} />
-                          {post.readTime}
-                        </span>
+                  <Link key={post.id} to={`/blog/${post.id}`}>
+                    <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-[1.02] cursor-pointer group h-full">
+                      <div className="aspect-video overflow-hidden">
+                        <img
+                          src={post.image}
+                          alt={post.title}
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                        />
                       </div>
-                      <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
-                        {post.title}
-                      </h3>
-                      <p className="text-foreground/70 line-clamp-2">
-                        {post.excerpt}
-                      </p>
-                      <div className="flex items-center justify-between pt-4 border-t border-border">
-                        <span className="text-sm text-muted-foreground">{post.date}</span>
-                        <Button variant="ghost" size="sm" className="group-hover:text-primary">
-                          Читать
-                          <Icon name="ArrowRight" className="ml-2" size={16} />
-                        </Button>
-                      </div>
-                    </CardContent>
-                  </Card>
+                      <CardContent className="p-6 space-y-4">
+                        <div className="flex items-center justify-between text-sm">
+                          <span className="px-3 py-1 bg-primary/20 text-primary rounded-full font-medium">
+                            {post.category}
+                          </span>
+                          <span className="text-muted-foreground flex items-center gap-1">
+                            <Icon name="Clock" size={14} />
+                            {post.readTime}
+                          </span>
+                        </div>
+                        <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
+                          {post.title}
+                        </h3>
+                        <p className="text-foreground/70 line-clamp-2">
+                          {post.excerpt}
+                        </p>
+                        <div className="flex items-center justify-between pt-4 border-t border-border">
+                          <span className="text-sm text-muted-foreground">{post.date}</span>
+                          <Button variant="ghost" size="sm" className="group-hover:text-primary">
+                            Читать
+                            <Icon name="ArrowRight" className="ml-2" size={16} />
+                          </Button>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </Link>
                 ))}
               </div>
             )}
