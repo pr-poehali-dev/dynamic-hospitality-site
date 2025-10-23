@@ -29,7 +29,7 @@ const Index = () => {
               <button onClick={() => scrollToSection('services')} className="text-sm font-medium hover:text-primary transition-colors">Услуги</button>
               <button onClick={() => scrollToSection('process')} className="text-sm font-medium hover:text-primary transition-colors">Процесс</button>
               <Link to="/blog" className="text-sm font-medium hover:text-primary transition-colors">Блог</Link>
-              <button onClick={() => scrollToSection('contact')} className="text-sm font-medium hover:text-primary transition-colors">Контакты</button>
+              <Link to="/contact" className="text-sm font-medium hover:text-primary transition-colors">Где нас найти</Link>
             </div>
           </div>
         </div>
