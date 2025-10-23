@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -27,6 +28,7 @@ const Index = () => {
               <button onClick={() => scrollToSection('for-whom')} className="text-sm font-medium hover:text-primary transition-colors">Для кого</button>
               <button onClick={() => scrollToSection('services')} className="text-sm font-medium hover:text-primary transition-colors">Услуги</button>
               <button onClick={() => scrollToSection('process')} className="text-sm font-medium hover:text-primary transition-colors">Процесс</button>
+              <Link to="/blog" className="text-sm font-medium hover:text-primary transition-colors">Блог</Link>
               <button onClick={() => scrollToSection('contact')} className="text-sm font-medium hover:text-primary transition-colors">Контакты</button>
             </div>
           </div>
@@ -574,7 +576,33 @@ const Index = () => {
                 </a>
               </Button>
             </div>
-            <p className="text-sm text-white/60">© 2024 MARICO PRO. Все права защищены.</p>
+            <div className="pt-6 border-t border-white/20">
+              <Card className="max-w-2xl mx-auto border-2 border-primary/40 bg-gradient-to-br from-background to-card">
+                <CardContent className="p-6">
+                  <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div className="text-center sm:text-left">
+                      <h4 className="text-lg font-bold text-foreground mb-1">Подписывайтесь на обновления</h4>
+                      <p className="text-sm text-foreground/70">Кейсы, статьи и инсайты о продажах</p>
+                    </div>
+                    <div className="flex gap-3">
+                      <Button size="sm" className="font-semibold" asChild>
+                        <a href="https://t.me/marico_pro" target="_blank" rel="noopener noreferrer">
+                          <Icon name="Send" className="mr-2" size={16} />
+                          Telegram
+                        </a>
+                      </Button>
+                      <Button size="sm" variant="outline" className="font-semibold border-2" asChild>
+                        <Link to="/blog">
+                          <Icon name="BookOpen" className="mr-2" size={16} />
+                          Блог
+                        </Link>
+                      </Button>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+            <p className="text-sm text-white/60 pt-6">© 2024 MARICO PRO. Все права защищены.</p>
           </div>
         </div>
       </footer>
