@@ -179,17 +179,22 @@ const Index = () => {
               ))}
             </div>
             <div className="bg-primary/10 p-8 rounded-2xl border-2 border-primary/40">
-              <h3 className="text-2xl font-bold mb-4 text-foreground text-center">Результаты:</h3>
-              <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
+              <h3 className="text-2xl font-bold mb-6 text-foreground text-center">Что получишь:</h3>
+              <div className="grid sm:grid-cols-2 gap-6">
                 {[
-                  { icon: 'TrendingUp', text: 'средний чек' },
-                  { icon: 'RotateCcw', text: 'повторные визиты' },
-                  { icon: 'MessageCircle', text: 'больше рекомендаций' },
-                  { icon: 'Heart', text: 'команда уверена' }
+                  { icon: 'TrendingUp', stat: '+30–50%', text: 'к среднему чеку за 2–4 недели' },
+                  { icon: 'RotateCcw', stat: 'x2', text: 'больше гостей возвращаются повторно' },
+                  { icon: 'MessageCircle', stat: '+40%', text: 'живых рекомендаций от гостей' },
+                  { icon: 'Users', stat: '100%', text: 'команда понимает, зачем продавать' }
                 ].map((result, i) => (
-                  <div key={i} className="flex items-center gap-3 justify-center">
-                    <Icon name={result.icon} className="text-primary" size={24} />
-                    <span className="text-foreground font-semibold">{result.text}</span>
+                  <div key={i} className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center flex-shrink-0">
+                      <Icon name={result.icon} className="text-white" size={24} />
+                    </div>
+                    <div>
+                      <div className="text-3xl font-black text-primary mb-1">{result.stat}</div>
+                      <div className="text-foreground font-medium">{result.text}</div>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -444,10 +449,10 @@ const Index = () => {
           <div className="max-w-2xl mx-auto space-y-12 animate-fade-in">
             <div className="text-center space-y-6">
               <h2 className="text-6xl font-black text-foreground leading-tight">
-                Хватит терять деньги.<br/>
-                <span className="text-primary">Начнём прямо сейчас</span>
+                Осталось <span className="text-primary">3 слота</span> на февраль.<br/>
+                Успей забронировать
               </h2>
-              <p className="text-xl text-foreground/80 font-medium">Напишите или позвоните — первая консультация покажет, как быстро всё изменить</p>
+              <p className="text-xl text-foreground/80 font-medium">Позвони сейчас — обсудим формат, дату и покажу, как вырастить чек на 30% за 2 недели</p>
             </div>
             
             <Card className="border-2">
