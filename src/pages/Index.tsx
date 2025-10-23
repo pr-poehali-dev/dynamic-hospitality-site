@@ -449,8 +449,8 @@ const Index = () => {
           <div className="max-w-2xl mx-auto space-y-12 animate-fade-in">
             <div className="text-center space-y-6">
               <h2 className="text-6xl font-black text-foreground leading-tight">
-                Осталось <span className="text-primary">3 слота</span> на февраль.<br/>
-                Успей забронировать
+                Готов вырастить <span className="text-primary">чек на 30%</span>?<br/>
+                Оставь заявку
               </h2>
               <p className="text-xl text-foreground/80 font-medium">Позвони сейчас — обсудим формат, дату и покажу, как вырастить чек на 30% за 2 недели</p>
             </div>
