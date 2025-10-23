@@ -44,7 +44,7 @@ const Index = () => {
               Выстраиваю систему продаж и культуры в ресторанах, клубах и отелях.
             </p>
             <div className="inline-block px-6 py-2 bg-primary/20 rounded-full border border-primary/40">
-              <p className="text-primary font-semibold">Эксперт — продажи & сервис</p>
+              <p className="text-primary font-semibold">Эксперт по продажам и сервису в HoReCa</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
               <Button size="lg" className="text-lg px-8 py-6 font-semibold" onClick={() => scrollToSection('process')}>
@@ -382,7 +382,51 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="contact" className="py-24 bg-card">
+      <section className="py-24 bg-card">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto space-y-12 animate-fade-in">
+            <h2 className="text-5xl font-black text-center text-foreground">Часто задаваемые вопросы</h2>
+            <div className="space-y-4">
+              {[
+                {
+                  q: 'Сколько времени занимает внедрение системы продаж?',
+                  a: 'В зависимости от формата: консультация — 90 минут, аудит — 3–5 дней, полное внедрение — от 2 до 14 дней. Первые изменения видны уже через 1–2 недели.'
+                },
+                {
+                  q: 'Работаете ли вы с небольшими заведениями?',
+                  a: 'Да, работаю с любыми форматами: от небольших кафе до крупных ресторанов, клубов и отелей. Подход адаптируется под размер команды и специфику бизнеса.'
+                },
+                {
+                  q: 'Можно ли начать с онлайн-консультации?',
+                  a: 'Конечно! Первая консультация доступна в онлайн и офлайн форматах. За 90 минут мы проведём диагностику и составим пошаговый план.'
+                },
+                {
+                  q: 'Что включает аудит продаж или сервиса?',
+                  a: 'Полный анализ процессов: встреча гостей, рекомендации, апсейл, атмосфера, скорость обслуживания. Формат тайного гостя или наблюдение в смене. Итог — детальный отчёт с задачами.'
+                },
+                {
+                  q: 'Как происходит внедрение «изнутри»?',
+                  a: 'Я или мой специалист работаем в ваших сменах: обучаем команду на практике, внедряем стандарты, даём обратную связь в реальном времени. Это самый быстрый способ изменить систему.'
+                },
+                {
+                  q: 'Какие результаты я получу?',
+                  a: 'Рост среднего чека, увеличение повторных визитов, больше рекомендаций от гостей, уверенная и мотивированная команда, чёткие стандарты работы.'
+                }
+              ].map((faq, i) => (
+                <details key={i} className="group bg-background p-6 rounded-xl border-2 border-border hover:border-primary transition-all">
+                  <summary className="text-xl font-bold text-foreground cursor-pointer flex items-center justify-between">
+                    <span>{faq.q}</span>
+                    <Icon name="ChevronDown" className="text-primary group-open:rotate-180 transition-transform" size={24} />
+                  </summary>
+                  <p className="text-foreground/80 mt-4 leading-relaxed">{faq.a}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" className="py-24 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-2xl mx-auto space-y-12 animate-fade-in">
             <div className="text-center space-y-4">
