@@ -34,10 +34,10 @@ const Index = () => {
       </nav>
 
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-        <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0">
           <img src="https://cdn.poehali.dev/projects/a0f1d64c-d8ab-4496-af89-52912fc87ab2/files/76dfee33-67bf-42da-9a28-f8930d95fa50.jpg" alt="" className="w-full h-full object-cover" />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/90 to-background/95"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/75 to-background/80"></div>
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-5xl mx-auto text-center space-y-8 animate-fade-in">
             <h1 className="text-6xl md:text-8xl font-black text-foreground leading-tight">
@@ -156,8 +156,8 @@ const Index = () => {
       </section>
 
       <section className="py-24 bg-card relative overflow-hidden">
-        <div className="absolute right-0 top-0 w-1/3 h-full opacity-10">
-          <img src="https://cdn.poehali.dev/projects/a0f1d64c-d8ab-4496-af89-52912fc87ab2/files/6a5728f0-32b4-4722-b31b-8121fa03989e.jpg" alt="" className="w-full h-full object-cover" />
+        <div className="absolute right-0 top-0 w-1/2 h-full">
+          <img src="https://cdn.poehali.dev/projects/a0f1d64c-d8ab-4496-af89-52912fc87ab2/files/6a5728f0-32b4-4722-b31b-8121fa03989e.jpg" alt="" className="w-full h-full object-cover opacity-30" />
         </div>
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto space-y-12 animate-slide-up">
@@ -347,8 +347,8 @@ const Index = () => {
       </section>
 
       <section className="py-24 bg-background relative overflow-hidden">
-        <div className="absolute left-0 top-0 w-1/3 h-full opacity-10">
-          <img src="https://cdn.poehali.dev/projects/a0f1d64c-d8ab-4496-af89-52912fc87ab2/files/c523b05f-465a-4b67-b605-5fb518a0a85e.jpg" alt="" className="w-full h-full object-cover" />
+        <div className="absolute left-0 top-0 w-1/2 h-full">
+          <img src="https://cdn.poehali.dev/projects/a0f1d64c-d8ab-4496-af89-52912fc87ab2/files/c523b05f-465a-4b67-b605-5fb518a0a85e.jpg" alt="" className="w-full h-full object-cover opacity-30" />
         </div>
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-5xl mx-auto space-y-12">
