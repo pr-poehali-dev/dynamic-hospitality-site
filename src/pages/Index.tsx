@@ -21,7 +21,7 @@ const Index = () => {
       <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-sm z-50 border-b border-border/40">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <div className="text-xl font-bold text-foreground">HORECA CONSULTING</div>
+            <div className="text-xl font-bold text-foreground">MARICO PRO</div>
             <div className="hidden md:flex items-center gap-8">
               <button onClick={() => scrollToSection('about')} className="text-sm font-medium hover:text-primary transition-colors">Знакомство</button>
               <button onClick={() => scrollToSection('for-whom')} className="text-sm font-medium hover:text-primary transition-colors">Для кого</button>
@@ -66,7 +66,7 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto animate-slide-up">
             <div className="aspect-[3/4] bg-muted rounded-2xl overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=800&fit=crop" 
+                src="https://cdn.poehali.dev/files/ec636e5f-8860-4ed3-a14e-094d8acd3c94.png" 
                 alt="Марина" 
                 className="w-full h-full object-cover"
               />
@@ -461,7 +461,8 @@ const Index = () => {
       <footer className="py-12 bg-secondary text-white">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center space-y-6">
-            <h3 className="text-3xl font-black">Продажи и сервис — одна система.</h3>
+            <h3 className="text-3xl font-black">MARICO PRO</h3>
+            <p className="text-white/80">Продажи и сервис — одна система.</p>
             <div className="flex justify-center gap-6">
               <Button variant="ghost" size="icon" className="text-white hover:text-primary">
                 <Icon name="Instagram" size={24} />
@@ -473,7 +474,7 @@ const Index = () => {
                 <Icon name="Mail" size={24} />
               </Button>
             </div>
-            <p className="text-sm text-white/60">© 2024 HORECA CONSULTING. Все права защищены.</p>
+            <p className="text-sm text-white/60">© 2024 MARICO PRO. Все права защищены.</p>
           </div>
         </div>
       </footer>
