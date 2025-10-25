@@ -42,44 +42,7 @@ const socialLinks = [
   }
 ];
 
-const directories = [
-  {
-    name: '2GIS',
-    icon: 'MapPin',
-    url: 'https://2gis.ru',
-    description: 'Найдите нас на карте'
-  },
-  {
-    name: 'Яндекс.Карты',
-    icon: 'Map',
-    url: 'https://yandex.ru/maps',
-    description: 'Карты и навигация'
-  },
-  {
-    name: 'Google Бизнес',
-    icon: 'Building2',
-    url: 'https://business.google.com',
-    description: 'Профиль компании'
-  },
-  {
-    name: 'Zoon',
-    icon: 'Star',
-    url: 'https://zoon.ru',
-    description: 'Отзывы клиентов'
-  },
-  {
-    name: 'Yell.ru',
-    icon: 'BookOpen',
-    url: 'https://yell.ru',
-    description: 'Каталог услуг'
-  },
-  {
-    name: 'Profi.ru',
-    icon: 'Award',
-    url: 'https://profi.ru',
-    description: 'Профессиональные услуги'
-  }
-];
+
 
 const Contact = () => {
   useEffect(() => {
@@ -170,48 +133,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="space-y-8">
-              <div className="text-center space-y-4">
-                <h2 className="text-3xl md:text-4xl font-black text-foreground">
-                  Каталоги и справочники
-                </h2>
-                <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-                  Найдите нас в популярных справочниках и картах
-                </p>
-              </div>
 
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {directories.map((directory, index) => (
-                  <a
-                    key={index}
-                    href={directory.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group"
-                  >
-                    <Card className="h-full hover:shadow-xl transition-all duration-300 hover:scale-[1.02] hover:border-primary/30">
-                      <CardContent className="p-6 space-y-4">
-                        <div className="p-3 bg-primary/10 rounded-xl w-fit">
-                          <Icon name={directory.icon as any} size={28} className="text-primary" />
-                        </div>
-                        <div className="space-y-2">
-                          <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
-                            {directory.name}
-                          </h3>
-                          <p className="text-sm text-foreground/60">
-                            {directory.description}
-                          </p>
-                        </div>
-                        <div className="flex items-center gap-2 text-primary font-medium text-sm pt-2">
-                          Открыть профиль
-                          <Icon name="ArrowRight" size={14} className="group-hover:translate-x-1 transition-transform" />
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </a>
-                ))}
-              </div>
-            </div>
 
             <Card className="border-2 border-primary/40 bg-gradient-to-br from-background to-card" style={{display: 'none'}}>
               <CardContent className="p-8 md:p-12 text-center space-y-6">
