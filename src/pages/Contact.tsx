@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const socialLinks = [
   {
@@ -74,6 +75,14 @@ const directories = [
 ];
 
 const Contact = () => {
+  useEffect(() => {
+    document.title = 'Контакты MARICO PRO — Связь с экспертом по HoReCa | Instagram, Telegram, WhatsApp';
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute('content', 'Свяжитесь с экспертом MARICO PRO по продажам и сервису в ресторанном бизнесе. Найдите нас в Instagram, Telegram, WhatsApp, 2GIS, Яндекс.Карты, Google и других каталогах.');
+    }
+  }, []);
+  
   return (
     <div className="min-h-screen bg-background">
       <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-sm z-50 border-b border-border/40">

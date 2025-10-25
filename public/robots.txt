@@ -1,3 +1,14 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://marico.su/sitemap.xml
+
+# Yandex specific
+User-agent: Yandex
+Allow: /
+
+# Google specific
 User-agent: Googlebot
 Allow: /
 
@@ -10,5 +21,9 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: *
-Allow: /
+# Crawl-delay for all bots
+Crawl-delay: 1
+
+# Disallow admin areas (if any in future)
+Disallow: /admin/
+Disallow: /api/

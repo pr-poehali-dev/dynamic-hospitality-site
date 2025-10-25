@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -7,6 +7,14 @@ import { Link } from 'react-router-dom';
 
 const Blog = () => {
   const [searchQuery, setSearchQuery] = useState('');
+  
+  useEffect(() => {
+    document.title = 'Блог MARICO PRO — Секреты продаж и сервиса в HoReCa | Статьи и кейсы';
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute('content', 'Полезные статьи о продажах, сервисе и управлении в ресторанном бизнесе. Реальные кейсы, лайфхаки и советы от эксперта HoReCa.');
+    }
+  }, []);
 
   const blogPosts = [
     {
