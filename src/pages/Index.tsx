@@ -5,6 +5,7 @@ import ForWhomSection from '@/components/sections/ForWhomSection';
 import ServicesSection from '@/components/sections/ServicesSection';
 import ProcessSection from '@/components/sections/ProcessSection';
 import CasesSection from '@/components/sections/CasesSection';
+import ROICalculator from '@/components/sections/ROICalculator';
 import ContactSection from '@/components/sections/ContactSection';
 import FooterSection from '@/components/sections/FooterSection';
 
@@ -21,6 +22,7 @@ const Index = () => {
       <AboutSection scrollToSection={scrollToSection} />
       <ForWhomSection />
       <ServicesSection />
+      <ROICalculator />
       <ProcessSection scrollToSection={scrollToSection} />
       <CasesSection />
       <ContactSection />

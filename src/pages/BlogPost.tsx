@@ -5,6 +5,7 @@ import BlogPostHeader from '@/components/blog/BlogPostHeader';
 import BlogPostContent from '@/components/blog/BlogPostContent';
 import BlogPostAuthor from '@/components/blog/BlogPostAuthor';
 import BlogPostCTA from '@/components/blog/BlogPostCTA';
+import Comments from '@/components/blog/Comments';
 import { blogPosts } from '@/data/blogPosts';
 
 const BlogPost = () => {
@@ -41,6 +42,8 @@ const BlogPost = () => {
             <BlogPostContent content={post.content} />
 
             <BlogPostAuthor />
+
+            <Comments postId={post.id} />
 
             <BlogPostCTA />
           </div>
