@@ -34,6 +34,13 @@ const Blog = () => {
     post.category.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
+  console.log('=== BLOG DEBUG ===');
+  console.log('Total posts from data:', Object.keys(blogPostsData).length);
+  console.log('Processed posts:', blogPosts.length);
+  console.log('Search query:', searchQuery);
+  console.log('Filtered posts:', filteredPosts.length);
+  console.log('Posts:', filteredPosts);
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
