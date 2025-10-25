@@ -99,7 +99,8 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
         'body': json.dumps({
             'success': True,
             'message': 'Заявка успешно отправлена',
-            'lead_id': result['id']
+            'lead_id': result['id'],
+            'created_at': result['created_at'].isoformat()
         }),
         'isBase64Encoded': False
     }
