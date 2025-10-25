@@ -224,7 +224,7 @@ const ContactSection = () => {
                         <Icon name="Phone" className="text-white" size={24} />
                       </div>
                       <div className="flex-1">
-                        <div className="font-semibold text-foreground group-hover:text-primary">Телефон</div>
+                        <div className="font-semibold text-foreground group-hover:text-primary">Max</div>
                         <div className="text-sm text-foreground/60">Позвонить</div>
                       </div>
                       <Icon name="ArrowRight" className="text-primary" size={20} />
