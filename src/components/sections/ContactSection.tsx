@@ -57,13 +57,68 @@ const ContactSection = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-5xl mx-auto">
           <div className="text-center space-y-6 mb-12">
-            <h2 className="text-5xl font-black text-foreground">Готовы обсудить проект?</h2>
+            <h2 className="text-5xl font-black text-foreground">Готовы обсудить ваш проект?</h2>
             <p className="text-xl text-foreground/80">
-              Заполните форму — отвечу в течение 2 часов.
+              Напишите мне в удобный мессенджер
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="max-w-2xl mx-auto">
+            <Card className="border-2 border-primary/30 bg-gradient-to-br from-primary/5 to-primary/10">
+              <CardContent className="p-8 space-y-6">
+                <h3 className="text-2xl font-bold text-foreground text-center">Напишите мне:</h3>
+                <div className="space-y-4">
+                  <a 
+                    href="https://t.me/malinochka_marina" 
+                    className="flex items-center gap-4 p-4 bg-background rounded-xl hover:shadow-lg transition-all group"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center">
+                      <Icon name="Send" className="text-white" size={24} />
+                    </div>
+                    <div className="flex-1">
+                      <div className="font-semibold text-foreground group-hover:text-primary">Telegram</div>
+                      <div className="text-sm text-foreground/60">@malinochka_marina</div>
+                    </div>
+                    <Icon name="ArrowRight" className="text-primary" size={20} />
+                  </a>
+
+                  <a 
+                    href="https://wa.me/79000000000"
+                    className="flex items-center gap-4 p-4 bg-background rounded-xl hover:shadow-lg transition-all group"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center">
+                      <Icon name="MessageCircle" className="text-white" size={24} />
+                    </div>
+                    <div className="flex-1">
+                      <div className="font-semibold text-foreground group-hover:text-primary">WhatsApp</div>
+                      <div className="text-sm text-foreground/60">Быстрая связь</div>
+                    </div>
+                    <Icon name="ArrowRight" className="text-primary" size={20} />
+                  </a>
+
+                  <a 
+                    href="tel:+79182858216"
+                    className="flex items-center gap-4 p-4 bg-background rounded-xl hover:shadow-lg transition-all group"
+                  >
+                    <div className="w-12 h-12 rounded-full bg-emerald-500 flex items-center justify-center">
+                      <Icon name="Phone" className="text-white" size={24} />
+                    </div>
+                    <div className="flex-1">
+                      <div className="font-semibold text-foreground group-hover:text-primary">Max</div>
+                      <div className="text-sm text-foreground/60">+7 (918) 285-82-16</div>
+                    </div>
+                    <Icon name="ArrowRight" className="text-primary" size={20} />
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 mt-12" style={{display: 'none'}}>
             <Card className="border-2">
               <CardContent className="p-8">
                 <form className="space-y-6" onSubmit={handleSubmit}>
@@ -125,7 +180,7 @@ const ContactSection = () => {
             <div className="space-y-6">
               <Card className="border-2 border-primary/30 bg-gradient-to-br from-primary/5 to-primary/10">
                 <CardContent className="p-8 space-y-6">
-                  <h3 className="text-2xl font-bold text-foreground">Или напишите напрямую:</h3>
+                  <h3 className="text-2xl font-bold text-foreground">Напишите мне:</h3>
                   <div className="space-y-4">
                     <a 
                       href="https://t.me/malinochka_marina" 
@@ -143,21 +198,7 @@ const ContactSection = () => {
                       <Icon name="ArrowRight" className="text-primary" size={20} />
                     </a>
 
-                    <a 
-                      href="https://www.instagram.com/marico_pro?igsh=eXljY2RqbHJtdjM4&utm_source=qr"
-                      className="flex items-center gap-4 p-4 bg-background rounded-xl hover:shadow-lg transition-all group"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-pink-500 to-rose-500 flex items-center justify-center">
-                        <Icon name="Instagram" className="text-white" size={24} />
-                      </div>
-                      <div className="flex-1">
-                        <div className="font-semibold text-foreground group-hover:text-primary">Instagram</div>
-                        <div className="text-sm text-foreground/60">@marico_pro</div>
-                      </div>
-                      <Icon name="ArrowRight" className="text-primary" size={20} />
-                    </a>
+
 
                     <a 
                       href="https://wa.me/79000000000"
