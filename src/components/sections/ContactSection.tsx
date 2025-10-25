@@ -118,7 +118,7 @@ const ContactSection = () => {
             </Card>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 mt-12" style={{display: 'none'}}>
+          <div className="grid md:grid-cols-2 gap-8 mt-12">
             <Card className="border-2">
               <CardContent className="p-8">
                 <form className="space-y-6" onSubmit={handleSubmit}>
