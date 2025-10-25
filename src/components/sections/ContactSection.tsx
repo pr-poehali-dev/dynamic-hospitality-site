@@ -4,6 +4,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Checkbox } from '@/components/ui/checkbox';
 import Icon from '@/components/ui/icon';
 import { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
@@ -17,6 +18,7 @@ const ContactSection = () => {
     business_type: '',
     message: ''
   });
+  const [agreedToPrivacy, setAgreedToPrivacy] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -39,6 +41,7 @@ const ContactSection = () => {
           description: 'Свяжемся с вами в течение 2 часов',
         });
         setFormData({ name: '', phone: '', business_type: '', message: '' });
+        setAgreedToPrivacy(false);
       } else {
         throw new Error(data.error || 'Ошибка отправки');
       }
@@ -112,12 +115,20 @@ const ContactSection = () => {
                       onChange={(e) => setFormData({...formData, message: e.target.value})}
                     />
                   </div>
-                  <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
+                  <div className="flex items-start gap-3 p-4 border-2 border-border rounded-lg bg-muted/30">
+                    <Checkbox 
+                      id="privacy" 
+                      checked={agreedToPrivacy}
+                      onCheckedChange={(checked) => setAgreedToPrivacy(checked as boolean)}
+                      required
+                    />
+                    <Label htmlFor="privacy" className="text-sm leading-relaxed cursor-pointer">
+                      Я согласен на сбор и обработку персональных данных в соответствии с политикой конфиденциальности
+                    </Label>
+                  </div>
+                  <Button type="submit" size="lg" className="w-full" disabled={isSubmitting || !agreedToPrivacy}>
                     {isSubmitting ? 'Отправка...' : 'Отправить заявку'}
                   </Button>
-                  <p className="text-xs text-center text-muted-foreground">
-                    Нажимая кнопку, вы соглашаетесь с обработкой персональных данных
-                  </p>
                 </form>
               </CardContent>
             </Card>
