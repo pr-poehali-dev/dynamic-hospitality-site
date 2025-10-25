@@ -4,6 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import Icon from '@/components/ui/icon';
 import { Link } from 'react-router-dom';
+import { blogPosts as blogPostsData } from '@/data/blogPosts';
 
 const Blog = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -16,35 +17,16 @@ const Blog = () => {
     }
   }, []);
 
-  const blogPosts = [
-    {
-      id: 1,
-      title: 'Почему официанты не продают: 3 главные ошибки',
-      excerpt: 'Разбираю типичные проблемы, из-за которых персонал теряет деньги для заведения и для себя.',
-      date: '15 октября 2024',
-      category: 'Продажи',
-      image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=600&fit=crop',
-      readTime: '5 мин'
-    },
-    {
-      id: 2,
-      title: 'Как вырастить средний чек на 30% без скриптов',
-      excerpt: 'Живые сценарии продаж, которые работают в ресторанах и клубах. Проверено на практике.',
-      date: '8 октября 2024',
-      category: 'Кейсы',
-      image: 'https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=800&h=600&fit=crop',
-      readTime: '7 мин'
-    },
-    {
-      id: 3,
-      title: 'Культура сервиса: что это и как её внедрить',
-      excerpt: 'От теории к практике — пошаговый план создания атмосферы, за которую гости готовы платить больше.',
-      date: '1 октября 2024',
-      category: 'Сервис',
-      image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop',
-      readTime: '6 мин'
-    }
-  ];
+  // Convert blogPosts object to array and extract only needed fields for list view
+  const blogPosts = Object.values(blogPostsData).map(post => ({
+    id: post.id,
+    title: post.title,
+    excerpt: post.content.substring(0, 150) + '...',
+    date: post.date,
+    category: post.category,
+    image: post.image,
+    readTime: post.readTime
+  }));
 
   const filteredPosts = blogPosts.filter(post =>
     post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||

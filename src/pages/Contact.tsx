@@ -15,7 +15,7 @@ const socialLinks = [
   {
     name: 'Telegram',
     icon: 'Send',
-    url: 'https://t.me/marico_pro',
+    url: 'https://t.me/malinochka_marina',
     description: 'Быстрая связь и консультации',
     color: 'from-blue-500 to-cyan-500'
   },
@@ -27,10 +27,17 @@ const socialLinks = [
     color: 'from-green-500 to-emerald-500'
   },
   {
+    name: 'Max',
+    icon: 'Phone',
+    url: 'tel:+79182858216',
+    description: '+7 (918) 285-82-16',
+    color: 'from-emerald-500 to-teal-500'
+  },
+  {
     name: 'Email',
     icon: 'Mail',
-    url: 'mailto:hello@maricopro.ru',
-    description: 'hello@maricopro.ru',
+    url: 'mailto:malinochkamarina@gmail.com',
+    description: 'malinochkamarina@gmail.com',
     color: 'from-purple-500 to-indigo-500'
   }
 ];
@@ -128,7 +135,7 @@ const Contact = () => {
                 </p>
               </div>
 
-              <div className="grid sm:grid-cols-2 gap-6">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {socialLinks.map((link, index) => (
                   <a
                     key={index}
@@ -165,15 +172,11 @@ const Contact = () => {
 
             <div className="space-y-8">
               <div className="text-center space-y-4">
-                <div className="inline-flex items-center gap-3 px-6 py-3 bg-primary/10 rounded-full">
-                  <Icon name="TrendingUp" size={24} className="text-primary" />
-                  <span className="font-bold text-primary">SEO-бонус</span>
-                </div>
                 <h2 className="text-3xl md:text-4xl font-black text-foreground">
                   Каталоги и справочники
                 </h2>
                 <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-                  Присутствие в каталогах улучшает позиции в поиске и дает дополнительный трафик
+                  Найдите нас в популярных справочниках и картах
                 </p>
               </div>
 
@@ -210,7 +213,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <Card className="border-2 border-primary/40 bg-gradient-to-br from-background to-card">
+            <Card className="border-2 border-primary/40 bg-gradient-to-br from-background to-card" style={{display: 'none'}}>
               <CardContent className="p-8 md:p-12 text-center space-y-6">
                 <div className="inline-block p-4 bg-primary/10 rounded-full">
                   <Icon name="Lightbulb" size={40} className="text-primary" />

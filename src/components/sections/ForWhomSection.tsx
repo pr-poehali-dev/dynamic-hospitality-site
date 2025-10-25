@@ -9,10 +9,10 @@ const ForWhomSection = () => {
           <h2 className="text-5xl font-black text-center text-foreground">Для кого мои решения</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: 'Crown', title: 'Владельцы/совладельцы', desc: 'Нужна управляемая система продаж, а не хаос' },
-              { icon: 'Briefcase', title: 'Управляющие', desc: 'Нужен уверенный персонал и культура сервиса' },
-              { icon: 'Users', title: 'Команды залов', desc: 'Хочется продавать без давления и «скриптов»' },
-              { icon: 'Building2', title: 'Отели/частные клубы', desc: 'Важны эмоции гостя и высокий стандарт' }
+              { icon: 'Crown', title: 'Владельцы/совладельцы', desc: 'Хотите видеть систему продаж, которая работает без вашего контроля' },
+              { icon: 'Briefcase', title: 'Управляющие', desc: 'Нужна команда, которая продаёт и создаёт атмосферу искренне' },
+              { icon: 'Users', title: 'Команды залов', desc: 'Хотите предлагать гостям естественно, без заученных фраз' },
+              { icon: 'Building2', title: 'Отели/частные клубы', desc: 'Каждая деталь сервиса должна соответствовать уровню заведения' }
             ].map((item, i) => (
               <Card key={i} className="border-2 hover:border-primary hover:shadow-lg transition-all duration-300 hover:scale-105">
                 <CardContent className="p-6 space-y-4">

@@ -128,7 +128,7 @@ const ContactSection = () => {
                   <h3 className="text-2xl font-bold text-foreground">Или напишите напрямую:</h3>
                   <div className="space-y-4">
                     <a 
-                      href="https://t.me/marico_pro" 
+                      href="https://t.me/malinochka_marina" 
                       className="flex items-center gap-4 p-4 bg-background rounded-xl hover:shadow-lg transition-all group"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -138,7 +138,7 @@ const ContactSection = () => {
                       </div>
                       <div className="flex-1">
                         <div className="font-semibold text-foreground group-hover:text-primary">Telegram</div>
-                        <div className="text-sm text-foreground/60">@marico_pro</div>
+                        <div className="text-sm text-foreground/60">@malinochka_marina</div>
                       </div>
                       <Icon name="ArrowRight" className="text-primary" size={20} />
                     </a>
@@ -171,6 +171,20 @@ const ContactSection = () => {
                       <div className="flex-1">
                         <div className="font-semibold text-foreground group-hover:text-primary">WhatsApp</div>
                         <div className="text-sm text-foreground/60">Быстрая связь</div>
+                      </div>
+                      <Icon name="ArrowRight" className="text-primary" size={20} />
+                    </a>
+
+                    <a 
+                      href="tel:+79182858216"
+                      className="flex items-center gap-4 p-4 bg-background rounded-xl hover:shadow-lg transition-all group"
+                    >
+                      <div className="w-12 h-12 rounded-full bg-emerald-500 flex items-center justify-center">
+                        <Icon name="Phone" className="text-white" size={24} />
+                      </div>
+                      <div className="flex-1">
+                        <div className="font-semibold text-foreground group-hover:text-primary">Max</div>
+                        <div className="text-sm text-foreground/60">+7 (918) 285-82-16</div>
                       </div>
                       <Icon name="ArrowRight" className="text-primary" size={20} />
                     </a>
