@@ -1412,7 +1412,7 @@ Google, Яндекс, соцсети. Что пишут? Где повторяю
     title: 'Средний чек vs. количество гостей: что важнее?',
     date: '4 августа 2024',
     category: 'Управление',
-    image: 'https://images.unsplash.com/photo-1554224311-beee460c201f?w=1200&h=600&fit=crop',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=600&fit=crop',
     readTime: '5 мин',
     author: 'Марина',
     content: `
