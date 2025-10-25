@@ -33,8 +33,8 @@ const BlogPost = () => {
   // Формируем полный URL для og:url
   const currentUrl = `${window.location.origin}${location.pathname}`;
   
-  // Извлекаем description из content
-  const description = post ? getPlainTextFromMarkdown(post.content, 200) : '';
+  // Используем excerpt или fallback на getPlainTextFromMarkdown
+  const description = post ? (post.excerpt || getPlainTextFromMarkdown(post.content, 200)) : '';
   
   // Форматируем дату в ISO формат для Schema.org
   const formatDateToISO = (dateStr: string): string => {
@@ -72,6 +72,9 @@ const BlogPost = () => {
         {/* Базовые meta теги */}
         <title>{post.title} | MARICO PRO</title>
         <meta name="description" content={description} />
+        <meta name="keywords" content={post.keywords.join(', ')} />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href={currentUrl} />
         
         {/* Open Graph теги */}
         <meta property="og:title" content={post.title} />
@@ -102,6 +105,7 @@ const BlogPost = () => {
               name: post.author
             },
             description: description,
+            keywords: post.keywords,
             articleSection: post.category,
             publisher: {
               '@type': 'Organization',
@@ -115,6 +119,40 @@ const BlogPost = () => {
               '@type': 'WebPage',
               '@id': currentUrl
             }
+          })}
+        </script>
+        
+        {/* Schema.org разметка для BreadcrumbList */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Главная',
+                item: window.location.origin
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Блог',
+                item: `${window.location.origin}/blog`
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: post.category,
+                item: `${window.location.origin}/blog?category=${encodeURIComponent(post.category)}`
+              },
+              {
+                '@type': 'ListItem',
+                position: 4,
+                name: post.title,
+                item: currentUrl
+              }
+            ]
           })}
         </script>
       </Helmet>
