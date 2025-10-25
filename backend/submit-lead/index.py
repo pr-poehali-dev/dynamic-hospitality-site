@@ -1,5 +1,5 @@
 '''
-Business: API для приема и сохранения заявок в базу данных
+Business: API для приема и сохранения заявок в базу данных с отправкой уведомлений в Telegram
 Args: event - dict с httpMethod, body (JSON с полями: name, email, phone, message, type)
       context - объект с атрибутами request_id, function_name
 Returns: HTTP response dict с результатом сохранения заявки
@@ -10,6 +10,7 @@ from typing import Dict, Any, Optional
 from pydantic import BaseModel, Field, EmailStr, ValidationError
 import psycopg2
 from psycopg2.extras import RealDictCursor
+import requests
 
 
 class LeadRequest(BaseModel):
@@ -89,6 +90,37 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
     
     cur.close()
     conn.close()
+    
+    # Отправка уведомления в Telegram
+    telegram_token = os.environ.get('TELEGRAM_BOT_TOKEN')
+    telegram_chat_id = os.environ.get('TELEGRAM_CHAT_ID')
+    
+    if telegram_token and telegram_chat_id:
+        telegram_message = f"""
+🔔 Новая заявка #{result['id']}
+
+👤 Имя: {lead_data.name}
+📧 Email: {lead_data.email or 'не указан'}
+📱 Телефон: {lead_data.phone or 'не указан'}
+{f"🏢 Тип бизнеса: {lead_data.business_type}" if lead_data.business_type else ""}
+
+💬 Сообщение:
+{lead_data.message or 'нет сообщения'}
+
+⏰ Время: {result['created_at'].strftime('%d.%m.%Y %H:%M')}
+"""
+        
+        telegram_url = f"https://api.telegram.org/bot{telegram_token}/sendMessage"
+        telegram_payload = {
+            'chat_id': telegram_chat_id,
+            'text': telegram_message,
+            'parse_mode': 'HTML'
+        }
+        
+        try:
+            requests.post(telegram_url, json=telegram_payload, timeout=5)
+        except Exception as e:
+            pass
     
     return {
         'statusCode': 200,
