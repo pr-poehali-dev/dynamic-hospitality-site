@@ -26,8 +26,8 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
             <Button size="lg" className="text-lg px-8 py-6 font-semibold" onClick={() => scrollToSection('process')}>
               С чего начать
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-6 font-semibold border-2" asChild>
-              <a href="#contact">Оставить заявку</a>
+            <Button size="lg" variant="outline" className="text-lg px-8 py-6 font-semibold border-2" onClick={() => scrollToSection('contact')}>
+              Оставить заявку
             </Button>
           </div>
           <p className="text-xs text-muted-foreground pt-4">
