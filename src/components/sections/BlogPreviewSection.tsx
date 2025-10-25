@@ -13,7 +13,7 @@ const BlogPreviewSection = () => {
     category: post.category,
     image: post.image,
     readTime: post.readTime
-  }));
+  })).slice(0, 3);
 
   return (
     <section className="py-24 bg-background">
@@ -66,12 +66,18 @@ const BlogPreviewSection = () => {
             ))}
           </div>
 
-          <div className="text-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button size="lg" asChild>
               <Link to="/blog">
                 Все статьи блога
                 <Icon name="ArrowRight" className="ml-2" size={20} />
               </Link>
+            </Button>
+            <Button size="lg" variant="outline" className="border-2" asChild>
+              <a href="https://t.me/marico_pro" target="_blank" rel="noopener noreferrer">
+                <Icon name="Bell" className="mr-2" size={20} />
+                Подписаться на блог
+              </a>
             </Button>
           </div>
         </div>
