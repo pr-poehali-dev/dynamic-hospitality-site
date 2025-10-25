@@ -16,6 +16,7 @@ const Navigation = ({ scrollToSection }: NavigationProps) => {
             <button onClick={() => scrollToSection('services')} className="text-sm font-medium hover:text-primary transition-colors">Услуги</button>
             <button onClick={() => scrollToSection('process')} className="text-sm font-medium hover:text-primary transition-colors">Процесс</button>
             <Link to="/blog" className="text-sm font-medium hover:text-primary transition-colors">Блог</Link>
+            <Link to="/faq" className="text-sm font-medium hover:text-primary transition-colors">FAQ</Link>
             <Link to="/contact" className="text-sm font-medium hover:text-primary transition-colors">Где нас найти</Link>
           </div>
         </div>
