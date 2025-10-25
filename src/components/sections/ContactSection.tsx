@@ -5,8 +5,53 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import Icon from '@/components/ui/icon';
+import { useState } from 'react';
+import { useToast } from '@/hooks/use-toast';
 
 const ContactSection = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    business_type: '',
+    message: ''
+  });
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('https://functions.poehali.dev/5d1ba8c6-82ca-42ab-be50-54dc6866b7b5', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        toast({
+          title: 'Заявка отправлена!',
+          description: 'Свяжемся с вами в течение 2 часов',
+        });
+        setFormData({ name: '', phone: '', business_type: '', message: '' });
+      } else {
+        throw new Error(data.error || 'Ошибка отправки');
+      }
+    } catch (error) {
+      toast({
+        title: 'Ошибка',
+        description: 'Не удалось отправить заявку. Попробуйте снова.',
+        variant: 'destructive'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   return (
     <section id="contact" className="py-24 bg-background">
       <div className="container mx-auto px-6">
@@ -21,18 +66,30 @@ const ContactSection = () => {
           <div className="grid md:grid-cols-2 gap-8">
             <Card className="border-2">
               <CardContent className="p-8">
-                <form className="space-y-6">
+                <form className="space-y-6" onSubmit={handleSubmit}>
                   <div className="space-y-2">
                     <Label htmlFor="name">Ваше имя</Label>
-                    <Input id="name" placeholder="Иван Петров" />
+                    <Input 
+                      id="name" 
+                      placeholder="Иван Петров" 
+                      value={formData.name}
+                      onChange={(e) => setFormData({...formData, name: e.target.value})}
+                      required
+                    />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="phone">Телефон</Label>
-                    <Input id="phone" type="tel" placeholder="+7 (999) 123-45-67" />
+                    <Input 
+                      id="phone" 
+                      type="tel" 
+                      placeholder="+7 (999) 123-45-67"
+                      value={formData.phone}
+                      onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                    />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="business">Тип бизнеса</Label>
-                    <Select>
+                    <Select value={formData.business_type} onValueChange={(value) => setFormData({...formData, business_type: value})}>
                       <SelectTrigger id="business">
                         <SelectValue placeholder="Выберите" />
                       </SelectTrigger>
@@ -51,10 +108,12 @@ const ContactSection = () => {
                       id="message" 
                       placeholder="Расскажите, с чем нужна помощь..."
                       rows={4}
+                      value={formData.message}
+                      onChange={(e) => setFormData({...formData, message: e.target.value})}
                     />
                   </div>
-                  <Button type="submit" size="lg" className="w-full">
-                    Отправить заявку
+                  <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
+                    {isSubmitting ? 'Отправка...' : 'Отправить заявку'}
                   </Button>
                   <p className="text-xs text-center text-muted-foreground">
                     Нажимая кнопку, вы соглашаетесь с обработкой персональных данных
