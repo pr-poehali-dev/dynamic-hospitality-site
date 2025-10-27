@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -11,12 +12,11 @@ import {
 import Icon from '@/components/ui/icon';
 
 const FAQ = () => {
+  const currentUrl = `${window.location.origin}/faq`;
+  const faqDescription = 'Ответы на частые вопросы о продажах и сервисе в ресторанах, клубах и отелях. Как увеличить средний чек, обучить персонал, повысить выручку заведения. Консультации MARICO PRO.';
+  
   useEffect(() => {
     document.title = 'Частые вопросы — MARICO PRO | Ответы эксперта по HoReCa';
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute('content', 'Ответы на частые вопросы о продажах и сервисе в ресторанах, клубах и отелях. Как увеличить средний чек, обучить персонал, повысить выручку заведения.');
-    }
   }, []);
 
   const faqCategories = [
@@ -156,6 +156,27 @@ const FAQ = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Частые вопросы — MARICO PRO | Ответы эксперта по HoReCa</title>
+        <meta name="description" content={faqDescription} />
+        <meta name="keywords" content="faq horeca, вопросы про рестораны, как увеличить продажи ресторана, обучение персонала вопросы, консультации ресторан цены" />
+        <link rel="canonical" href={currentUrl} />
+        
+        {/* Open Graph теги */}
+        <meta property="og:title" content="Частые вопросы — MARICO PRO | Ответы эксперта" />
+        <meta property="og:description" content={faqDescription} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={currentUrl} />
+        <meta property="og:image" content="https://cdn.poehali.dev/projects/a0f1d64c-d8ab-4496-af89-52912fc87ab2/files/76dfee33-67bf-42da-9a28-f8930d95fa50.jpg" />
+        <meta property="og:site_name" content="MARICO PRO" />
+        
+        {/* Twitter Card теги */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Частые вопросы — MARICO PRO" />
+        <meta name="twitter:description" content={faqDescription} />
+        <meta name="twitter:image" content="https://cdn.poehali.dev/projects/a0f1d64c-d8ab-4496-af89-52912fc87ab2/files/76dfee33-67bf-42da-9a28-f8930d95fa50.jpg" />
+      </Helmet>
+      
       <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-sm z-50 border-b border-border/40">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">

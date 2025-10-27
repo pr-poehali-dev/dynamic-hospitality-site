@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -8,13 +9,11 @@ import { blogPosts as blogPostsData } from '@/data/blogPosts';
 
 const Blog = () => {
   const [searchQuery, setSearchQuery] = useState('');
+  const currentUrl = `${window.location.origin}/blog`;
+  const blogDescription = 'Полезные статьи о продажах, сервисе и управлении в ресторанном бизнесе. Реальные кейсы, лайфхаки и советы от эксперта HoReCa Марины MARICO PRO.';
   
   useEffect(() => {
     document.title = 'Блог MARICO PRO — Секреты продаж и сервиса в HoReCa | Статьи и кейсы';
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute('content', 'Полезные статьи о продажах, сервисе и управлении в ресторанном бизнесе. Реальные кейсы, лайфхаки и советы от эксперта HoReCa.');
-    }
   }, []);
 
   // Convert blogPosts object to array and extract only needed fields for list view
@@ -47,6 +46,86 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Блог MARICO PRO — Секреты продаж и сервиса в HoReCa | Статьи и кейсы</title>
+        <meta name="description" content={blogDescription} />
+        <meta name="keywords" content="блог horeca, продажи в ресторане, сервис ресторан, управление рестораном, обучение персонала, кейсы ресторанов, советы эксперта horeca" />
+        <link rel="canonical" href={currentUrl} />
+        
+        {/* Open Graph теги */}
+        <meta property="og:title" content="Блог MARICO PRO — Секреты продаж и сервиса в HoReCa" />
+        <meta property="og:description" content={blogDescription} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={currentUrl} />
+        <meta property="og:image" content="https://cdn.poehali.dev/projects/a0f1d64c-d8ab-4496-af89-52912fc87ab2/files/76dfee33-67bf-42da-9a28-f8930d95fa50.jpg" />
+        <meta property="og:site_name" content="MARICO PRO" />
+        
+        {/* Twitter Card теги */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Блог MARICO PRO — Секреты продаж и сервиса в HoReCa" />
+        <meta name="twitter:description" content={blogDescription} />
+        <meta name="twitter:image" content="https://cdn.poehali.dev/projects/a0f1d64c-d8ab-4496-af89-52912fc87ab2/files/76dfee33-67bf-42da-9a28-f8930d95fa50.jpg" />
+        
+        {/* Schema.org разметка для Blog */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Blog',
+            name: 'Блог MARICO PRO',
+            description: blogDescription,
+            url: currentUrl,
+            author: {
+              '@type': 'Person',
+              name: 'Марина',
+              jobTitle: 'Эксперт по продажам и сервису в HoReCa'
+            },
+            publisher: {
+              '@type': 'Organization',
+              name: 'MARICO PRO',
+              url: 'https://marico.su',
+              logo: {
+                '@type': 'ImageObject',
+                url: 'https://cdn.poehali.dev/projects/a0f1d64c-d8ab-4496-af89-52912fc87ab2/files/76dfee33-67bf-42da-9a28-f8930d95fa50.jpg'
+              }
+            },
+            blogPost: Object.values(blogPostsData).map(post => ({
+              '@type': 'BlogPosting',
+              headline: post.title,
+              url: `${window.location.origin}/blog/${post.id}`,
+              datePublished: post.date,
+              author: {
+                '@type': 'Person',
+                name: post.author
+              },
+              image: post.image,
+              articleSection: post.category
+            }))
+          })}
+        </script>
+        
+        {/* Schema.org разметка для BreadcrumbList */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Главная',
+                item: window.location.origin
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Блог',
+                item: currentUrl
+              }
+            ]
+          })}
+        </script>
+      </Helmet>
+      
       <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-sm z-50 border-b border-border/40">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">

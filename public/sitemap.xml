@@ -49,6 +49,13 @@
   </url>
   
   <url>
+    <loc>https://marico.su/faq</loc>
+    <lastmod>2025-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>https://marico.su/ai-about.html</loc>
     <lastmod>2025-10-27</lastmod>
     <changefreq>monthly</changefreq>

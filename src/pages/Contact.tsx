@@ -3,6 +3,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const socialLinks = [
   {
@@ -45,16 +46,85 @@ const socialLinks = [
 
 
 const Contact = () => {
+  const currentUrl = `${window.location.origin}/contact`;
+  const contactDescription = 'Свяжитесь с Мариной MARICO PRO — экспертом по продажам и сервису в HoReCa. Телефон: +7 (918) 285-82-16, Instagram, Telegram, WhatsApp, Email. Москва и вся Россия.';
+  
   useEffect(() => {
     document.title = 'Контакты MARICO PRO — Связь с экспертом по HoReCa | Instagram, Telegram, WhatsApp';
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute('content', 'Свяжитесь с экспертом MARICO PRO по продажам и сервису в ресторанном бизнесе. Найдите нас в Instagram, Telegram, WhatsApp, 2GIS, Яндекс.Карты, Google и других каталогах.');
-    }
   }, []);
   
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Контакты MARICO PRO — Связь с экспертом по HoReCa | Instagram, Telegram, WhatsApp</title>
+        <meta name="description" content={contactDescription} />
+        <meta name="keywords" content="контакты marico pro, эксперт horeca контакты, консультант ресторанов москва телефон, марина marico контакты, связаться с экспертом horeca" />
+        <link rel="canonical" href={currentUrl} />
+        
+        {/* Open Graph теги */}
+        <meta property="og:title" content="Контакты MARICO PRO — Свяжитесь с экспертом HoReCa" />
+        <meta property="og:description" content={contactDescription} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={currentUrl} />
+        <meta property="og:image" content="https://cdn.poehali.dev/projects/a0f1d64c-d8ab-4496-af89-52912fc87ab2/files/76dfee33-67bf-42da-9a28-f8930d95fa50.jpg" />
+        <meta property="og:site_name" content="MARICO PRO" />
+        
+        {/* Twitter Card теги */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Контакты MARICO PRO — Свяжитесь с экспертом HoReCa" />
+        <meta name="twitter:description" content={contactDescription} />
+        <meta name="twitter:image" content="https://cdn.poehali.dev/projects/a0f1d64c-d8ab-4496-af89-52912fc87ab2/files/76dfee33-67bf-42da-9a28-f8930d95fa50.jpg" />
+        
+        {/* Schema.org разметка для ContactPage */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'ContactPage',
+            name: 'Контакты MARICO PRO',
+            description: contactDescription,
+            url: currentUrl,
+            mainEntity: {
+              '@type': 'Person',
+              name: 'Марина',
+              jobTitle: 'Эксперт по продажам и сервису в HoReCa',
+              telephone: '+7 (918) 285-82-16',
+              email: 'malinochkamarina@gmail.com',
+              address: {
+                '@type': 'PostalAddress',
+                addressLocality: 'Москва',
+                addressCountry: 'RU'
+              },
+              sameAs: [
+                'https://www.instagram.com/marico_pro',
+                'https://t.me/malinochka_marina'
+              ]
+            }
+          })}
+        </script>
+        
+        {/* Schema.org разметка для BreadcrumbList */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Главная',
+                item: window.location.origin
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Контакты',
+                item: currentUrl
+              }
+            ]
+          })}
+        </script>
+      </Helmet>
+      
       <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-sm z-50 border-b border-border/40">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
