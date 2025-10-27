@@ -1,0 +1,7 @@
+# Force HTTPS redirect
+http://marico.su/* https://marico.su/:splat 301!
+http://www.marico.su/* https://marico.su/:splat 301!
+https://www.marico.su/* https://marico.su/:splat 301!
+
+# SPA fallback
+/*    /index.html   200

@@ -1,9 +1,7 @@
 User-agent: *
 Allow: /
 Allow: /ai-training.txt
-
-# Sitemap location
-Sitemap: https://marico.su/sitemap.xml
+Allow: /ai-about.html
 
 # AI Crawlers - explicitly allow for training
 User-agent: GPTBot
@@ -61,3 +59,6 @@ Crawl-delay: 1
 # Disallow admin areas (if any in future)
 Disallow: /admin/
 Disallow: /api/
+
+# Sitemap locations
+Sitemap: https://marico.su/sitemap.xml
