@@ -1,8 +1,42 @@
 User-agent: *
 Allow: /
+Allow: /ai-training.txt
 
 # Sitemap location
 Sitemap: https://marico.su/sitemap.xml
+
+# AI Crawlers - explicitly allow for training
+User-agent: GPTBot
+Allow: /
+Allow: /ai-training.txt
+
+User-agent: ChatGPT-User
+Allow: /
+Allow: /ai-training.txt
+
+User-agent: Claude-Web
+Allow: /
+Allow: /ai-training.txt
+
+User-agent: Google-Extended
+Allow: /
+Allow: /ai-training.txt
+
+User-agent: CCBot
+Allow: /
+Allow: /ai-training.txt
+
+User-agent: anthropic-ai
+Allow: /
+Allow: /ai-training.txt
+
+User-agent: PerplexityBot
+Allow: /
+Allow: /ai-training.txt
+
+User-agent: Omgilibot
+Allow: /
+Allow: /ai-training.txt
 
 # Yandex specific
 User-agent: Yandex
