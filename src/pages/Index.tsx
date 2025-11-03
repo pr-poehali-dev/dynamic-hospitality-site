@@ -4,6 +4,7 @@ import HeroSection from '@/components/sections/HeroSection';
 import AboutSection from '@/components/sections/AboutSection';
 import ForWhomSection from '@/components/sections/ForWhomSection';
 import ServicesSection from '@/components/sections/ServicesSection';
+import TrainingsSection from '@/components/sections/TrainingsSection';
 import ProcessSection from '@/components/sections/ProcessSection';
 import CasesSection from '@/components/sections/CasesSection';
 import BlogPreviewSection from '@/components/sections/BlogPreviewSection';
@@ -43,6 +44,7 @@ const Index = () => {
       <AboutSection scrollToSection={scrollToSection} />
       <ForWhomSection />
       <ServicesSection />
+      <TrainingsSection />
       <ROICalculator />
       <ProcessSection scrollToSection={scrollToSection} />
       <CasesSection />

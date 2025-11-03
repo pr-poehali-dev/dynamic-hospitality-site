@@ -14,6 +14,7 @@ const Navigation = ({ scrollToSection }: NavigationProps) => {
             <button onClick={() => scrollToSection('about')} className="text-sm font-medium hover:text-primary transition-colors">Знакомство</button>
             <button onClick={() => scrollToSection('for-whom')} className="text-sm font-medium hover:text-primary transition-colors">Для кого</button>
             <button onClick={() => scrollToSection('services')} className="text-sm font-medium hover:text-primary transition-colors">Услуги</button>
+            <button onClick={() => scrollToSection('trainings')} className="text-sm font-medium hover:text-primary transition-colors">Тренинги</button>
             <button onClick={() => scrollToSection('process')} className="text-sm font-medium hover:text-primary transition-colors">Процесс</button>
             <Link to="/blog" className="text-sm font-medium hover:text-primary transition-colors">Блог</Link>
             <Link to="/faq" className="text-sm font-medium hover:text-primary transition-colors">FAQ</Link>
