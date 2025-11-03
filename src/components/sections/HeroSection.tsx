@@ -8,7 +8,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       <div className="absolute inset-0">
-        <img src="https://cdn.poehali.dev/projects/a0f1d64c-d8ab-4496-af89-52912fc87ab2/files/76dfee33-67bf-42da-9a28-f8930d95fa50.jpg" alt="" className="w-full h-full object-cover" />
+        <img src="https://cdn.poehali.dev/files/d389612d-0b1f-418a-956f-71c6c1c715c7.png" alt="" className="w-full h-full object-cover" />
       </div>
       <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/75 to-background/80"></div>
       <div className="container mx-auto px-6 relative z-10">

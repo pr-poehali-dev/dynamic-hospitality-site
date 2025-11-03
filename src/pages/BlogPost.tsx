@@ -29,6 +29,10 @@ const BlogPost = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const post = blogPosts[Number(id)];
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, [id]);
   
   // Формируем полный URL для og:url
   const currentUrl = `${window.location.origin}${location.pathname}`;

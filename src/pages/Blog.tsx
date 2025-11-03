@@ -174,7 +174,11 @@ const Blog = () => {
             ) : (
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredPosts.map((post) => (
-                  <Link key={post.id} to={`/blog/${post.id}`}>
+                  <Link 
+                    key={post.id} 
+                    to={`/blog/${post.id}`}
+                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                  >
                     <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-[1.02] cursor-pointer group h-full">
                       <div className="aspect-video overflow-hidden">
                         <img
