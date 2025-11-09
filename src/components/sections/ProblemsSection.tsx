@@ -79,31 +79,42 @@ const ProblemsSection = () => {
                   
                   <h3 className="text-xl font-bold text-foreground">{problem.title}</h3>
                   
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {problem.description}
-                  </p>
+                  <div className="bg-muted/30 p-4 rounded-lg">
+                    <p className="text-foreground text-sm leading-relaxed font-medium">
+                      {problem.description}
+                    </p>
+                  </div>
                   
                   <div 
                     className={`overflow-hidden transition-all duration-300 ${
-                      activeIndex === index ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
+                      activeIndex === index ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'
                     }`}
                   >
-                    <div className="pt-4 border-t border-border mt-4">
-                      <p className="text-sm font-semibold text-primary flex items-start gap-2">
-                        <Icon name="CheckCircle2" size={18} className="flex-shrink-0 mt-0.5" />
-                        <span>{problem.solution}</span>
+                    <div className="pt-4 border-t-2 border-primary/30 mt-4 bg-primary/5 p-4 rounded-lg">
+                      <div className="flex items-start gap-2 mb-2">
+                        <Icon name="Lightbulb" size={20} className="flex-shrink-0 mt-0.5 text-primary" />
+                        <span className="text-xs font-bold text-primary uppercase tracking-wide">Решение</span>
+                      </div>
+                      <p className="text-sm font-semibold text-foreground leading-relaxed">
+                        {problem.solution}
                       </p>
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-2 text-sm text-primary font-medium">
+                  <button 
+                    className="flex items-center justify-center gap-2 w-full text-sm text-primary font-bold hover:text-primary/80 transition-colors py-2 px-4 rounded-lg bg-primary/5 hover:bg-primary/10"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setActiveIndex(activeIndex === index ? null : index);
+                    }}
+                  >
                     <span>{activeIndex === index ? 'Скрыть решение' : 'Показать решение'}</span>
                     <Icon 
                       name={activeIndex === index ? 'ChevronUp' : 'ChevronDown'} 
-                      size={16} 
+                      size={18} 
                       className="transition-transform"
                     />
-                  </div>
+                  </button>
                 </CardContent>
               </Card>
             ))}

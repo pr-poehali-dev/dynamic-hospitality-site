@@ -39,6 +39,28 @@ const ProblemSection = () => {
                 <p className="text-lg text-muted-foreground">
                   Только отмазки и разные поводы в своем качестве работы. А я про бизнес — и бизнес должен приносить деньги, не останавливаясь на месте.
                 </p>
+                
+                <div className="bg-destructive/5 border-l-4 border-destructive p-6 rounded-r-xl mt-6">
+                  <h4 className="text-xl font-bold text-destructive mb-3">Почему так происходит?</h4>
+                  <ul className="space-y-3 text-foreground">
+                    <li className="flex items-start gap-3">
+                      <Icon name="X" className="text-destructive mt-1 flex-shrink-0" size={20} />
+                      <span>Сотрудники не знают, <strong>как правильно</strong> предлагать блюда и напитки</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Icon name="X" className="text-destructive mt-1 flex-shrink-0" size={20} />
+                      <span>Никто не обучил их <strong>психологии продаж</strong> и работе с возражениями</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Icon name="X" className="text-destructive mt-1 flex-shrink-0" size={20} />
+                      <span>Отсутствует <strong>система мотивации</strong> и контроля качества обслуживания</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Icon name="X" className="text-destructive mt-1 flex-shrink-0" size={20} />
+                      <span>Многие просто <strong>не понимают своей ценности</strong> для бизнеса и работают "для галочки"</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
 
               <div className="bg-destructive/10 rounded-xl p-6 space-y-4">

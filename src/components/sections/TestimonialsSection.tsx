@@ -54,9 +54,30 @@ const TestimonialsSection = () => {
                 </div>
               </CardContent>
             </Card>
+
+            <Card className="border-2 hover:border-primary transition-all duration-300">
+              <CardContent className="p-8">
+                <div className="flex items-start gap-6">
+                  <div className="w-20 h-20 rounded-full bg-primary flex items-center justify-center text-white text-3xl font-bold flex-shrink-0">
+                    ДК
+                  </div>
+                  <div className="space-y-4 flex-1">
+                    <div>
+                      <h4 className="text-2xl font-bold text-foreground">Дмитрий Кузнецов</h4>
+                      <p className="text-muted-foreground">Владелец гастробара "Медь", Казань</p>
+                    </div>
+                    <div className="border-l-4 border-primary pl-6">
+                      <p className="text-foreground italic text-lg leading-relaxed">
+                        "Мы застряли на одном уровне и никак не могли пробить 'стеклянный потолок'. Аудит показал, что проблема не в кухне или локации, а в системе обслуживания и позиционировании. За четыре месяца работы изменили концепцию подачи, переобучили весь персонал, скорректировали маркетинг. Сейчас у нас очередь на выходных, рейтинг 4.9, а прибыль выросла на 210%. Самое главное — я наконец понял, как должен работать ресторан на этом уровне. Знания, которые я получил, стоят в десятки раз больше, чем я заплатил. Теперь открываю вторую точку и уже знаю, что делать."
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
 
-          <div className="bg-primary/5 p-8 rounded-2xl border-2 border-primary/30">
+          <div className="bg-gradient-to-r from-primary/10 to-primary/5 p-10 rounded-2xl border-2 border-primary shadow-lg">
             <h3 className="text-2xl font-bold text-center text-foreground mb-6">
               После моей работы остается не просто впечатление
             </h3>

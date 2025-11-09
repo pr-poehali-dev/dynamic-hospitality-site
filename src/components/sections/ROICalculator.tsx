@@ -188,31 +188,32 @@ const ROICalculator = () => {
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="space-y-4">
                   <h3 className="text-3xl font-black text-foreground">Было</h3>
-                  <div className="space-y-3 text-lg">
-                    <p className="text-muted-foreground">• 60 гостей в день</p>
-                    <p className="text-muted-foreground">• Средний чек: <strong className="text-foreground">1 500₽</strong></p>
-                    <p className="text-muted-foreground">• Выручка в день: <strong className="text-foreground">90 000₽</strong></p>
-                    <p className="text-muted-foreground">• Выручка в месяц: <strong className="text-foreground">2 700 000₽</strong></p>
+                  <div className="space-y-3 text-lg bg-card p-6 rounded-xl border-2 border-border">
+                    <p className="text-muted-foreground">• <strong className="text-foreground">75 гостей</strong> в день</p>
+                    <p className="text-muted-foreground">• Средний чек: <strong className="text-foreground">2 800₽</strong></p>
+                    <p className="text-muted-foreground">• Выручка в день: <strong className="text-foreground">210 000₽</strong></p>
+                    <p className="text-muted-foreground">• Выручка в месяц: <strong className="text-foreground text-2xl">6 300 000₽</strong></p>
                   </div>
                 </div>
 
                 <div className="space-y-4">
                   <h3 className="text-3xl font-black text-primary">Стало</h3>
-                  <div className="space-y-3 text-lg">
-                    <p className="text-muted-foreground">• 60 гостей в день <span className="text-sm">(те же)</span></p>
-                    <p className="text-muted-foreground">• Средний чек: <strong className="text-primary">1 950₽ (+30%)</strong></p>
-                    <p className="text-muted-foreground">• Выручка в день: <strong className="text-primary">117 000₽</strong></p>
-                    <p className="text-muted-foreground">• Выручка в месяц: <strong className="text-primary">3 510 000₽</strong></p>
+                  <div className="space-y-3 text-lg bg-gradient-to-br from-primary/10 to-primary/5 p-6 rounded-xl border-2 border-primary">
+                    <p className="text-muted-foreground">• <strong className="text-foreground">75 гостей</strong> в день <span className="text-sm">(те же)</span></p>
+                    <p className="text-muted-foreground">• Средний чек: <strong className="text-primary">3 640₽ (+30%)</strong></p>
+                    <p className="text-muted-foreground">• Выручка в день: <strong className="text-primary">273 000₽</strong></p>
+                    <p className="text-muted-foreground">• Выручка в месяц: <strong className="text-primary text-2xl">8 190 000₽</strong></p>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-gradient-to-r from-primary to-primary/80 rounded-2xl p-8 text-white text-center">
-                <div className="text-5xl font-black mb-2">+810 000₽</div>
-                <div className="text-2xl font-semibold mb-4">дополнительной выручки в месяц</div>
-                <div className="border-t border-white/30 pt-4 mt-4">
-                  <p className="text-lg opacity-90">Стоимость тренинга: <span className="font-bold">80 000₽</span></p>
-                  <p className="text-3xl font-black mt-2">Окупаемость: 3 дня</p>
+              <div className="bg-gradient-to-r from-primary to-primary/80 rounded-2xl p-10 text-white text-center shadow-2xl">
+                <div className="text-6xl font-black mb-3">+1 890 000₽</div>
+                <div className="text-2xl font-semibold mb-6">дополнительной выручки в месяц</div>
+                <div className="border-t-2 border-white/30 pt-6 mt-6 space-y-3">
+                  <p className="text-xl opacity-90">Стоимость тренинга: <span className="font-black text-2xl">80 000₽</span></p>
+                  <p className="text-4xl font-black">Окупаемость: 1.5 дня</p>
+                  <p className="text-lg opacity-75 pt-2">За год дополнительная выручка: <span className="font-bold text-xl">+22 680 000₽</span></p>
                 </div>
               </div>
 

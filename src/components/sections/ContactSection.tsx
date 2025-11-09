@@ -67,12 +67,34 @@ const ContactSection = () => {
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center space-y-6 mb-12">
-            <h2 className="text-5xl font-black text-foreground">Готовы увеличить выручку?</h2>
-            <p className="text-xl text-muted-foreground">
-              Оставьте заявку или напишите в мессенджер
-            </p>
-          </div>
+          <Card className="border-4 border-primary bg-gradient-to-br from-primary/10 to-background mb-12 shadow-2xl">
+            <CardContent className="p-10 text-center space-y-6">
+              <div className="inline-block p-4 bg-primary rounded-full mb-4">
+                <Icon name="Gift" className="text-white" size={48} />
+              </div>
+              <h2 className="text-5xl font-black text-foreground">Бесплатная консультация 30 минут!</h2>
+              <p className="text-2xl text-foreground max-w-3xl mx-auto">
+                Разберем вашу ситуацию и определим точки роста — <span className="text-primary font-black">без оплаты</span>
+              </p>
+              <div className="grid md:grid-cols-3 gap-4 pt-4">
+                <div className="bg-card p-4 rounded-xl border-2 border-border">
+                  <Icon name="Check" className="text-green-600 mx-auto mb-2" size={32} />
+                  <p className="font-bold text-foreground">Анализ ситуации</p>
+                </div>
+                <div className="bg-card p-4 rounded-xl border-2 border-border">
+                  <Icon name="Check" className="text-green-600 mx-auto mb-2" size={32} />
+                  <p className="font-bold text-foreground">План действий</p>
+                </div>
+                <div className="bg-card p-4 rounded-xl border-2 border-border">
+                  <Icon name="Check" className="text-green-600 mx-auto mb-2" size={32} />
+                  <p className="font-bold text-foreground">Ответы на вопросы</p>
+                </div>
+              </div>
+              <p className="text-lg text-muted-foreground">
+                Запишитесь сейчас — <strong className="text-primary">мест ограничено!</strong>
+              </p>
+            </CardContent>
+          </Card>
 
           <div className="grid md:grid-cols-2 gap-8">
             <Card className="border-2">

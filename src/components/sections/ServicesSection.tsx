@@ -149,15 +149,51 @@ const ServicesSection = () => {
             ))}
           </div>
 
-          <div className="bg-primary/5 border-2 border-primary rounded-2xl p-8 mt-12 text-center">
-            <h3 className="text-2xl font-bold text-foreground mb-4">Альтернативный формат — онлайн-курсы</h3>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Если вам нужны базовые тренинги или у вас ограниченный бюджет, предлагаю качественные <strong>онлайн-курсы по ключевым темам</strong>: основы профессионального сервиса, работа с конфликтными гостями, техники продаж и допродаж, стандарты обслуживания. 
-            </p>
-            <p className="text-primary font-semibold mt-4">
-              Бонус: доступ на месяц в закрытое сообщество с дополнительными материалами
-            </p>
-          </div>
+          <Card className="mt-12 border-2 border-primary bg-gradient-to-br from-primary/10 to-primary/5">
+            <CardContent className="p-10 space-y-6">
+              <div className="text-center space-y-4">
+                <h3 className="text-3xl font-black text-foreground">Альтернативный формат — онлайн-курсы</h3>
+                <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+                  Если вам нужны базовые тренинги или у вас ограниченный бюджет, предлагаю качественные онлайн-курсы по ключевым темам
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div className="bg-card p-5 rounded-xl border-2 border-border">
+                  <Icon name="GraduationCap" className="text-primary mb-3" size={32} />
+                  <h4 className="font-bold text-foreground mb-2">Основы сервиса</h4>
+                  <p className="text-sm text-muted-foreground">Базовые принципы профессионального обслуживания</p>
+                </div>
+
+                <div className="bg-card p-5 rounded-xl border-2 border-border">
+                  <Icon name="UserX" className="text-primary mb-3" size={32} />
+                  <h4 className="font-bold text-foreground mb-2">Конфликтные гости</h4>
+                  <p className="text-sm text-muted-foreground">Работа с возражениями и сложными ситуациями</p>
+                </div>
+
+                <div className="bg-card p-5 rounded-xl border-2 border-border">
+                  <Icon name="TrendingUp" className="text-primary mb-3" size={32} />
+                  <h4 className="font-bold text-foreground mb-2">Техники продаж</h4>
+                  <p className="text-sm text-muted-foreground">Допродажи и увеличение среднего чека</p>
+                </div>
+
+                <div className="bg-card p-5 rounded-xl border-2 border-border">
+                  <Icon name="Award" className="text-primary mb-3" size={32} />
+                  <h4 className="font-bold text-foreground mb-2">Стандарты обслуживания</h4>
+                  <p className="text-sm text-muted-foreground">Создание эталонного сервиса</p>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-r from-primary to-primary/80 p-6 rounded-2xl text-white text-center">
+                <p className="text-xl font-bold mb-2">
+                  🎁 Бонус: доступ на месяц в закрытое сообщество
+                </p>
+                <p className="opacity-90">
+                  Дополнительные материалы, разборы кейсов и возможность задавать вопросы напрямую
+                </p>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
