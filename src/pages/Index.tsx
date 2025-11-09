@@ -1,10 +1,14 @@
 import { Helmet } from 'react-helmet-async';
 import Navigation from '@/components/sections/Navigation';
 import HeroSection from '@/components/sections/HeroSection';
+import AboutSection from '@/components/sections/AboutSection';
+import ProblemSection from '@/components/sections/ProblemSection';
 import AboutMeSection from '@/components/sections/AboutMeSection';
+import WhyMeSection from '@/components/sections/WhyMeSection';
 import ProblemsSection from '@/components/sections/ProblemsSection';
 import CasesSection from '@/components/sections/CasesSection';
 import ServicesSection from '@/components/sections/ServicesSection';
+import HowWeWorkSection from '@/components/sections/HowWeWorkSection';
 import ROICalculator from '@/components/sections/ROICalculator';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import BlogPreviewSection from '@/components/sections/BlogPreviewSection';
@@ -40,10 +44,14 @@ const Index = () => {
       
       <Navigation scrollToSection={scrollToSection} />
       <HeroSection scrollToSection={scrollToSection} />
+      <AboutSection scrollToSection={scrollToSection} />
+      <ProblemSection />
       <AboutMeSection />
       <ProblemsSection />
       <CasesSection />
       <ServicesSection />
+      <WhyMeSection />
+      <HowWeWorkSection />
       <ROICalculator />
       <TestimonialsSection />
       <BlogPreviewSection />

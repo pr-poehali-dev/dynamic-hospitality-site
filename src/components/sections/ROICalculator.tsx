@@ -41,10 +41,10 @@ const ROICalculator = () => {
               <Icon name="Calculator" size={48} className="text-primary" />
             </div>
             <h2 className="text-4xl md:text-5xl font-black text-foreground">
-              Калькулятор роста выручки
+              Окупаемость инвестиции
             </h2>
             <p className="text-xl text-foreground/80 max-w-2xl mx-auto">
-              Посчитайте, насколько вырастет доход вашего заведения после внедрения системы продаж
+              Давайте посчитаем на реальном примере
             </p>
           </div>
 
@@ -183,34 +183,43 @@ const ROICalculator = () => {
             </Card>
           </div>
 
-          <Card className="mt-8 border-2 border-primary/20 bg-gradient-to-r from-background to-card">
-            <CardContent className="p-8">
-              <div className="flex items-start gap-6">
-                <div className="p-4 bg-primary/10 rounded-full flex-shrink-0">
-                  <Icon name="Lightbulb" className="text-primary" size={32} />
-                </div>
-                <div className="space-y-3">
-                  <h3 className="text-2xl font-black text-foreground">Как это работает?</h3>
-                  <p className="text-foreground/80">
-                    Калькулятор показывает консервативный прогноз роста выручки при увеличении среднего чека на 30%. 
-                    Это достижимо через внедрение культуры продаж: апсейл, кросс-селл, правильная презентация меню 
-                    и обучение персонала. В моих реальных кейсах рост достигал 40-50%.
-                  </p>
-                  <div className="flex flex-wrap gap-4 pt-4">
-                    <div className="flex items-center gap-2 text-sm font-medium text-primary">
-                      <Icon name="Award" size={20} />
-                      <span>10+ лет опыта</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-sm font-medium text-primary">
-                      <Icon name="Users" size={20} />
-                      <span>47+ довольных клиентов</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-sm font-medium text-primary">
-                      <Icon name="TrendingUp" size={20} />
-                      <span>Средний рост чека 30-40%</span>
-                    </div>
+          <Card className="mt-12 border-2 border-primary bg-gradient-to-br from-primary/5 to-background">
+            <CardContent className="p-8 space-y-8">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="space-y-4">
+                  <h3 className="text-3xl font-black text-foreground">Было</h3>
+                  <div className="space-y-3 text-lg">
+                    <p className="text-muted-foreground">• 60 гостей в день</p>
+                    <p className="text-muted-foreground">• Средний чек: <strong className="text-foreground">1 500₽</strong></p>
+                    <p className="text-muted-foreground">• Выручка в день: <strong className="text-foreground">90 000₽</strong></p>
+                    <p className="text-muted-foreground">• Выручка в месяц: <strong className="text-foreground">2 700 000₽</strong></p>
                   </div>
                 </div>
+
+                <div className="space-y-4">
+                  <h3 className="text-3xl font-black text-primary">Стало</h3>
+                  <div className="space-y-3 text-lg">
+                    <p className="text-muted-foreground">• 60 гостей в день <span className="text-sm">(те же)</span></p>
+                    <p className="text-muted-foreground">• Средний чек: <strong className="text-primary">1 950₽ (+30%)</strong></p>
+                    <p className="text-muted-foreground">• Выручка в день: <strong className="text-primary">117 000₽</strong></p>
+                    <p className="text-muted-foreground">• Выручка в месяц: <strong className="text-primary">3 510 000₽</strong></p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-r from-primary to-primary/80 rounded-2xl p-8 text-white text-center">
+                <div className="text-5xl font-black mb-2">+810 000₽</div>
+                <div className="text-2xl font-semibold mb-4">дополнительной выручки в месяц</div>
+                <div className="border-t border-white/30 pt-4 mt-4">
+                  <p className="text-lg opacity-90">Стоимость тренинга: <span className="font-bold">80 000₽</span></p>
+                  <p className="text-3xl font-black mt-2">Окупаемость: 3 дня</p>
+                </div>
+              </div>
+
+              <div className="text-center pt-4">
+                <p className="text-muted-foreground text-lg">
+                  Это реальные цифры из практики. И это только среднее. В некоторых проектах рост был на 50-60%.
+                </p>
               </div>
             </CardContent>
           </Card>

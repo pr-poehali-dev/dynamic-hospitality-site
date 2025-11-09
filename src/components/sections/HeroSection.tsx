@@ -19,15 +19,15 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-3xl space-y-8 animate-fade-in">
           <div className="inline-block px-4 py-2 bg-primary/10 rounded-full border border-primary/30">
-            <p className="text-primary font-semibold text-sm">Эксперт по трансформации ресторанного бизнеса</p>
+            <p className="text-primary font-semibold text-sm">13 лет опыта • 50+ успешных проектов • Гарантия результата</p>
           </div>
           
           <h1 className="text-5xl md:text-6xl font-black text-foreground leading-tight">
-            Индивидуальный подход, глубокий анализ и <span className="text-primary">измеримые результаты</span>
+            Эксперт по трансформации ресторанного бизнеса: <span className="text-primary">продажи и сервис в HoReCa</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground font-medium">
-            Превращаю слабые стороны в конкурентные преимущества
+            Рост среднего чека на 30% возможен даже без изменения меню и повышения цен. Авторский подход и уникальная методика работы.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 pt-6">
