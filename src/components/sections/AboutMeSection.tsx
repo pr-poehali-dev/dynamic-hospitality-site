@@ -1,4 +1,5 @@
 import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 
 const AboutMeSection = () => {
@@ -40,6 +41,43 @@ const AboutMeSection = () => {
                   <div className="text-sm text-muted-foreground mt-1">рекомендуют</div>
                 </div>
               </div>
+
+              <Card className="border-2 border-primary bg-primary/5 mt-8">
+                <CardContent className="p-6 space-y-4">
+                  <h4 className="text-xl font-bold text-foreground flex items-center gap-2">
+                    <Icon name="Gift" className="text-primary" size={24} />
+                    Бесплатная консультация — что входит?
+                  </h4>
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-3">
+                      <Icon name="CheckCircle2" className="text-primary flex-shrink-0 mt-1" size={20} />
+                      <span className="text-muted-foreground">Знакомство с вашим бизнесом и текущей ситуацией</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Icon name="CheckCircle2" className="text-primary flex-shrink-0 mt-1" size={20} />
+                      <span className="text-muted-foreground">Выявление главных задач и проблемных точек</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Icon name="CheckCircle2" className="text-primary flex-shrink-0 mt-1" size={20} />
+                      <span className="text-muted-foreground">Формирование плана действий</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Icon name="CheckCircle2" className="text-primary flex-shrink-0 mt-1" size={20} />
+                      <span className="text-muted-foreground">Честная оценка: помогу или нет</span>
+                    </div>
+                  </div>
+                  <Button 
+                    size="lg" 
+                    className="w-full text-lg"
+                    onClick={() => {
+                      const element = document.getElementById('contact');
+                      element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }}
+                  >
+                    Записаться на консультацию
+                  </Button>
+                </CardContent>
+              </Card>
             </div>
 
             <div className="space-y-6 order-1 md:order-2">
