@@ -4,6 +4,11 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <script>
+      if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
+        location.replace(`https:${location.href.substring(location.protocol.length)}`);
+      }
+    </script>
     <title>MARICO PRO — Эксперт по продажам и сервису в HoReCa | Консультант ресторанов, клубов, отелей</title>
     <meta name="description" content="Марина MARICO PRO — эксперт по продажам и сервису в ресторанах Москвы. Увеличиваю выручку заведений HoReCa на 30-50% за 2-4 недели. Аудит, обучение персонала, внедрение системы продаж. 10+ лет опыта. 500+ обученных сотрудников. Тел: +7 (918) 285-82-16"/>
     <meta name="author" content="Марина, MARICO PRO"/>

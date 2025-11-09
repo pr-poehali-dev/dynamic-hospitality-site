@@ -266,7 +266,7 @@ const ServicesSection = () => {
                     <Button 
                       className="w-full" 
                       size="lg"
-                      onClick={() => window.open('https://t.me/maricopro', '_blank')}
+                      onClick={() => window.open('https://t.me/maricopro?text=' + encodeURIComponent('Здравствуйте, хочу приобрести доступ на ваш онлайн-курс.'), '_blank')}
                     >
                       Подать заявку на курс
                     </Button>

@@ -65,7 +65,7 @@ const ContactSection = () => {
                 <div className="flex justify-center">
                   <div className="w-48 h-48 rounded-2xl overflow-hidden shadow-2xl border-4 border-primary">
                     <img 
-                      src="https://cdn.poehali.dev/files/ec636e5f-8860-4ed3-a14e-094d8acd3c94.png" 
+                      src="https://cdn.poehali.dev/files/a45a0c62-e8c3-401e-9174-57df5f3b3840.jpg" 
                       alt="Марина" 
                       className="w-full h-full object-cover"
                     />

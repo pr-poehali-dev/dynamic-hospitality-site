@@ -20,8 +20,8 @@ const ServiceDetail = () => {
     audit: {
       title: 'Аудит "ДНК"',
       subtitle: 'Глубокий анализ всех аспектов вашего бизнеса',
-      price: 'от 95 000₽',
-      duration: '3-5 дней',
+      price: 'от 60 000₽',
+      duration: '5-7 дней',
       description: 'Комплексный аудит, который выявляет сильные и слабые стороны вашего заведения. Я изучаю концепцию, анализирую гостей, проверяю внутренний брендинг — всё индивидуально, только то, что действительно нужно вашему заведению.',
       includes: [
         'Анализ концепции и брендинга — проверка соответствия позиционирования реальности',
@@ -71,8 +71,8 @@ const ServiceDetail = () => {
     training: {
       title: 'Индивидуальный тренинг',
       subtitle: 'Обучение под вашу команду после анализа каждого сотрудника',
-      price: 'от 120 000₽',
-      duration: '2-3 дня + 45 дней поддержки',
+      price: 'от 80 000₽',
+      duration: '2-3 дня + 30 дней поддержки',
       description: 'Не шаблонное обучение, а персональная программа под вашу команду. Перед тренингами я изучаю и анализирую каждого сотрудника, выявляю сильные и слабые стороны. Невозможно учить всех одинаково — я выстраиваю методы и техники именно для вашей команды.',
       includes: [
         'Предварительный анализ каждого сотрудника (1-2 дня наблюдения)',
@@ -213,12 +213,12 @@ const ServiceDetail = () => {
               <p className="text-2xl text-muted-foreground">{service.subtitle}</p>
               
               <div className="flex flex-wrap gap-6 items-center">
-                <div>
-                  <div className="text-sm text-muted-foreground mb-1">Стоимость</div>
+                <div className="bg-card p-6 rounded-xl border-2 border-border shadow-lg">
+                  <div className="text-sm font-semibold text-foreground mb-2">Стоимость</div>
                   <div className="text-4xl font-black text-primary">{service.price}</div>
                 </div>
-                <div>
-                  <div className="text-sm text-muted-foreground mb-1">Длительность</div>
+                <div className="bg-card p-6 rounded-xl border-2 border-border shadow-lg">
+                  <div className="text-sm font-semibold text-foreground mb-2">Длительность</div>
                   <div className="text-2xl font-bold text-foreground">{service.duration}</div>
                 </div>
               </div>
