@@ -56,12 +56,12 @@ const ContactSection = () => {
     }
   };
   return (
-    <section id="contact" className="py-24 bg-background">
+    <section id="contact" className="py-24 bg-gray-900 text-white">
       <div className="container mx-auto px-6">
         <div className="max-w-5xl mx-auto">
           <div className="text-center space-y-6 mb-12">
-            <h2 className="text-5xl font-black text-foreground">Готовы обсудить ваш проект?</h2>
-            <p className="text-xl text-foreground/80">
+            <h2 className="text-5xl font-black">Готовы увеличить выручку?</h2>
+            <p className="text-xl text-gray-300">
               Оставьте заявку или напишите в мессенджер
             </p>
           </div>
@@ -134,57 +134,52 @@ const ContactSection = () => {
             </Card>
 
             <div className="space-y-6">
-              <Card className="border-2 border-primary/30 bg-gradient-to-br from-primary/5 to-primary/10">
+              <Card className="border-2 border-gray-700 bg-gray-800">
                 <CardContent className="p-8 space-y-6">
-                  <h3 className="text-2xl font-bold text-foreground">Напишите мне:</h3>
+                  <h3 className="text-2xl font-bold text-white">Напишите мне:</h3>
                   <div className="space-y-4">
                     <a 
-                      href="https://t.me/malinochka_marina" 
-                      className="flex items-center gap-4 p-4 bg-background rounded-xl hover:shadow-lg transition-all group"
+                      href="https://t.me/maricopro" 
+                      className="flex items-center gap-4 p-4 bg-gray-700 rounded-xl hover:shadow-lg transition-all group border border-gray-600"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       <div className="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center">
-                        <Icon name="Send" className="text-white" size={24} />
-                      </div>
-                      <div className="flex-1">
-                        <div className="font-semibold text-foreground group-hover:text-primary">Telegram</div>
-                        <div className="text-sm text-foreground/60">Написать в мессенджер</div>
-                      </div>
-                      <Icon name="ArrowRight" className="text-primary" size={20} />
-                    </a>
-
-
-
-                    <a 
-                      href="https://wa.me/79000000000"
-                      className="flex items-center gap-4 p-4 bg-background rounded-xl hover:shadow-lg transition-all group"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <div className="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center">
                         <Icon name="MessageCircle" className="text-white" size={24} />
                       </div>
                       <div className="flex-1">
-                        <div className="font-semibold text-foreground group-hover:text-primary">WhatsApp</div>
-                        <div className="text-sm text-foreground/60">Быстрая связь</div>
+                        <div className="font-semibold text-white group-hover:text-primary">Telegram</div>
+                        <div className="text-sm text-gray-400">@maricopro</div>
                       </div>
                       <Icon name="ArrowRight" className="text-primary" size={20} />
                     </a>
 
                     <a 
-                      href="tel:+79182858216"
-                      className="flex items-center gap-4 p-4 bg-background rounded-xl hover:shadow-lg transition-all group"
+                      href="https://instagram.com/marico.pro"
+                      className="flex items-center gap-4 p-4 bg-gray-700 rounded-xl hover:shadow-lg transition-all group border border-gray-600"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      <div className="w-12 h-12 rounded-full bg-emerald-500 flex items-center justify-center">
-                        <Icon name="Phone" className="text-white" size={24} />
+                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
+                        <Icon name="Camera" className="text-white" size={24} />
                       </div>
                       <div className="flex-1">
-                        <div className="font-semibold text-foreground group-hover:text-primary">Max</div>
-                        <div className="text-sm text-foreground/60">Позвонить</div>
+                        <div className="font-semibold text-white group-hover:text-primary">Instagram</div>
+                        <div className="text-sm text-gray-400">@marico.pro</div>
                       </div>
                       <Icon name="ArrowRight" className="text-primary" size={20} />
                     </a>
+                  </div>
+                  
+                  <div className="border-t-2 border-gray-700 pt-6 mt-6 space-y-4">
+                    <div className="flex items-center gap-3 text-gray-300">
+                      <Icon name="MapPin" size={20} className="text-primary" />
+                      <span>📍 Работаю в Москве и МО</span>
+                    </div>
+                    <div className="flex items-center gap-3 text-gray-300">
+                      <Icon name="Globe" size={20} className="text-primary" />
+                      <span>🌐 Онлайн для регионов</span>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
