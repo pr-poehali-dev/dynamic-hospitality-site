@@ -9,7 +9,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
         <img 
-          src="https://cdn.poehali.dev/projects/a0f1d64c-d8ab-4496-af89-52912fc87ab2/files/76dfee33-67bf-42da-9a28-f8930d95fa50.jpg" 
+          src="https://cdn.poehali.dev/files/5ae80724-43ec-4258-b040-d890a18250cc.png" 
           alt="Марина MARICO PRO" 
           className="w-full h-full object-cover"
         />

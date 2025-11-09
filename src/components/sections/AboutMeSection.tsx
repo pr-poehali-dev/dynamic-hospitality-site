@@ -12,7 +12,7 @@ const AboutMeSection = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
+            <div className="space-y-6 order-2 md:order-1">
               <h3 className="text-3xl font-bold text-foreground">Марина, эксперт MARICO PRO</h3>
               <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
                 <p>
@@ -42,48 +42,43 @@ const AboutMeSection = () => {
               </div>
             </div>
 
-            <div className="space-y-6">
-              <Card className="border-2">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0">
-                      <Icon name="Award" className="text-primary" size={24} />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-foreground mb-2">Сертифицированный эксперт HoReCa</h4>
-                      <p className="text-sm text-muted-foreground">Постоянное повышение квалификации, участие в международных конференциях</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+            <div className="space-y-6 order-1 md:order-2">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                <img 
+                  src="https://cdn.poehali.dev/files/b9fc8501-228a-40ed-8a19-174cf4985534.png" 
+                  alt="Марина, эксперт MARICO PRO" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
 
-              <Card className="border-2">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0">
-                      <Icon name="Users" className="text-primary" size={24} />
+              <div className="grid grid-cols-3 gap-4">
+                <Card className="border-2">
+                  <CardContent className="p-4 text-center">
+                    <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center mx-auto mb-2">
+                      <Icon name="Award" className="text-primary" size={20} />
                     </div>
-                    <div>
-                      <h4 className="font-bold text-foreground mb-2">Работа с разными форматами</h4>
-                      <p className="text-sm text-muted-foreground">От семейных кафе до премиум-ресторанов и частных клубов</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+                    <p className="text-xs text-muted-foreground">Сертифицированный эксперт</p>
+                  </CardContent>
+                </Card>
 
-              <Card className="border-2">
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0">
-                      <Icon name="TrendingUp" className="text-primary" size={24} />
+                <Card className="border-2">
+                  <CardContent className="p-4 text-center">
+                    <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center mx-auto mb-2">
+                      <Icon name="Users" className="text-primary" size={20} />
                     </div>
-                    <div>
-                      <h4 className="font-bold text-foreground mb-2">Гарантия результата</h4>
-                      <p className="text-sm text-muted-foreground">100% возврат средств, если не увидите роста показателей</p>
+                    <p className="text-xs text-muted-foreground">Все форматы HoReCa</p>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-2">
+                  <CardContent className="p-4 text-center">
+                    <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center mx-auto mb-2">
+                      <Icon name="TrendingUp" className="text-primary" size={20} />
                     </div>
-                  </div>
-                </CardContent>
-              </Card>
+                    <p className="text-xs text-muted-foreground">Гарантия результата</p>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
         </div>

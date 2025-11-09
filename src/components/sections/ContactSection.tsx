@@ -56,12 +56,20 @@ const ContactSection = () => {
     }
   };
   return (
-    <section id="contact" className="py-24 bg-gray-900 text-white">
-      <div className="container mx-auto px-6">
+    <section id="contact" className="py-24 bg-card relative overflow-hidden">
+      <div className="absolute inset-0 opacity-10">
+        <img 
+          src="https://cdn.poehali.dev/files/3aca5e4f-c0ba-46eb-9d15-44bc568d73a5.jpg" 
+          alt="" 
+          className="w-full h-full object-cover"
+        />
+      </div>
+      
+      <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-5xl mx-auto">
           <div className="text-center space-y-6 mb-12">
-            <h2 className="text-5xl font-black">Готовы увеличить выручку?</h2>
-            <p className="text-xl text-gray-300">
+            <h2 className="text-5xl font-black text-foreground">Готовы увеличить выручку?</h2>
+            <p className="text-xl text-muted-foreground">
               Оставьте заявку или напишите в мессенджер
             </p>
           </div>
