@@ -56,43 +56,50 @@ const ContactSection = () => {
     }
   };
   return (
-    <section id="contact" className="py-24 bg-card relative overflow-hidden">
-      <div className="absolute inset-0 opacity-10">
-        <img 
-          src="https://cdn.poehali.dev/files/3aca5e4f-c0ba-46eb-9d15-44bc568d73a5.jpg" 
-          alt="" 
-          className="w-full h-full object-cover"
-        />
-      </div>
-      
-      <div className="container mx-auto px-6 relative z-10">
+    <section id="contact" className="py-24 bg-card">
+      <div className="container mx-auto px-6">
         <div className="max-w-5xl mx-auto">
           <Card className="border-4 border-primary bg-gradient-to-br from-primary/10 to-background mb-12 shadow-2xl">
-            <CardContent className="p-10 text-center space-y-6">
-              <div className="inline-block p-4 bg-primary rounded-full mb-4">
-                <Icon name="Gift" className="text-white" size={48} />
+            <CardContent className="p-10 space-y-6">
+              <div className="grid md:grid-cols-[200px,1fr] gap-8 items-center">
+                <div className="flex justify-center">
+                  <div className="w-48 h-48 rounded-2xl overflow-hidden shadow-2xl border-4 border-primary">
+                    <img 
+                      src="https://cdn.poehali.dev/files/ec636e5f-8860-4ed3-a14e-094d8acd3c94.png" 
+                      alt="Марина" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+                
+                <div className="text-center md:text-left space-y-4">
+                  <div className="inline-block p-3 bg-primary rounded-full mb-2">
+                    <Icon name="Gift" className="text-white" size={40} />
+                  </div>
+                  <h2 className="text-4xl md:text-5xl font-black text-foreground">Бесплатная консультация 30 минут!</h2>
+                  <p className="text-xl text-foreground">
+                    Разберем вашу ситуацию и определим точки роста — <span className="text-primary font-black">без оплаты</span>
+                  </p>
+                  <p className="text-lg text-muted-foreground">
+                    Запишитесь сейчас — <strong className="text-primary">мест ограничено!</strong>
+                  </p>
+                </div>
               </div>
-              <h2 className="text-5xl font-black text-foreground">Бесплатная консультация 30 минут!</h2>
-              <p className="text-2xl text-foreground max-w-3xl mx-auto">
-                Разберем вашу ситуацию и определим точки роста — <span className="text-primary font-black">без оплаты</span>
-              </p>
-              <div className="grid md:grid-cols-3 gap-4 pt-4">
-                <div className="bg-card p-4 rounded-xl border-2 border-border">
+              
+              <div className="grid md:grid-cols-3 gap-4">
+                <div className="bg-card p-4 rounded-xl border-2 border-border text-center">
                   <Icon name="Check" className="text-green-600 mx-auto mb-2" size={32} />
                   <p className="font-bold text-foreground">Анализ ситуации</p>
                 </div>
-                <div className="bg-card p-4 rounded-xl border-2 border-border">
+                <div className="bg-card p-4 rounded-xl border-2 border-border text-center">
                   <Icon name="Check" className="text-green-600 mx-auto mb-2" size={32} />
                   <p className="font-bold text-foreground">План действий</p>
                 </div>
-                <div className="bg-card p-4 rounded-xl border-2 border-border">
+                <div className="bg-card p-4 rounded-xl border-2 border-border text-center">
                   <Icon name="Check" className="text-green-600 mx-auto mb-2" size={32} />
                   <p className="font-bold text-foreground">Ответы на вопросы</p>
                 </div>
               </div>
-              <p className="text-lg text-muted-foreground">
-                Запишитесь сейчас — <strong className="text-primary">мест ограничено!</strong>
-              </p>
             </CardContent>
           </Card>
 

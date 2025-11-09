@@ -37,7 +37,7 @@ const ServicesSection = () => {
       iconColor: 'text-orange-600',
       title: 'Уникальный тренинг',
       price: 'от 80 000₽',
-      duration: '2-3 дня',
+      duration: '2-3 дня + 30 дней поддержки',
       description: 'Обучение под вашу команду после анализа каждого сотрудника',
       features: [
         'Предварительный анализ каждого члена команды',
@@ -106,22 +106,22 @@ const ServicesSection = () => {
                     <h3 className="text-2xl font-bold text-foreground">{service.title}</h3>
                     <div className="text-3xl font-black text-primary">{service.price}</div>
                     {service.duration && (
-                      <div className="text-sm font-semibold text-muted-foreground">{service.duration}</div>
+                      <div className="text-sm font-semibold text-foreground">{service.duration}</div>
                     )}
-                    <p className="text-muted-foreground">{service.description}</p>
+                    <p className="text-foreground">{service.description}</p>
                   </div>
 
                   <div className="space-y-3">
                     {service.features.map((feature, index) => (
                       <div key={index} className="flex items-start gap-3">
                         <Check className="text-green-600 flex-shrink-0 mt-1" size={20} />
-                        <span className="text-muted-foreground text-sm">{feature}</span>
+                        <span className="text-foreground text-sm">{feature}</span>
                       </div>
                     ))}
                   </div>
 
                   <div className="pt-4 border-t border-border">
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-foreground leading-relaxed">
                       {service.note}
                     </p>
                   </div>
@@ -250,7 +250,7 @@ const ServicesSection = () => {
                     <p className="text-3xl font-black">2 990₽</p>
                     <p className="text-lg font-semibold">подписка / месяц</p>
                     <p className="opacity-90 text-sm">
-                      Доступ ко всем курсам + закрытое сообщество + дополнительные материалы
+                      Доступ к выбранному курсу + закрытое сообщество + дополнительные материалы
                     </p>
                   </div>
                 </div>
