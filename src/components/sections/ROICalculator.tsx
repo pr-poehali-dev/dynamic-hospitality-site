@@ -188,21 +188,21 @@ const ROICalculator = () => {
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="space-y-4">
                   <h3 className="text-3xl font-black text-foreground">Было</h3>
-                  <div className="space-y-3 text-lg bg-card p-6 rounded-xl border-2 border-border">
-                    <p className="text-muted-foreground">• <strong className="text-foreground">75 гостей</strong> в день</p>
-                    <p className="text-muted-foreground">• Средний чек: <strong className="text-foreground">2 800₽</strong></p>
-                    <p className="text-muted-foreground">• Выручка в день: <strong className="text-foreground">210 000₽</strong></p>
-                    <p className="text-muted-foreground">• Выручка в месяц: <strong className="text-foreground text-2xl">6 300 000₽</strong></p>
+                  <div className="space-y-3 text-lg bg-card p-6 rounded-xl border-2 border-border shadow-lg">
+                    <p className="text-foreground">• <strong className="text-foreground text-xl">75 гостей</strong> в день</p>
+                    <p className="text-foreground">• Средний чек: <strong className="text-foreground text-xl">2 800₽</strong></p>
+                    <p className="text-foreground">• Выручка в день: <strong className="text-foreground text-xl">210 000₽</strong></p>
+                    <p className="text-foreground">• Выручка в месяц: <strong className="text-destructive text-2xl">6 300 000₽</strong></p>
                   </div>
                 </div>
 
                 <div className="space-y-4">
                   <h3 className="text-3xl font-black text-primary">Стало</h3>
-                  <div className="space-y-3 text-lg bg-gradient-to-br from-primary/10 to-primary/5 p-6 rounded-xl border-2 border-primary">
-                    <p className="text-muted-foreground">• <strong className="text-foreground">75 гостей</strong> в день <span className="text-sm">(те же)</span></p>
-                    <p className="text-muted-foreground">• Средний чек: <strong className="text-primary">3 640₽ (+30%)</strong></p>
-                    <p className="text-muted-foreground">• Выручка в день: <strong className="text-primary">273 000₽</strong></p>
-                    <p className="text-muted-foreground">• Выручка в месяц: <strong className="text-primary text-2xl">8 190 000₽</strong></p>
+                  <div className="space-y-3 text-lg bg-gradient-to-br from-primary/10 to-primary/5 p-6 rounded-xl border-2 border-primary shadow-lg">
+                    <p className="text-foreground">• <strong className="text-foreground text-xl">75 гостей</strong> в день <span className="text-sm text-muted-foreground">(те же)</span></p>
+                    <p className="text-foreground">• Средний чек: <strong className="text-primary text-xl">3 640₽ (+30%)</strong></p>
+                    <p className="text-foreground">• Выручка в день: <strong className="text-primary text-xl">273 000₽</strong></p>
+                    <p className="text-foreground">• Выручка в месяц: <strong className="text-green-600 text-2xl">8 190 000₽</strong></p>
                   </div>
                 </div>
               </div>

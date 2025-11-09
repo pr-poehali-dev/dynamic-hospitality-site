@@ -95,7 +95,7 @@ const CasesSection = () => {
               <CardContent className="p-8 bg-gradient-to-br from-primary/5 to-primary/10">
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-3xl font-bold text-foreground mb-2">Кофейня на Патриарших</h3>
+                    <h3 className="text-3xl font-bold text-foreground mb-2">Кофейня в центре Москвы</h3>
                     <p className="text-muted-foreground">Москва, ЦАО • Премиум-локация • 120-140 гостей/день</p>
                   </div>
 
@@ -134,10 +134,12 @@ const CasesSection = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <Card className="border-2 bg-gradient-to-br from-card to-primary/5">
                 <CardContent className="p-6 space-y-4">
-                  <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center mb-2">
-                    <span className="text-white text-2xl font-black">+187%</span>
+                  <div className="flex justify-center mb-2">
+                    <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center shadow-lg">
+                      <span className="text-white text-3xl font-black">+187%</span>
+                    </div>
                   </div>
-                  <h4 className="text-xl font-bold text-foreground">Премиальный ресторан</h4>
+                  <h4 className="text-xl font-bold text-foreground text-center">Премиальный ресторан</h4>
                   <div className="bg-muted/50 p-4 rounded-lg">
                     <p className="text-foreground text-sm leading-relaxed">
                       Рост выручки за 4 месяца. Средний чек с 3 200₽ до 5 800₽ благодаря новой концепции подачи и обучению персонала.
@@ -151,10 +153,12 @@ const CasesSection = () => {
 
               <Card className="border-2 bg-gradient-to-br from-card to-amber-50">
                 <CardContent className="p-6 space-y-4">
-                  <div className="w-12 h-12 rounded-xl bg-amber-500 flex items-center justify-center mb-2">
-                    <span className="text-white text-2xl font-black">4.9⭐</span>
+                  <div className="flex justify-center mb-2">
+                    <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center shadow-lg">
+                      <span className="text-white text-3xl font-black">4.9⭐</span>
+                    </div>
                   </div>
-                  <h4 className="text-xl font-bold text-foreground">Сеть кафе, 5 локаций</h4>
+                  <h4 className="text-xl font-bold text-foreground text-center">Сеть кафе, 5 локаций</h4>
                   <div className="bg-muted/50 p-4 rounded-lg">
                     <p className="text-foreground text-sm leading-relaxed">
                       Рейтинг вырос с 3.8 до 4.9 за 2 месяца. Негативные отзывы сократились на 94%. Поток гостей +65%.
@@ -168,10 +172,12 @@ const CasesSection = () => {
 
               <Card className="border-2 bg-gradient-to-br from-card to-green-50">
                 <CardContent className="p-6 space-y-4">
-                  <div className="w-12 h-12 rounded-xl bg-green-600 flex items-center justify-center mb-2">
-                    <span className="text-white text-2xl font-black">-78%</span>
+                  <div className="flex justify-center mb-2">
+                    <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center shadow-lg">
+                      <span className="text-white text-3xl font-black">-78%</span>
+                    </div>
                   </div>
-                  <h4 className="text-xl font-bold text-foreground">Семейный ресторан</h4>
+                  <h4 className="text-xl font-bold text-foreground text-center">Семейный ресторан</h4>
                   <div className="bg-muted/50 p-4 rounded-lg">
                     <p className="text-foreground text-sm leading-relaxed">
                       Снижение текучести персонала. За год уволился 1 сотрудник. До этого — 2-3 человека каждый месяц.
@@ -185,10 +191,12 @@ const CasesSection = () => {
 
               <Card className="border-2 bg-gradient-to-br from-card to-blue-50">
                 <CardContent className="p-6 space-y-4">
-                  <div className="w-12 h-12 rounded-xl bg-blue-600 flex items-center justify-center mb-2">
-                    <span className="text-white text-2xl font-black">+52%</span>
+                  <div className="flex justify-center mb-2">
+                    <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center shadow-lg">
+                      <span className="text-white text-3xl font-black">+52%</span>
+                    </div>
                   </div>
-                  <h4 className="text-xl font-bold text-foreground">Бистро в Сити</h4>
+                  <h4 className="text-xl font-bold text-foreground text-center">Бистро в Сити</h4>
                   <div className="bg-muted/50 p-4 rounded-lg">
                     <p className="text-foreground text-sm leading-relaxed">
                       Рост среднего чека с 1650₽ до 2510₽ за 6 недель. Обучение персонала работе с бизнес-ланчами и предложениями дня.

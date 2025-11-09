@@ -158,39 +158,120 @@ const ServicesSection = () => {
                 </p>
               </div>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div className="bg-card p-5 rounded-xl border-2 border-border">
-                  <Icon name="GraduationCap" className="text-primary mb-3" size={32} />
-                  <h4 className="font-bold text-foreground mb-2">Основы сервиса</h4>
-                  <p className="text-sm text-muted-foreground">Базовые принципы профессионального обслуживания</p>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-card p-6 rounded-xl border-2 border-border space-y-3">
+                  <div className="flex items-center gap-3 mb-3">
+                    <Icon name="GraduationCap" className="text-primary" size={36} />
+                    <h4 className="font-bold text-foreground text-lg">Основы профессионального сервиса</h4>
+                  </div>
+                  <ul className="space-y-2 text-sm text-foreground">
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary font-bold">—</span>
+                      <span>Стандарты обслуживания и этикет в HoReCa</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary font-bold">—</span>
+                      <span>Правильная коммуникация с гостями</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary font-bold">—</span>
+                      <span>Работа с жалобами и рекламациями</span>
+                    </li>
+                  </ul>
                 </div>
 
-                <div className="bg-card p-5 rounded-xl border-2 border-border">
-                  <Icon name="UserX" className="text-primary mb-3" size={32} />
-                  <h4 className="font-bold text-foreground mb-2">Конфликтные гости</h4>
-                  <p className="text-sm text-muted-foreground">Работа с возражениями и сложными ситуациями</p>
+                <div className="bg-card p-6 rounded-xl border-2 border-border space-y-3">
+                  <div className="flex items-center gap-3 mb-3">
+                    <Icon name="UserX" className="text-primary" size={36} />
+                    <h4 className="font-bold text-foreground text-lg">Работа с конфликтными гостями</h4>
+                  </div>
+                  <ul className="space-y-2 text-sm text-foreground">
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary font-bold">—</span>
+                      <span>Техники деэскалации конфликтов</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary font-bold">—</span>
+                      <span>Работа с возражениями и претензиями</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary font-bold">—</span>
+                      <span>Превращение недовольных гостей в постоянных</span>
+                    </li>
+                  </ul>
                 </div>
 
-                <div className="bg-card p-5 rounded-xl border-2 border-border">
-                  <Icon name="TrendingUp" className="text-primary mb-3" size={32} />
-                  <h4 className="font-bold text-foreground mb-2">Техники продаж</h4>
-                  <p className="text-sm text-muted-foreground">Допродажи и увеличение среднего чека</p>
+                <div className="bg-card p-6 rounded-xl border-2 border-border space-y-3">
+                  <div className="flex items-center gap-3 mb-3">
+                    <Icon name="TrendingUp" className="text-primary" size={36} />
+                    <h4 className="font-bold text-foreground text-lg">Техники продаж и допродаж</h4>
+                  </div>
+                  <ul className="space-y-2 text-sm text-foreground">
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary font-bold">—</span>
+                      <span>Скрипты продаж без навязывания</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary font-bold">—</span>
+                      <span>Upsell и cross-sell стратегии</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary font-bold">—</span>
+                      <span>Увеличение среднего чека на 25-40%</span>
+                    </li>
+                  </ul>
                 </div>
 
-                <div className="bg-card p-5 rounded-xl border-2 border-border">
-                  <Icon name="Award" className="text-primary mb-3" size={32} />
-                  <h4 className="font-bold text-foreground mb-2">Стандарты обслуживания</h4>
-                  <p className="text-sm text-muted-foreground">Создание эталонного сервиса</p>
+                <div className="bg-card p-6 rounded-xl border-2 border-border space-y-3">
+                  <div className="flex items-center gap-3 mb-3">
+                    <Icon name="Award" className="text-primary" size={36} />
+                    <h4 className="font-bold text-foreground text-lg">Стандарты обслуживания</h4>
+                  </div>
+                  <ul className="space-y-2 text-sm text-foreground">
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary font-bold">—</span>
+                      <span>Создание корпоративных стандартов сервиса</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary font-bold">—</span>
+                      <span>Система оценки качества обслуживания</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary font-bold">—</span>
+                      <span>Чек-листы и процедуры для персонала</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
 
-              <div className="bg-gradient-to-r from-primary to-primary/80 p-6 rounded-2xl text-white text-center">
-                <p className="text-xl font-bold mb-2">
-                  🎁 Бонус: доступ на месяц в закрытое сообщество
-                </p>
-                <p className="opacity-90">
-                  Дополнительные материалы, разборы кейсов и возможность задавать вопросы напрямую
-                </p>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-gradient-to-r from-primary to-primary/80 p-8 rounded-2xl text-white">
+                  <div className="text-center space-y-4">
+                    <p className="text-3xl font-black">2 990₽</p>
+                    <p className="text-lg font-semibold">подписка / месяц</p>
+                    <p className="opacity-90 text-sm">
+                      Доступ ко всем курсам + закрытое сообщество + дополнительные материалы
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-card border-2 border-primary p-8 rounded-2xl flex flex-col justify-center">
+                  <div className="space-y-3">
+                    <p className="text-xl font-bold text-foreground text-center">
+                      🎁 Бонус при подписке
+                    </p>
+                    <p className="text-foreground text-center">
+                      Доступ на месяц в закрытое сообщество с разборами кейсов и прямой связью со мной
+                    </p>
+                    <Button 
+                      className="w-full" 
+                      size="lg"
+                      onClick={() => window.open('https://t.me/maricopro', '_blank')}
+                    >
+                      Подать заявку на курс
+                    </Button>
+                  </div>
+                </div>
               </div>
             </CardContent>
           </Card>
