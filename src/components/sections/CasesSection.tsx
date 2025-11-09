@@ -2,12 +2,12 @@ import { Card, CardContent } from '@/components/ui/card';
 
 const CasesSection = () => {
   return (
-    <section id="results" className="py-24 bg-gray-50">
+    <section id="results" className="py-24 bg-card">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto space-y-12">
           <div className="text-center space-y-4">
-            <h2 className="text-5xl font-black text-gray-900">Результаты клиентов</h2>
-            <p className="text-xl text-gray-600">Названия изменены, цифры — реальные</p>
+            <h2 className="text-5xl font-black text-foreground">Как я достигаю результатов</h2>
+            <p className="text-xl text-muted-foreground">Реальные кейсы трансформации бизнеса</p>
           </div>
 
           <div className="space-y-12">
