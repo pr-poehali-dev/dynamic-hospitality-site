@@ -29,20 +29,20 @@ const SocialProofSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-br from-primary/5 to-background border-y border-border">
+    <section className="py-12 bg-slate-900 border-y-4 border-amber-500">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
             <div key={index} className="text-center space-y-3 animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
               <div className="flex justify-center">
-                <div className="w-16 h-16 rounded-2xl bg-card border-2 border-primary/20 flex items-center justify-center">
-                  <Icon name={stat.icon} className={stat.color} size={32} />
+                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 shadow-xl flex items-center justify-center transform hover:scale-110 transition-transform">
+                  <Icon name={stat.icon} className="text-slate-900" size={40} />
                 </div>
               </div>
-              <div className={`text-4xl md:text-5xl font-black ${stat.color}`}>
+              <div className={`text-5xl md:text-6xl font-black text-white drop-shadow-lg`}>
                 {stat.value}
               </div>
-              <div className="text-sm md:text-base text-muted-foreground font-medium">
+              <div className="text-sm md:text-base text-amber-300 font-bold uppercase tracking-wider">
                 {stat.label}
               </div>
             </div>

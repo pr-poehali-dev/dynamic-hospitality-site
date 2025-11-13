@@ -20,7 +20,7 @@ const AboutSection = ({ scrollToSection }: AboutSectionProps) => {
             </div>
 
             <div className="space-y-6">
-              <h2 className="text-5xl font-black text-foreground">Привет, я Марина.</h2>
+              <h2 className="text-5xl font-black text-foreground">Почему владельцы премиальных заведений выбирают меня</h2>
               
               <div className="bg-primary/5 border-l-4 border-primary p-6 rounded-r-xl">
                 <p className="text-foreground text-lg font-semibold">
@@ -56,7 +56,7 @@ const AboutSection = ({ scrollToSection }: AboutSectionProps) => {
           </div>
 
           <div className="bg-card border-2 border-border p-8 rounded-2xl">
-            <h3 className="text-2xl font-bold text-primary mb-6 text-center">Мои ключевые особенности:</h3>
+            <h3 className="text-3xl font-black text-foreground mb-6 text-center">Что отличает меня от других консультантов</h3>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="flex flex-col items-center text-center space-y-3 p-6 bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl border-2 border-primary/20">
                 <div className="w-16 h-16 rounded-full bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center">

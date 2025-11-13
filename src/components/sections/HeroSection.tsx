@@ -6,46 +6,49 @@ interface HeroSectionProps {
 
 const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-primary/20 to-slate-800">
       <div className="absolute inset-0">
         <img 
           src="https://cdn.poehali.dev/files/5ae80724-43ec-4258-b040-d890a18250cc.png" 
           alt="Марина MARICO PRO" 
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover opacity-40"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-primary/30 to-transparent"></div>
       </div>
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-3xl space-y-8 animate-fade-in">
-          <div className="inline-block px-4 py-2 bg-primary/10 rounded-full border border-primary/30">
-            <p className="text-primary font-semibold text-sm">13 лет опыта • 50+ успешных проектов • Гарантия результата</p>
+          <div className="inline-block px-6 py-3 bg-amber-400 rounded-full shadow-xl">
+            <p className="text-slate-900 font-black text-sm tracking-wide">⭐ 13 ЛЕТ ОПЫТА • 50+ ПРОЕКТОВ • ГАРАНТИЯ</p>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-black text-foreground leading-tight">
-            Ваши официанты работают на автопилоте?
+          <h1 className="text-5xl md:text-7xl font-black text-white leading-tight drop-shadow-2xl">
+            Увеличу средний чек в вашем ресторане на 30% за 90 дней
           </h1>
           
-          <p className="text-2xl md:text-3xl text-primary font-black">
-            Увеличу средний чек на 30% за 3 месяца
-          </p>
+          <div className="bg-gradient-to-r from-amber-400 to-orange-500 p-1 rounded-2xl inline-block">
+            <div className="bg-slate-900 px-8 py-4 rounded-xl">
+              <p className="text-2xl md:text-3xl text-amber-400 font-black">
+                ИЛИ ВЕРНУ ДЕНЬГИ
+              </p>
+            </div>
+          </div>
           
-          <p className="text-lg md:text-xl text-muted-foreground font-medium">
-            Или верну деньги. Системный подход к обучению персонала HoReCa. Без шаблонов и волшебных таблеток — только проверенные методики.
+          <p className="text-xl md:text-2xl text-white font-bold leading-relaxed drop-shadow-lg">
+            Системный подход к обучению персонала HoReCa. Работала в Marriott, Hilton, Four Seasons. Без шаблонов и волшебных таблеток.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 pt-6">
             <Button 
               size="lg" 
-              className="text-lg px-10 py-7 font-bold shadow-2xl hover:scale-105 transition-transform" 
+              className="text-xl px-12 py-8 font-black shadow-2xl hover:scale-105 transition-transform bg-amber-500 hover:bg-amber-600 text-slate-900 border-4 border-amber-300" 
               onClick={() => scrollToSection('contact')}
             >
-              ПОЛУЧИТЬ АУДИТ
+              ПОЛУЧИТЬ БЕСПЛАТНЫЙ АУДИТ →
             </Button>
             <Button 
               size="lg" 
-              variant="outline" 
-              className="text-lg px-10 py-7 font-bold border-2" 
+              className="text-xl px-12 py-8 font-black border-4 border-white bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm" 
               onClick={() => scrollToSection('results')}
             >
               Смотреть кейсы
