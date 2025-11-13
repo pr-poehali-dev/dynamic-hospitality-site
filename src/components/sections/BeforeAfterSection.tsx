@@ -29,7 +29,7 @@ const BeforeAfterSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-background">
+    <section className="py-24 bg-gradient-to-br from-green-50 via-emerald-50 to-white">
       <div className="container mx-auto px-6">
         <div className="max-w-5xl mx-auto space-y-12">
           <div className="text-center space-y-4">

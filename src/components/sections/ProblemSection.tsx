@@ -3,7 +3,7 @@ import Icon from '@/components/ui/icon';
 
 const ProblemSection = () => {
   return (
-    <section className="py-24 bg-gradient-to-br from-destructive/5 via-background to-background">
+    <section className="py-24 bg-white">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto space-y-12">
           <div className="text-center space-y-4">

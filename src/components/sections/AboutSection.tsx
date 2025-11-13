@@ -7,7 +7,7 @@ interface AboutSectionProps {
 
 const AboutSection = ({ scrollToSection }: AboutSectionProps) => {
   return (
-    <section id="about" className="py-24 bg-card">
+    <section id="about" className="py-24 bg-white">
       <div className="container mx-auto px-6">
         <div className="max-w-7xl mx-auto space-y-12 animate-slide-up">
           <div className="grid md:grid-cols-[300px,1fr] gap-8 items-start">

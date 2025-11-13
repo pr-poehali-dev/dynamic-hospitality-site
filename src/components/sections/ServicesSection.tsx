@@ -74,7 +74,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="py-24 bg-card">
+    <section id="services" className="py-24 bg-white">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto space-y-12">
           <div className="text-center space-y-4">
