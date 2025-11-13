@@ -14,6 +14,7 @@ const Blog = () => {
   
   useEffect(() => {
     document.title = 'Блог MARICO PRO — Секреты продаж и сервиса в HoReCa | Статьи и кейсы';
+    window.scrollTo(0, 0);
   }, []);
 
   // Convert blogPosts object to array and extract only needed fields for list view
@@ -244,7 +245,7 @@ const Blog = () => {
                     </a>
                   </Button>
                   <Button size="lg" variant="outline" className="font-semibold border-2" asChild>
-                    <a href="https://www.instagram.com/marico_pro?igsh=eXljY2RqbHJtdjM4&utm_source=qr" target="_blank" rel="noopener noreferrer">
+                    <a href="https://instagram.com/marico.su" target="_blank" rel="noopener noreferrer">
                       <Icon name="Instagram" className="mr-2" size={20} />
                       Instagram
                     </a>

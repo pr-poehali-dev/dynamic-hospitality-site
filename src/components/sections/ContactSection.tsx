@@ -221,7 +221,7 @@ const ContactSection = () => {
                     </a>
 
                     <a 
-                      href="https://instagram.com/marico.pro"
+                      href="https://instagram.com/marico.su"
                       className="flex items-center gap-4 p-4 bg-gray-700 rounded-xl hover:shadow-lg transition-all group border border-gray-600"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -231,7 +231,7 @@ const ContactSection = () => {
                       </div>
                       <div className="flex-1">
                         <div className="font-semibold text-white group-hover:text-primary">Instagram</div>
-                        <div className="text-sm text-gray-400">@marico.pro</div>
+                        <div className="text-sm text-gray-400">@marico.su</div>
                       </div>
                       <Icon name="ArrowRight" className="text-primary" size={20} />
                     </a>

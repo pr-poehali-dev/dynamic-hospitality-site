@@ -15,7 +15,7 @@ const FooterSection = () => {
               </a>
             </Button>
             <Button variant="ghost" size="icon" className="text-white hover:text-primary" asChild>
-              <a href="https://instagram.com/marico.pro" target="_blank" rel="noopener noreferrer">
+              <a href="https://instagram.com/marico.su" target="_blank" rel="noopener noreferrer">
                 <Icon name="Camera" size={24} />
               </a>
             </Button>

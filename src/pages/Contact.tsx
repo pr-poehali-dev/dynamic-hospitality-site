@@ -9,7 +9,7 @@ const socialLinks = [
   {
     name: 'Instagram',
     icon: 'Instagram',
-    url: 'https://www.instagram.com/marico_pro?igsh=eXljY2RqbHJtdjM4&utm_source=qr',
+    url: 'https://instagram.com/marico.su',
     description: 'Ежедневные кейсы и лайфхаки',
     color: 'from-pink-500 to-rose-500'
   },
