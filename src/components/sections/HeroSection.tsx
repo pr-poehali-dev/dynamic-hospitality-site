@@ -11,7 +11,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
         <img 
           src="https://cdn.poehali.dev/files/5ae80724-43ec-4258-b040-d890a18250cc.png" 
           alt="Марина MARICO PRO" 
-          className="w-full h-full object-cover opacity-40"
+          className="w-full h-full object-cover object-top opacity-40"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-primary/30 to-transparent"></div>
       </div>
