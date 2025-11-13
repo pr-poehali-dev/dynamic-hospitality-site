@@ -320,8 +320,14 @@ const QuizDiagnostic = () => {
                     size="lg" 
                     className="w-full text-lg py-6 font-bold"
                     onClick={() => {
-                      const element = document.getElementById('contact');
-                      element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                      setTimeout(() => {
+                        const element = document.getElementById('contact');
+                        if (element) {
+                          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        } else {
+                          window.location.href = '/#contact';
+                        }
+                      }, 100);
                     }}
                   >
                     ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ

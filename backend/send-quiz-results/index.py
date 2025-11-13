@@ -276,7 +276,28 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
     </html>
     """
     
-    # Отправляем уведомление в Telegram
+    smtp_email = os.environ.get('SMTP_EMAIL', '')
+    smtp_password = os.environ.get('SMTP_PASSWORD', '')
+    
+    email_sent = False
+    if smtp_email and smtp_password:
+        msg = MIMEMultipart('alternative')
+        msg['Subject'] = f'🎯 Ваши рекомендации от MARICO PRO'
+        msg['From'] = f'Марина MARICO PRO <{smtp_email}>'
+        msg['To'] = email
+        
+        html_part = MIMEText(html_body, 'html', 'utf-8')
+        msg.attach(html_part)
+        
+        try:
+            server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
+            server.login(smtp_email, smtp_password)
+            server.send_message(msg)
+            server.quit()
+            email_sent = True
+        except Exception as e:
+            email_sent = False
+    
     telegram_token = os.environ.get('TELEGRAM_BOT_TOKEN', '')
     telegram_chat_id = os.environ.get('TELEGRAM_CHAT_ID', '')
     
@@ -318,6 +339,6 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
         'body': json.dumps({
             'success': True,
             'message': 'Рекомендации отправлены на ваш email',
-            'email_sent': True
+            'email_sent': email_sent
         })
     }
