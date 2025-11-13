@@ -52,7 +52,7 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
     telegram_chat_id = os.environ.get('TELEGRAM_CHAT_ID', '')
     
     if telegram_token and telegram_chat_id:
-        message = f"🎁 Новая подписка на чек-лист!\n\nEmail: {email}"
+        message = f"🎁 Новая подписка на чек-лист!\n\nEmail: {email}\n\nСейчас нужно отправить чек-лист пользователю на email: {email}"
         
         telegram_url = f"https://api.telegram.org/bot{telegram_token}/sendMessage"
         telegram_data = {
@@ -68,9 +68,6 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
         )
         
         urllib.request.urlopen(req)
-    
-    # In real app, you would send email with checklist PDF here
-    # For now, just return success
     return {
         'statusCode': 200,
         'headers': {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
