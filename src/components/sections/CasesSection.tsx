@@ -27,23 +27,33 @@ const CasesSection = () => {
                     </div>
 
                     <div className="bg-primary p-6 rounded-2xl flex items-center justify-center">
-                      <div className="text-6xl font-black text-white">+50%</div>
+                      <div className="text-6xl font-black text-white">+38%</div>
                     </div>
 
                     <div className="p-6 bg-card rounded-2xl border-2 border-border">
                       <div className="text-sm text-muted-foreground mb-2">Стало:</div>
-                      <div className="text-2xl font-black text-green-600">Чек: 2180₽</div>
-                      <div className="text-sm text-muted-foreground mt-1">Выручка: 5 930 000₽/мес</div>
+                      <div className="text-2xl font-black text-green-600">Чек: 2000₽</div>
+                      <div className="text-sm text-muted-foreground mt-1">Выручка: 5 450 000₽/мес</div>
                     </div>
                   </div>
 
+                  <div className="bg-amber-50 p-6 rounded-2xl border-2 border-amber-200">
+                    <p className="text-sm font-bold text-amber-900 mb-3">⚠️ ВАЖНЫЙ КОНТЕКСТ:</p>
+                    <ul className="space-y-2 text-sm text-foreground">
+                      <li>• Параллельно работал сильный маркетинг</li>
+                      <li>• Владелец лично присутствовал 5 дней в неделю</li>
+                      <li>• Вклад моей работы: ~60% от роста</li>
+                      <li>• Остальное: маркетинг + вовлечённость владельца</li>
+                    </ul>
+                  </div>
+
                   <div className="bg-primary p-6 rounded-2xl text-center">
-                    <div className="text-3xl font-black text-white">Прирост: +1 980 000₽ в месяц</div>
+                    <div className="text-3xl font-black text-white">Прирост: +1 500 000₽ в месяц</div>
                   </div>
 
                   <div className="border-l-4 border-primary pl-6 py-4 bg-card rounded-r-xl">
                     <p className="text-foreground italic text-lg mb-4">
-                      "Марина не просто провела тренинг и ушла. Она три недели каждый день приезжала, смотрела, как работают официанты, исправляла ошибки на месте. Окупили инвестиции за 18 дней."
+                      "Марина не просто провела тренинг и ушла. Она три недели каждый день приезжала, смотрела, как работают официанты, исправляла ошибки на месте. Окупили инвестиции за месяц."
                     </p>
                     <p className="text-foreground font-bold">— Георгий, владелец</p>
                   </div>
@@ -67,23 +77,33 @@ const CasesSection = () => {
                     </div>
 
                     <div className="bg-primary p-6 rounded-2xl flex items-center justify-center">
-                      <div className="text-6xl font-black text-white">+45%</div>
+                      <div className="text-6xl font-black text-white">+32%</div>
                     </div>
 
                     <div className="p-6 bg-card rounded-2xl border-2 border-border">
                       <div className="text-sm text-muted-foreground mb-2">Стало:</div>
-                      <div className="text-2xl font-black text-green-600">Чек: 4650₽</div>
-                      <div className="text-sm text-muted-foreground mt-1">Выручка: 8 370 000₽/мес</div>
+                      <div className="text-2xl font-black text-green-600">Чек: 4220₽</div>
+                      <div className="text-sm text-muted-foreground mt-1">Выручка: 7 600 000₽/мес</div>
                     </div>
                   </div>
 
+                  <div className="bg-amber-50 p-6 rounded-2xl border-2 border-amber-200">
+                    <p className="text-sm font-bold text-amber-900 mb-3">⚠️ ВАЖНЫЙ КОНТЕКСТ:</p>
+                    <ul className="space-y-2 text-sm text-foreground">
+                      <li>• Управляющая очень сильная, вовлечённая</li>
+                      <li>• Параллельно обновили винную карту</li>
+                      <li>• Вклад моей работы: ~55% от роста</li>
+                      <li>• Остальное: управление + новое меню</li>
+                    </ul>
+                  </div>
+
                   <div className="bg-primary p-6 rounded-2xl text-center">
-                    <div className="text-3xl font-black text-white">Прирост: +2 610 000₽ в месяц</div>
+                    <div className="text-3xl font-black text-white">Прирост: +1 840 000₽ в месяц</div>
                   </div>
 
                   <div className="border-l-4 border-primary pl-6 py-4 bg-card rounded-r-xl">
                     <p className="text-foreground italic text-lg mb-4">
-                      "Марина показала, что знать продукт и уметь его продать — это разные вещи. Теперь наши бармены не просто наливают вино, они создают опыт. Чек вырос почти в полтора раза."
+                      "Марина показала, что знать продукт и уметь его продать — это разные вещи. Теперь наши бармены не просто наливают вино, они создают опыт."
                     </p>
                     <p className="text-foreground font-bold">— Анна, управляющая</p>
                   </div>

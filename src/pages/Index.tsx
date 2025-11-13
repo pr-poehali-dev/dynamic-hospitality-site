@@ -1,13 +1,18 @@
 import { Helmet } from 'react-helmet-async';
 import Navigation from '@/components/sections/Navigation';
 import HeroSection from '@/components/sections/HeroSection';
+import SocialProofSection from '@/components/sections/SocialProofSection';
 import AboutSection from '@/components/sections/AboutSection';
 import ProblemSection from '@/components/sections/ProblemSection';
 import AboutMeSection from '@/components/sections/AboutMeSection';
 import WhyMeSection from '@/components/sections/WhyMeSection';
 import ProblemsSection from '@/components/sections/ProblemsSection';
 import CasesSection from '@/components/sections/CasesSection';
+import BeforeAfterSection from '@/components/sections/BeforeAfterSection';
+import HonestySection from '@/components/sections/HonestySection';
 import ServicesSection from '@/components/sections/ServicesSection';
+import NotForYouSection from '@/components/sections/NotForYouSection';
+import ExpectationsSection from '@/components/sections/ExpectationsSection';
 import HowWeWorkSection from '@/components/sections/HowWeWorkSection';
 import ROICalculator from '@/components/sections/ROICalculator';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
@@ -44,15 +49,20 @@ const Index = () => {
       
       <Navigation scrollToSection={scrollToSection} />
       <HeroSection scrollToSection={scrollToSection} />
-      <AboutSection scrollToSection={scrollToSection} />
+      <SocialProofSection />
       <ProblemSection />
       <ProblemsSection />
+      <ROICalculator />
       <CasesSection />
+      <BeforeAfterSection />
+      <ExpectationsSection />
+      <HonestySection />
       <ServicesSection />
+      <NotForYouSection />
       <WhyMeSection />
       <HowWeWorkSection />
-      <ROICalculator />
       <TestimonialsSection />
+      <AboutSection scrollToSection={scrollToSection} />
       <BlogPreviewSection />
       <ContactSection />
       <FooterSection />

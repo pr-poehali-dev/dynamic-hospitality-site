@@ -25,15 +25,15 @@ const Navigation = ({ scrollToSection }: NavigationProps) => {
         <div className="flex items-center justify-between">
           <div className="text-xl font-bold text-foreground">MARICO PRO</div>
           
-          <div className="hidden md:flex items-center gap-8">
-            <button onClick={() => scrollToSection('about')} className="text-sm font-medium hover:text-primary transition-colors">Знакомство</button>
-            <button onClick={() => scrollToSection('for-whom')} className="text-sm font-medium hover:text-primary transition-colors">Для кого</button>
+          <div className="hidden md:flex items-center gap-6">
             <button onClick={() => scrollToSection('services')} className="text-sm font-medium hover:text-primary transition-colors">Услуги</button>
-            <button onClick={() => scrollToSection('trainings')} className="text-sm font-medium hover:text-primary transition-colors">Тренинги</button>
-            <button onClick={() => scrollToSection('process')} className="text-sm font-medium hover:text-primary transition-colors">Процесс</button>
+            <button onClick={() => scrollToSection('results')} className="text-sm font-medium hover:text-primary transition-colors">Кейсы</button>
+            <Link to="/quiz" className="text-sm font-medium text-primary hover:underline transition-colors">🎯 Квиз</Link>
             <Link to="/blog" className="text-sm font-medium hover:text-primary transition-colors">Блог</Link>
             <Link to="/faq" className="text-sm font-medium hover:text-primary transition-colors">FAQ</Link>
-            <Link to="/contact" className="text-sm font-medium hover:text-primary transition-colors">Где нас найти</Link>
+            <Button asChild size="sm">
+              <Link to="/contact">Связаться</Link>
+            </Button>
           </div>
 
           <Button
@@ -49,35 +49,24 @@ const Navigation = ({ scrollToSection }: NavigationProps) => {
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4 pb-4 space-y-3 animate-fade-in">
             <button 
-              onClick={() => handleMobileNavClick(() => scrollToSection('about'))} 
-              className="block w-full text-left py-2 text-sm font-medium hover:text-primary transition-colors"
-            >
-              Знакомство
-            </button>
-            <button 
-              onClick={() => handleMobileNavClick(() => scrollToSection('for-whom'))} 
-              className="block w-full text-left py-2 text-sm font-medium hover:text-primary transition-colors"
-            >
-              Для кого
-            </button>
-            <button 
               onClick={() => handleMobileNavClick(() => scrollToSection('services'))} 
               className="block w-full text-left py-2 text-sm font-medium hover:text-primary transition-colors"
             >
               Услуги
             </button>
             <button 
-              onClick={() => handleMobileNavClick(() => scrollToSection('trainings'))} 
+              onClick={() => handleMobileNavClick(() => scrollToSection('results'))} 
               className="block w-full text-left py-2 text-sm font-medium hover:text-primary transition-colors"
             >
-              Тренинги
+              Кейсы
             </button>
-            <button 
-              onClick={() => handleMobileNavClick(() => scrollToSection('process'))} 
-              className="block w-full text-left py-2 text-sm font-medium hover:text-primary transition-colors"
+            <Link 
+              to="/quiz" 
+              className="block w-full text-left py-2 text-sm font-bold text-primary hover:underline transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
             >
-              Процесс
-            </button>
+              🎯 Квиз-диагностика
+            </Link>
             <Link 
               to="/blog" 
               className="block w-full text-left py-2 text-sm font-medium hover:text-primary transition-colors"
@@ -97,7 +86,7 @@ const Navigation = ({ scrollToSection }: NavigationProps) => {
               className="block w-full text-left py-2 text-sm font-medium hover:text-primary transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Где нас найти
+              Связаться
             </Link>
           </div>
         )}

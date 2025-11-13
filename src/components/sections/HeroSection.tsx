@@ -22,29 +22,33 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
             <p className="text-primary font-semibold text-sm">13 лет опыта • 50+ успешных проектов • Гарантия результата</p>
           </div>
           
-          <h1 className="text-5xl md:text-6xl font-black text-foreground leading-tight">
-            Эксперт по трансформации ресторанного бизнеса: <span className="text-primary">продажи и сервис в HoReCa</span>
+          <h1 className="text-5xl md:text-7xl font-black text-foreground leading-tight">
+            Ваши официанты работают на автопилоте?
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground font-medium">
-            Рост среднего чека на 30% возможен даже без изменения меню и повышения цен. Авторский подход и уникальная методика работы.
+          <p className="text-2xl md:text-3xl text-primary font-black">
+            Увеличу средний чек на 30% за 3 месяца
+          </p>
+          
+          <p className="text-lg md:text-xl text-muted-foreground font-medium">
+            Или верну деньги. Системный подход к обучению персонала HoReCa. Без шаблонов и волшебных таблеток — только проверенные методики.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 pt-6">
             <Button 
               size="lg" 
-              className="text-lg px-8 py-6 font-semibold" 
+              className="text-lg px-10 py-7 font-bold shadow-2xl hover:scale-105 transition-transform" 
               onClick={() => scrollToSection('contact')}
             >
-              Бесплатная консультация
+              ПОЛУЧИТЬ АУДИТ
             </Button>
             <Button 
               size="lg" 
               variant="outline" 
-              className="text-lg px-8 py-6 font-semibold border-2" 
+              className="text-lg px-10 py-7 font-bold border-2" 
               onClick={() => scrollToSection('results')}
             >
-              Смотреть результаты
+              Смотреть кейсы
             </Button>
           </div>
         </div>
