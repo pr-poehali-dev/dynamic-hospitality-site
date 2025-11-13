@@ -62,7 +62,7 @@ const PricingSection = ({ scrollToSection }: PricingSectionProps) => {
   ];
 
   return (
-    <section id="pricing" className="py-24 bg-gradient-to-br from-slate-50 via-white to-slate-50">
+    <section id="pricing" className="py-24 bg-gradient-to-br from-slate-50 via-white to-slate-50" data-section="services">
       <div className="container mx-auto px-6">
         <div className="max-w-7xl mx-auto space-y-12">
           <div className="text-center space-y-4">

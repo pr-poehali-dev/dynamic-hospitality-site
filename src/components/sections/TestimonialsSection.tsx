@@ -91,7 +91,7 @@ const TestimonialsSection = () => {
               size="lg" 
               variant="outline"
               className="text-lg px-8 py-6 border-2"
-              onClick={() => window.open('https://t.me/maricopro', '_blank')}
+              onClick={() => window.open('https://t.me/malinochka_marina', '_blank')}
             >
               <Icon name="MessageCircle" className="mr-2" size={20} />
               Оставить свой отзыв

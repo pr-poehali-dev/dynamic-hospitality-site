@@ -303,7 +303,7 @@ const QuizDiagnostic = () => {
                     Пройти заново
                   </Button>
                   <p className="text-sm text-muted-foreground">
-                    Или напишите в Telegram: <a href="https://t.me/maricopro" className="text-primary font-bold">@maricopro</a>
+                    Или напишите в Telegram: <a href="https://t.me/malinochka_marina" className="text-primary font-bold">@malinochka_marina</a>
                   </p>
                 </div>
               </CardContent>

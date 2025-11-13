@@ -10,7 +10,7 @@ const FooterSection = () => {
           <p className="text-gray-400">Консультант №1 по продажам в HoReCa</p>
           <div className="flex justify-center gap-4 flex-wrap">
             <Button variant="ghost" size="icon" className="text-white hover:text-primary" asChild>
-              <a href="https://t.me/maricopro" target="_blank" rel="noopener noreferrer">
+              <a href="https://t.me/malinochka_marina" target="_blank" rel="noopener noreferrer">
                 <Icon name="MessageCircle" size={24} />
               </a>
             </Button>

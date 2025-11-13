@@ -12,6 +12,7 @@ import { useToast } from '@/hooks/use-toast';
 const ContactSection = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -37,11 +38,15 @@ const ContactSection = () => {
 
       if (response.ok && data.success) {
         toast({
-          title: 'Заявка отправлена!',
-          description: 'Свяжемся с вами в течение 2 часов',
+          title: '✅ Спасибо! Ваша заявка отправлена',
+          description: 'Мы свяжемся с вами в течение 2 часов',
         });
+        setIsSubmitted(true);
         setFormData({ name: '', phone: '', business_type: '', message: '' });
         setAgreedToPrivacy(false);
+        
+        // Reset submitted state after 5 seconds
+        setTimeout(() => setIsSubmitted(false), 5000);
       } else {
         throw new Error(data.error || 'Ошибка отправки');
       }
@@ -106,7 +111,30 @@ const ContactSection = () => {
           <div className="grid md:grid-cols-2 gap-8">
             <Card className="border-2">
               <CardContent className="p-8">
-                <form className="space-y-6" onSubmit={handleSubmit}>
+                {isSubmitted ? (
+                  <div className="text-center space-y-6 py-8">
+                    <div className="w-24 h-24 rounded-full bg-green-100 flex items-center justify-center mx-auto">
+                      <Icon name="CheckCircle" className="text-green-600" size={64} />
+                    </div>
+                    <h3 className="text-3xl font-black text-foreground">
+                      Спасибо!
+                    </h3>
+                    <p className="text-xl text-foreground">
+                      Ваша заявка успешно отправлена
+                    </p>
+                    <p className="text-muted-foreground">
+                      Мы свяжемся с вами в течение 2 часов
+                    </p>
+                    <Button 
+                      variant="outline" 
+                      onClick={() => setIsSubmitted(false)}
+                      className="mt-4"
+                    >
+                      Отправить еще одну заявку
+                    </Button>
+                  </div>
+                ) : (
+                  <form className="space-y-6" onSubmit={handleSubmit}>
                   <div className="space-y-2">
                     <Label htmlFor="name">Ваше имя</Label>
                     <Input 
@@ -167,6 +195,7 @@ const ContactSection = () => {
                     {isSubmitting ? 'Отправка...' : 'Отправить заявку'}
                   </Button>
                 </form>
+                )}
               </CardContent>
             </Card>
 
@@ -176,7 +205,7 @@ const ContactSection = () => {
                   <h3 className="text-2xl font-bold text-white">Напишите мне:</h3>
                   <div className="space-y-4">
                     <a 
-                      href="https://t.me/maricopro" 
+                      href="https://t.me/malinochka_marina" 
                       className="flex items-center gap-4 p-4 bg-gray-700 rounded-xl hover:shadow-lg transition-all group border border-gray-600"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -186,7 +215,7 @@ const ContactSection = () => {
                       </div>
                       <div className="flex-1">
                         <div className="font-semibold text-white group-hover:text-primary">Telegram</div>
-                        <div className="text-sm text-gray-400">@maricopro</div>
+                        <div className="text-sm text-gray-400">@malinochka_marina</div>
                       </div>
                       <Icon name="ArrowRight" className="text-primary" size={20} />
                     </a>

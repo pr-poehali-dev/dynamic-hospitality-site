@@ -3,14 +3,43 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import Icon from '@/components/ui/icon';
+import { useToast } from '@/hooks/use-toast';
 
 const LeadMagnetSection = () => {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('https://functions.poehali.dev/e1eae6a2-5c49-41d1-ae04-0ee93a5569be', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email })
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        setSubmitted(true);
+      } else {
+        throw new Error(data.error || 'Ошибка отправки');
+      }
+    } catch (error) {
+      toast({
+        title: 'Ошибка',
+        description: 'Не удалось отправить запрос. Попробуйте снова.',
+        variant: 'destructive'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -75,9 +104,10 @@ const LeadMagnetSection = () => {
                         <Button 
                           type="submit" 
                           size="lg" 
+                          disabled={isSubmitting}
                           className="w-full text-lg py-6 font-black bg-amber-500 hover:bg-amber-600 text-slate-900"
                         >
-                          ПОЛУЧИТЬ ЧЕК-ЛИСТ БЕСПЛАТНО →
+                          {isSubmitting ? 'ОТПРАВКА...' : 'ПОЛУЧИТЬ ЧЕК-ЛИСТ БЕСПЛАТНО →'}
                         </Button>
                         <p className="text-xs text-center text-muted-foreground">
                           Никакого спама. Отписаться можно в любой момент.
