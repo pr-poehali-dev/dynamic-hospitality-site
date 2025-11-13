@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -7,9 +7,28 @@ import Icon from '@/components/ui/icon';
 import { Label } from '@/components/ui/label';
 
 const QuizDiagnostic = () => {
-  const [step, setStep] = useState(0);
-  const [answers, setAnswers] = useState<Record<string, any>>({});
+  const [step, setStep] = useState(() => {
+    const saved = localStorage.getItem('quiz_step');
+    return saved ? parseInt(saved) : 0;
+  });
+  const [answers, setAnswers] = useState<Record<string, any>>(() => {
+    const saved = localStorage.getItem('quiz_answers');
+    return saved ? JSON.parse(saved) : {};
+  });
   const [showResult, setShowResult] = useState(false);
+
+  useEffect(() => {
+    localStorage.setItem('quiz_step', step.toString());
+    localStorage.setItem('quiz_answers', JSON.stringify(answers));
+  }, [step, answers]);
+
+  const resetQuiz = () => {
+    setStep(0);
+    setAnswers({});
+    setShowResult(false);
+    localStorage.removeItem('quiz_step');
+    localStorage.removeItem('quiz_answers');
+  };
 
   const questions = [
     {
@@ -274,6 +293,14 @@ const QuizDiagnostic = () => {
                 <div className="text-center space-y-4 pt-6">
                   <Button size="lg" className="w-full text-lg py-6 font-bold">
                     ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ
+                  </Button>
+                  <Button 
+                    variant="outline" 
+                    size="lg" 
+                    className="w-full border-2"
+                    onClick={resetQuiz}
+                  >
+                    Пройти заново
                   </Button>
                   <p className="text-sm text-muted-foreground">
                     Или напишите в Telegram: <a href="https://t.me/maricopro" className="text-primary font-bold">@maricopro</a>
