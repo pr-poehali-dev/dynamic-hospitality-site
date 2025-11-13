@@ -1,65 +1,8 @@
 import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Textarea } from '@/components/ui/textarea';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Checkbox } from '@/components/ui/checkbox';
 import Icon from '@/components/ui/icon';
-import { useState } from 'react';
-import { useToast } from '@/hooks/use-toast';
+import BookingCalendar from '@/components/BookingCalendar';
 
 const ContactSection = () => {
-  const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    business_type: '',
-    message: ''
-  });
-  const [agreedToPrivacy, setAgreedToPrivacy] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    try {
-      const response = await fetch('https://functions.poehali.dev/5d1ba8c6-82ca-42ab-be50-54dc6866b7b5', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData)
-      });
-
-      const data = await response.json();
-
-      if (response.ok && data.success) {
-        toast({
-          title: '✅ Спасибо! Ваша заявка отправлена',
-          description: 'Мы свяжемся с вами в течение 2 часов',
-        });
-        setIsSubmitted(true);
-        setFormData({ name: '', phone: '', business_type: '', message: '' });
-        setAgreedToPrivacy(false);
-        
-        // Reset submitted state after 5 seconds
-        setTimeout(() => setIsSubmitted(false), 5000);
-      } else {
-        throw new Error(data.error || 'Ошибка отправки');
-      }
-    } catch (error) {
-      toast({
-        title: 'Ошибка',
-        description: 'Не удалось отправить заявку. Попробуйте снова.',
-        variant: 'destructive'
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
   return (
     <section id="contact" className="py-24 bg-card">
       <div className="container mx-auto px-6">
@@ -109,95 +52,7 @@ const ContactSection = () => {
           </Card>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <Card className="border-2">
-              <CardContent className="p-8">
-                {isSubmitted ? (
-                  <div className="text-center space-y-6 py-8">
-                    <div className="w-24 h-24 rounded-full bg-green-100 flex items-center justify-center mx-auto">
-                      <Icon name="CheckCircle" className="text-green-600" size={64} />
-                    </div>
-                    <h3 className="text-3xl font-black text-foreground">
-                      Спасибо!
-                    </h3>
-                    <p className="text-xl text-foreground">
-                      Ваша заявка успешно отправлена
-                    </p>
-                    <p className="text-muted-foreground">
-                      Мы свяжемся с вами в течение 2 часов
-                    </p>
-                    <Button 
-                      variant="outline" 
-                      onClick={() => setIsSubmitted(false)}
-                      className="mt-4"
-                    >
-                      Отправить еще одну заявку
-                    </Button>
-                  </div>
-                ) : (
-                  <form className="space-y-6" onSubmit={handleSubmit}>
-                  <div className="space-y-2">
-                    <Label htmlFor="name">Ваше имя</Label>
-                    <Input 
-                      id="name" 
-                      placeholder="Иван Петров" 
-                      value={formData.name}
-                      onChange={(e) => setFormData({...formData, name: e.target.value})}
-                      required
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="phone">Телефон</Label>
-                    <Input 
-                      id="phone" 
-                      type="tel" 
-                      placeholder="+7 (999) 123-45-67"
-                      value={formData.phone}
-                      onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="business">Тип бизнеса</Label>
-                    <Select value={formData.business_type} onValueChange={(value) => setFormData({...formData, business_type: value})}>
-                      <SelectTrigger id="business">
-                        <SelectValue placeholder="Выберите" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="restaurant">Ресторан</SelectItem>
-                        <SelectItem value="club">Клуб</SelectItem>
-                        <SelectItem value="hotel">Отель</SelectItem>
-                        <SelectItem value="bar">Бар</SelectItem>
-                        <SelectItem value="other">Другое</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Опишите задачу</Label>
-                    <Textarea 
-                      id="message" 
-                      placeholder="Расскажите, с чем нужна помощь..."
-                      rows={4}
-                      value={formData.message}
-                      onChange={(e) => setFormData({...formData, message: e.target.value})}
-                    />
-                  </div>
-                  <div className="flex items-start gap-3 p-4 border-2 border-border rounded-lg bg-muted/30">
-                    <Checkbox 
-                      id="privacy" 
-                      checked={agreedToPrivacy}
-                      onCheckedChange={(checked) => setAgreedToPrivacy(checked as boolean)}
-                      required
-                    />
-                    <Label htmlFor="privacy" className="text-sm leading-relaxed cursor-pointer">
-                      Я согласен на сбор и обработку персональных данных в соответствии с политикой конфиденциальности
-                    </Label>
-                  </div>
-                  <Button type="submit" size="lg" className="w-full" disabled={isSubmitting || !agreedToPrivacy}>
-                    {isSubmitting ? 'Отправка...' : 'Отправить заявку'}
-                  </Button>
-                </form>
-                )}
-              </CardContent>
-            </Card>
+            <BookingCalendar />
 
             <div className="space-y-6">
               <Card className="border-2 border-gray-700 bg-gray-800">

@@ -23,7 +23,7 @@ const socialLinks = [
   {
     name: 'WhatsApp',
     icon: 'MessageCircle',
-    url: 'https://wa.me/79000000000',
+    url: 'https://wa.me/79182858216',
     description: 'Обсудим ваш проект',
     color: 'from-green-500 to-emerald-500'
   },
@@ -95,7 +95,7 @@ const Contact = () => {
                 addressCountry: 'RU'
               },
               sameAs: [
-                'https://www.instagram.com/marico_pro',
+                'https://www.instagram.com/marico.su',
                 'https://t.me/malinochka_marina'
               ]
             }

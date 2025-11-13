@@ -22,6 +22,9 @@ import FooterSection from '@/components/sections/FooterSection';
 import LeadMagnetSection from '@/components/sections/LeadMagnetSection';
 import PricingSection from '@/components/sections/PricingSection';
 import QuizDiagnostic from '@/components/sections/QuizDiagnostic';
+import LossesSection from '@/components/sections/LossesSection';
+import RealitySection from '@/components/sections/RealitySection';
+import HonestROISection from '@/components/sections/HonestROISection';
 
 const Index = () => {
   const scrollToSection = (id: string) => {
@@ -59,12 +62,14 @@ const Index = () => {
       <HeroSection scrollToSection={scrollToSection} />
       <SocialProofSection />
       <LeadMagnetSection />
+      <LossesSection />
       <ProblemSection />
       <ProblemsSection />
-      <ROICalculator />
       <QuizDiagnostic />
       <CasesSection />
       <BeforeAfterSection />
+      <RealitySection />
+      <HonestROISection />
       <ExpectationsSection />
       <HonestySection />
       <PricingSection scrollToSection={scrollToSection} />

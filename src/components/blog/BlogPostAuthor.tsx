@@ -30,7 +30,7 @@ const BlogPostAuthor = () => {
                 </a>
               </Button>
               <Button variant="outline" size="sm" asChild>
-                <a href="https://t.me/marico_pro" target="_blank" rel="noopener noreferrer">
+                <a href="https://t.me/malinochka_marina" target="_blank" rel="noopener noreferrer">
                   <Icon name="Send" size={16} className="mr-2" />
                   Telegram
                 </a>

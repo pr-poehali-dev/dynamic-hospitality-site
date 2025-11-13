@@ -94,3 +94,31 @@
     @apply bg-background text-foreground;
   }
 }
+
+.calendar-wrapper .react-calendar {
+  width: 100%;
+  border: none;
+  font-family: inherit;
+}
+
+.react-calendar__tile--active {
+  background: hsl(var(--primary)) !important;
+  color: white !important;
+}
+
+.react-calendar__tile--now {
+  background: hsl(var(--muted)) !important;
+}
+
+.react-calendar__tile:enabled:hover {
+  background: hsl(var(--accent)) !important;
+  color: white !important;
+}
+
+.react-calendar__month-view__days__day--weekend {
+  color: hsl(var(--destructive));
+}
+
+.react-calendar__navigation button:enabled:hover {
+  background: hsl(var(--muted));
+}
