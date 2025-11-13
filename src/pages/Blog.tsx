@@ -21,12 +21,18 @@ const Blog = () => {
   const blogPosts = Object.values(blogPostsData).map(post => ({
     id: post.id,
     title: post.title,
-    excerpt: post.content.substring(0, 150) + '...',
+    excerpt: post.excerpt || post.content.substring(0, 150) + '...',
     date: post.date,
     category: post.category,
     image: post.image,
-    readTime: post.readTime
+    readTime: post.readTime,
+    views: post.views || 0,
+    featured: post.featured || false
   }));
+
+  const featuredPosts = blogPosts.filter(post => post.featured).slice(0, 3);
+  const topPosts = [...blogPosts].sort((a, b) => b.views - a.views).slice(0, 5);
+  const regularPosts = blogPosts.filter(post => !post.featured);
 
   const filteredPosts = blogPosts.filter(post =>
     post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -164,28 +170,96 @@ const Blog = () => {
         </div>
       </section>
 
+      {searchQuery === '' && featuredPosts.length > 0 && (
+        <section className="py-8 bg-gradient-to-br from-primary/10 to-background">
+          <div className="container mx-auto px-6">
+            <div className="max-w-6xl mx-auto space-y-6">
+              <div className="flex items-center gap-3">
+                <Icon name="Star" className="text-primary" size={32} />
+                <h2 className="text-3xl font-black text-foreground">Топ статей</h2>
+              </div>
+              <div className="grid md:grid-cols-3 gap-6">
+                {featuredPosts.map((post) => (
+                  <Link key={post.id} to={`/blog/${post.id}`}>
+                    <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-[1.03] cursor-pointer group h-full border-2 border-primary/50">
+                      <div className="aspect-[16/10] overflow-hidden relative">
+                        <div className="absolute top-4 right-4 z-10 bg-primary text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
+                          <Icon name="Flame" size={14} />
+                          Топ
+                        </div>
+                        <img
+                          src={post.image}
+                          alt={post.title}
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        />
+                      </div>
+                      <CardContent className="p-6 space-y-4">
+                        <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors line-clamp-2">
+                          {post.title}
+                        </h3>
+                        <p className="text-foreground/70 text-sm line-clamp-2">{post.excerpt}</p>
+                        <div className="flex items-center justify-between text-sm">
+                          <div className="flex items-center gap-4 text-muted-foreground">
+                            <div className="flex items-center gap-1">
+                              <Icon name="Eye" size={16} />
+                              <span className="font-medium">{post.views.toLocaleString()}</span>
+                            </div>
+                            <div className="flex items-center gap-1">
+                              <Icon name="Clock" size={16} />
+                              <span>{post.readTime}</span>
+                            </div>
+                          </div>
+                          <span className="px-3 py-1 bg-primary/20 text-primary rounded-full font-medium text-xs">
+                            {post.category}
+                          </span>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       <section className="py-16">
         <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            {filteredPosts.length === 0 ? (
-              <div className="text-center py-16">
-                <Icon name="SearchX" className="mx-auto text-muted-foreground mb-4" size={48} />
-                <p className="text-xl text-foreground/60">Статьи не найдены</p>
-              </div>
-            ) : (
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredPosts.map((post) => (
+          <div className="max-w-7xl mx-auto">
+            <div className="grid lg:grid-cols-[1fr,320px] gap-12">
+              <div>
+                {searchQuery !== '' && filteredPosts.length === 0 ? (
+                  <div className="text-center py-16">
+                    <Icon name="SearchX" className="mx-auto text-muted-foreground mb-4" size={48} />
+                    <p className="text-xl text-foreground/60">Статьи не найдены</p>
+                  </div>
+                ) : (
+                  <div>
+                    <div className="flex items-center justify-between mb-8">
+                      <h2 className="text-2xl font-black text-foreground">
+                        {searchQuery ? `Результаты поиска: "${searchQuery}"` : 'Все статьи'}
+                      </h2>
+                      <span className="text-sm text-muted-foreground">
+                        {searchQuery ? filteredPosts.length : regularPosts.length} {searchQuery ? 'найдено' : 'статей'}
+                      </span>
+                    </div>
+                    <div className="grid md:grid-cols-2 gap-6">
+                      {(searchQuery ? filteredPosts : regularPosts).map((post) => (
                   <Link 
                     key={post.id} 
                     to={`/blog/${post.id}`}
                     onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   >
-                    <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-[1.02] cursor-pointer group h-full">
-                      <div className="aspect-video overflow-hidden">
+                    <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-[1.01] cursor-pointer group h-full">
+                      <div className="aspect-video overflow-hidden relative">
+                        <div className="absolute top-4 left-4 bg-background/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
+                          <Icon name="Eye" size={12} />
+                          {post.views.toLocaleString()}
+                        </div>
                         <img
                           src={post.image}
                           alt={post.title}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                         />
                       </div>
                       <CardContent className="p-6 space-y-4">
@@ -198,10 +272,10 @@ const Blog = () => {
                             {post.readTime}
                           </span>
                         </div>
-                        <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
+                        <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors line-clamp-2">
                           {post.title}
                         </h3>
-                        <p className="text-foreground/70 line-clamp-2">
+                        <p className="text-foreground/70 text-sm line-clamp-2">
                           {post.excerpt}
                         </p>
                         <div className="flex items-center justify-between pt-4 border-t border-border">
@@ -214,9 +288,69 @@ const Blog = () => {
                       </CardContent>
                     </Card>
                   </Link>
-                ))}
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
-            )}
+
+              {searchQuery === '' && (
+                <aside className="space-y-8">
+                  <Card className="border-2 border-primary/30 bg-gradient-to-br from-primary/5 to-background">
+                    <CardContent className="p-6 space-y-4">
+                      <div className="flex items-center gap-2">
+                        <Icon name="TrendingUp" className="text-primary" size={24} />
+                        <h3 className="font-black text-lg text-foreground">Самые популярные</h3>
+                      </div>
+                      <div className="space-y-4">
+                        {topPosts.map((post, index) => (
+                          <Link key={post.id} to={`/blog/${post.id}`}>
+                            <div className="flex gap-4 group cursor-pointer">
+                              <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center text-white font-black text-xl">
+                                {index + 1}
+                              </div>
+                              <div className="flex-1 min-w-0">
+                                <h4 className="font-bold text-sm text-foreground group-hover:text-primary transition-colors line-clamp-2">
+                                  {post.title}
+                                </h4>
+                                <div className="flex items-center gap-3 mt-2 text-xs text-muted-foreground">
+                                  <div className="flex items-center gap-1">
+                                    <Icon name="Eye" size={12} />
+                                    <span className="font-medium">{post.views.toLocaleString()}</span>
+                                  </div>
+                                  <span>•</span>
+                                  <span>{post.readTime}</span>
+                                </div>
+                              </div>
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card>
+                    <CardContent className="p-6 space-y-4">
+                      <div className="flex items-center gap-2">
+                        <Icon name="Tag" className="text-primary" size={20} />
+                        <h3 className="font-black text-lg text-foreground">Категории</h3>
+                      </div>
+                      <div className="flex flex-wrap gap-2">
+                        {Array.from(new Set(blogPosts.map(p => p.category))).map(cat => (
+                          <button
+                            key={cat}
+                            onClick={() => setSearchQuery(cat)}
+                            className="px-3 py-1 bg-muted hover:bg-primary/20 hover:text-primary rounded-full text-sm font-medium transition-colors"
+                          >
+                            {cat}
+                          </button>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                </aside>
+              )}
+            </div>
           </div>
         </div>
       </section>
