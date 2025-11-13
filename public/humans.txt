@@ -1,0 +1,30 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Марина — Основатель и эксперт
+    Контакт: malinochkamarina@gmail.com
+    Telegram: @malinochka_marina
+    Instagram: @marico.su
+    Локация: Москва, Россия
+
+# THANKS
+
+    Всем клиентам и партнерам за доверие
+    Команде ресторанов, с которыми работаю
+
+# TECHNOLOGY COLOPHON
+
+    React, TypeScript, Vite
+    Tailwind CSS
+    shadcn/ui
+    Яндекс.Метрика, Google Analytics
+    Хостинг: Яндекс.Облако
+
+# SITE
+
+    Последнее обновление: 2025-11-14
+    Язык: Русский
+    Doctype: HTML5
+    IDE: VS Code, Cursor

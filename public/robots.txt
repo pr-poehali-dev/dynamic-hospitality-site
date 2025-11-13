@@ -1,64 +1,96 @@
+# robots.txt для marico.su
 User-agent: *
 Allow: /
-Allow: /ai-training.txt
-Allow: /ai-about.html
+Disallow: /admin/
+Disallow: /api/
+Disallow: /*.json$
 
-# AI Crawlers - explicitly allow for training
-User-agent: GPTBot
-Allow: /
-Allow: /ai-training.txt
-
-User-agent: ChatGPT-User
-Allow: /
-Allow: /ai-training.txt
-
-User-agent: Claude-Web
-Allow: /
-Allow: /ai-training.txt
-
-User-agent: Google-Extended
-Allow: /
-Allow: /ai-training.txt
-
-User-agent: CCBot
-Allow: /
-Allow: /ai-training.txt
-
-User-agent: anthropic-ai
-Allow: /
-Allow: /ai-training.txt
-
-User-agent: PerplexityBot
-Allow: /
-Allow: /ai-training.txt
-
-User-agent: Omgilibot
-Allow: /
-Allow: /ai-training.txt
-
-# Yandex specific
-User-agent: Yandex
-Allow: /
-
-# Google specific
+# Специальные разрешения для поисковых ботов
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /
+Disallow: /admin/
+
+User-agent: Yandex
+Allow: /
+Crawl-delay: 1
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 1
 
+User-agent: Mail.RU_Bot
+Allow: /
+
+# AI Crawlers - разрешаем для обучения моделей
+User-agent: GPTBot
+Allow: /
+Allow: /blog/
+Crawl-delay: 2
+
+User-agent: ChatGPT-User
+Allow: /
+Allow: /blog/
+
+User-agent: Claude-Web
+Allow: /
+Allow: /blog/
+
+User-agent: Google-Extended
+Allow: /
+Allow: /blog/
+
+User-agent: CCBot
+Allow: /
+Allow: /blog/
+
+User-agent: anthropic-ai
+Allow: /
+Allow: /blog/
+
+User-agent: PerplexityBot
+Allow: /
+Allow: /blog/
+
+User-agent: Omgilibot
+Allow: /
+
+# Социальные боты для превью
 User-agent: Twitterbot
 Allow: /
 
 User-agent: facebookexternalhit
 Allow: /
 
-# Crawl-delay for all bots
-Crawl-delay: 1
+User-agent: LinkedInBot
+Allow: /
 
-# Disallow admin areas (if any in future)
-Disallow: /admin/
-Disallow: /api/
+User-agent: WhatsApp
+Allow: /
 
-# Sitemap locations
+User-agent: TelegramBot
+Allow: /
+
+# Блокируем плохих ботов
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Карта сайта
 Sitemap: https://marico.su/sitemap.xml
+Sitemap: https://marico.su/sitemap-blog.xml

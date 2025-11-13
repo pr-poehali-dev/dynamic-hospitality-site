@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+  
+  <url>
+    <loc>https://marico.su/blog/1</loc>
+    <lastmod>2024-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <news:news>
+      <news:publication>
+        <news:name>MARICO PRO</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2024-10-15</news:publication_date>
+      <news:title>5 ошибок владельцев ресторанов в обучении персонала</news:title>
+    </news:news>
+  </url>
+  
+  <url>
+    <loc>https://marico.su/blog/2</loc>
+    <lastmod>2024-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <news:news>
+      <news:publication>
+        <news:name>MARICO PRO</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2024-10-08</news:publication_date>
+      <news:title>Как увеличить средний чек на 30% без рекламы</news:title>
+    </news:news>
+  </url>
+  
+  <url>
+    <loc>https://marico.su/blog/3</loc>
+    <lastmod>2024-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <news:news>
+      <news:publication>
+        <news:name>MARICO PRO</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2024-10-28</news:publication_date>
+      <news:title>Скрипты допродаж для официантов: что работает в 2024</news:title>
+    </news:news>
+  </url>
+  
+  <url>
+    <loc>https://marico.su/blog/4</loc>
+    <lastmod>2024-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <news:news>
+      <news:publication>
+        <news:name>MARICO PRO</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2024-11-05</news:publication_date>
+      <news:title>7 фраз официанта, которые убивают продажи</news:title>
+    </news:news>
+  </url>
+  
+  <url>
+    <loc>https://marico.su/blog/5</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <news:news>
+      <news:publication>
+        <news:name>MARICO PRO</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2024-11-01</news:publication_date>
+      <news:title>Как обучить персонал за 3 дня: чек-лист для владельцев</news:title>
+    </news:news>
+  </url>
+  
+  <url>
+    <loc>https://marico.su/blog/6</loc>
+    <lastmod>2024-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <news:news>
+      <news:publication>
+        <news:name>MARICO PRO</news:name>
+        <news:language>ru</news:language>
+      </news:publication>
+      <news:publication_date>2024-10-28</news:publication_date>
+      <news:title>Почему гости не возвращаются: 5 скрытых причин</news:title>
+    </news:news>
+  </url>
+
+</urlset>

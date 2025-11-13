@@ -1,0 +1,3 @@
+Contact: mailto:malinochkamarina@gmail.com
+Preferred-Languages: ru, en
+Canonical: https://marico.su/.well-known/security.txt

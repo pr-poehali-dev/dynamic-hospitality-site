@@ -33,8 +33,8 @@ const Index = () => {
   };
 
   const homeUrl = window.location.origin;
-  const homeTitle = 'Консультант по увеличению продаж в HoReCa | Марина MARICO PRO';
-  const homeDescription = 'Увеличиваю средний чек в ресторанах, барах, отелях на 30%. 13 лет опыта в премиальном HoReCa. Гарантия результата. Работала в Marriott, Hilton, Four Seasons. Аудит, обучение персонала, системная трансформация.';
+  const homeTitle = 'Консультант по увеличению продаж в ресторанах | Марина MARICO PRO';
+  const homeDescription = 'Увеличиваю средний чек в ресторанах и барах на 25-35% за 3 месяца. Гарантия возврата средств. 13 лет опыта в премиальном HoReCa. Обучение персонала, аудит продаж, внедрение системы. 500+ обученных официантов.';
 
   return (
     <div className="min-h-screen bg-background">
