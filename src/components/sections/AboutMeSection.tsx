@@ -113,7 +113,7 @@ const AboutMeSection = () => {
                     <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center mx-auto mb-2">
                       <Icon name="TrendingUp" className="text-primary" size={20} />
                     </div>
-                    <p className="text-xs text-muted-foreground">Гарантия результата</p>
+                    <p className="text-xs text-muted-foreground">Возврат средств</p>
                   </CardContent>
                 </Card>
               </div>

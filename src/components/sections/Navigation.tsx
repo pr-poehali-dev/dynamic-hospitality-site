@@ -26,7 +26,7 @@ const Navigation = ({ scrollToSection }: NavigationProps) => {
           <div className="text-xl font-bold text-foreground">MARICO PRO</div>
           
           <div className="hidden md:flex items-center gap-6">
-            <button onClick={() => scrollToSection('pricing')} className="text-sm font-medium hover:text-primary transition-colors">Услуги</button>
+            <button onClick={() => scrollToSection('services')} className="text-sm font-medium hover:text-primary transition-colors">Услуги</button>
             <button onClick={() => scrollToSection('results')} className="text-sm font-medium hover:text-primary transition-colors">Кейсы</button>
             <Link to="/quiz" className="text-sm font-medium text-primary hover:underline transition-colors">🎯 Квиз</Link>
             <Link to="/blog" className="text-sm font-medium hover:text-primary transition-colors">Блог</Link>
@@ -49,7 +49,7 @@ const Navigation = ({ scrollToSection }: NavigationProps) => {
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4 pb-4 space-y-3 animate-fade-in">
             <button 
-              onClick={() => handleMobileNavClick(() => scrollToSection('pricing'))} 
+              onClick={() => handleMobileNavClick(() => scrollToSection('services'))} 
               className="block w-full text-left py-2 text-sm font-medium hover:text-primary transition-colors"
             >
               Услуги

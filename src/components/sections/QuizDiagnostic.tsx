@@ -120,11 +120,36 @@ const QuizDiagnostic = () => {
     setAnswers({ ...answers, [currentQuestion.id]: value });
   };
 
-  const handleNext = () => {
+  const handleNext = async () => {
     if (step < questions.length - 1) {
       setStep(step + 1);
     } else {
-      setShowResult(true);
+      // Отправляем данные на backend перед показом результата
+      const recommendation = getRecommendation();
+      const quizData = {
+        ...answers,
+        recommendation
+      };
+
+      try {
+        const response = await fetch('https://functions.poehali.dev/4276991a-c1c0-4761-86fd-9a9e74eadf0d', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(quizData)
+        });
+
+        if (response.ok) {
+          setShowResult(true);
+        } else {
+          // Даже при ошибке отправки показываем результат
+          setShowResult(true);
+        }
+      } catch (error) {
+        // При ошибке всё равно показываем результат пользователю
+        setShowResult(true);
+      }
     }
   };
 
@@ -291,7 +316,14 @@ const QuizDiagnostic = () => {
                 </div>
 
                 <div className="text-center space-y-4 pt-6">
-                  <Button size="lg" className="w-full text-lg py-6 font-bold">
+                  <Button 
+                    size="lg" 
+                    className="w-full text-lg py-6 font-bold"
+                    onClick={() => {
+                      const element = document.getElementById('contact');
+                      element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }}
+                  >
                     ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ
                   </Button>
                   <Button 
