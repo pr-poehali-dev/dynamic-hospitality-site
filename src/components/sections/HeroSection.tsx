@@ -19,7 +19,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="max-w-3xl space-y-6 sm:space-y-8 animate-fade-in">
           <div className="inline-block px-4 sm:px-6 py-2 sm:py-3 bg-amber-400 rounded-full shadow-xl">
-            <p className="text-slate-900 font-black text-xs sm:text-sm tracking-wide">⭐ 13 ЛЕТ ОПЫТА • 50+ ПРОЕКТОВ</p>
+            <p className="text-slate-900 font-black text-xs sm:text-sm tracking-wide">🔥 15 ЛЕТ • VIP-КЛУБЫ • ПРЕМИУМ-РЕСТОРАНЫ • ПЕРВЫЕ ЛИЦА</p>
           </div>
           
           <h1 className="text-3xl sm:text-5xl md:text-7xl font-black text-white leading-tight drop-shadow-2xl pr-4">
@@ -35,7 +35,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
           </div>
           
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white font-bold leading-relaxed drop-shadow-lg pr-4">
-            Системный подход к обучению персонала HoReCa. Работала в Marriott, Hilton, Four Seasons. Без шаблонов и волшебных таблеток.
+            Прошла весь путь HoReCa изнутри — от линейного персонала до управляющей в Marriott, Radisson, Four Seasons. С 2025 года делюсь авторской системой, которая реально работает.
           </p>
           
           <div className="flex flex-col gap-4 pt-6">
@@ -44,7 +44,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
               className="w-full sm:w-auto text-lg sm:text-xl px-8 sm:px-12 py-6 sm:py-8 font-black shadow-2xl hover:scale-105 transition-transform bg-amber-500 hover:bg-amber-600 text-slate-900 border-4 border-amber-300" 
               onClick={() => scrollToSection('contact')}
             >
-              ПОЛУЧИТЬ БЕСПЛАТНЫЙ АУДИТ →
+              ЗАПОЛНИТЬ БРИФ НА КОНСУЛЬТАЦИЮ →
             </Button>
           </div>
         </div>

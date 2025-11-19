@@ -25,6 +25,7 @@ import QuizDiagnostic from '@/components/sections/QuizDiagnostic';
 import LossesSection from '@/components/sections/LossesSection';
 import RealitySection from '@/components/sections/RealitySection';
 import HonestROISection from '@/components/sections/HonestROISection';
+import JourneySection from '@/components/sections/JourneySection';
 
 const Index = () => {
   const scrollToSection = (id: string) => {
@@ -34,7 +35,7 @@ const Index = () => {
 
   const homeUrl = window.location.origin;
   const homeTitle = 'Консультант по увеличению продаж в ресторанах | Марина MARICO PRO';
-  const homeDescription = 'Увеличиваю средний чек в ресторанах и барах на 25-35% за 3 месяца. Гарантия возврата средств. 13 лет опыта в премиальном HoReCa. Обучение персонала, аудит продаж, внедрение системы. 500+ обученных официантов.';
+  const homeDescription = 'Увеличиваю средний чек в ресторанах на 30% за 90 дней. 15 лет в премиум HoReCa. Работала в Marriott, Radisson, Four Seasons. Авторская методика "7 дней" — готовая система обучения персонала. Гарантия результата или возврат денег.';
 
   return (
     <div className="min-h-screen bg-background">
@@ -61,15 +62,10 @@ const Index = () => {
       <Navigation scrollToSection={scrollToSection} />
       <HeroSection scrollToSection={scrollToSection} />
       <SocialProofSection />
-      <LossesSection />
-      <ProblemSection />
-      <QuizDiagnostic />
-      <CasesSection />
-      <BeforeAfterSection />
-      <RealitySection />
-      <HonestROISection />
-      <PricingSection scrollToSection={scrollToSection} />
+      <JourneySection />
       <WhyMeSection />
+      <CasesSection />
+      <PricingSection scrollToSection={scrollToSection} />
       <TestimonialsSection />
       <HowWeWorkSection />
       <ContactSection />

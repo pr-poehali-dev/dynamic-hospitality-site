@@ -3,27 +3,27 @@ import Icon from '@/components/ui/icon';
 const SocialProofSection = () => {
   const stats = [
     {
-      icon: 'Trophy',
-      value: '50+',
-      label: 'Заведений трансформировано',
+      icon: 'Award',
+      value: '15 лет',
+      label: 'Опыта в премиум HoReCa',
       color: 'text-primary'
     },
     {
-      icon: 'TrendingUp',
-      value: '+34%',
-      label: 'Средний рост выручки',
+      icon: 'Briefcase',
+      value: '8 проектов',
+      label: 'Реализовано в 2025',
       color: 'text-green-600'
+    },
+    {
+      icon: 'Users',
+      value: '120+',
+      label: 'Сотрудников обучено в 2024',
+      color: 'text-amber-600'
     },
     {
       icon: 'Star',
       value: '0',
-      label: 'Возвратов за 5 лет',
-      color: 'text-amber-600'
-    },
-    {
-      icon: 'DollarSign',
-      value: '22+ млн ₽',
-      label: 'Дополнительной прибыли клиентов',
+      label: 'Возвратов денег',
       color: 'text-emerald-600'
     }
   ];

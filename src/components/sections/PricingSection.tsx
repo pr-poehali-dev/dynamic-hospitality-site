@@ -9,54 +9,71 @@ interface PricingSectionProps {
 const PricingSection = ({ scrollToSection }: PricingSectionProps) => {
   const plans = [
     {
-      name: 'АУДИТ',
-      price: 'от 60,000₽',
+      name: 'АУДИТ "ДНК"',
+      price: 'от 45,000₽',
       duration: '5-7 дней',
-      description: 'Для тех, кто хочет понять корень проблем',
+      description: 'Найду корни проблем, а не симптомы',
       popular: false,
       features: [
-        { text: 'Глубокая диагностика', included: true },
-        { text: 'Детальный отчет (30 стр)', included: true },
-        { text: 'План исправлений', included: true },
+        { text: 'Работаю как тайный гость', included: true },
+        { text: 'Глубокая диагностика 5-7 дней', included: true },
+        { text: 'Полный отчет + план на 6-12 мес', included: true },
         { text: 'Обучение персонала', included: false },
         { text: 'Личное сопровождение', included: false },
-        { text: 'Регулярные встречи', included: false },
+        { text: 'Гарантия результата', included: false },
       ],
       result: 'Точный диагноз и план действий',
       badge: null
     },
     {
-      name: 'ТРЕНИНГ',
-      price: 'от 80,000₽',
-      duration: '2-3 дня + поддержка',
-      description: 'Для команды, готовой внедрять изменения',
-      popular: true,
+      name: 'ТРЕНИНГ ПОД КЛЮЧ',
+      price: 'от 65,000₽',
+      duration: '2-3 дня + 30 дней',
+      description: 'Научу продавать всё — даже немыслимое',
+      popular: false,
       features: [
-        { text: 'Экспресс-аудит', included: true },
-        { text: 'Краткий отчет (10 стр)', included: true },
-        { text: 'Обучение персонала', included: true },
-        { text: 'Скрипты продаж', included: true },
+        { text: 'Экспресс-диагностика', included: true },
+        { text: '2-3 дня интенсива', included: true },
+        { text: 'Скрипты продаж + возражения', included: true },
+        { text: 'Учу продавать немыслимые позиции', included: true },
         { text: 'Поддержка 30 дней', included: true },
-        { text: 'Регулярные встречи', included: false },
+        { text: 'Гарантия +15% к чеку', included: false },
       ],
       result: '+15-25% к среднему чеку за 2 месяца',
-      badge: '⭐ САМЫЙ ПОПУЛЯРНЫЙ'
+      badge: null
+    },
+    {
+      name: 'ИНТЕНСИВ "7 ДНЕЙ"',
+      price: 'от 120,000₽',
+      duration: '7 дней работы',
+      description: 'Авторская методика — система за неделю',
+      popular: true,
+      features: [
+        { text: 'День 1: Аудит изнутри', included: true },
+        { text: 'День 2: Диагностика корней', included: true },
+        { text: 'День 3-4: Тренинги команды', included: true },
+        { text: 'День 5: Внедрение стандартов', included: true },
+        { text: 'День 6: Анализ результатов', included: true },
+        { text: 'День 7: Доработка + результат', included: true },
+      ],
+      result: 'Готовая система за 7 дней',
+      badge: '🚀 НОВИНКА 2025'
     },
     {
       name: 'FULL СОПРОВОЖДЕНИЕ',
-      price: 'от 180,000₽/мес',
+      price: 'от 150,000₽/мес',
       duration: 'от 3 месяцев',
-      description: 'Для тех, кто хочет системной трансформации',
+      description: 'Становлюсь частью вашей команды',
       popular: false,
       features: [
-        { text: 'Полный аудит ДНК', included: true },
-        { text: 'Развернутый отчет (30+ стр)', included: true },
-        { text: 'Обучение + переобучение', included: true },
+        { text: 'Полный контроль: найм, обучение, KPI', included: true },
         { text: 'Еженедельные встречи', included: true },
         { text: 'Безлимитные консультации', included: true },
         { text: 'Контроль внедрения', included: true },
+        { text: 'Работа с конфликтами', included: true },
+        { text: 'Гарантия +30-60% за квартал', included: true },
       ],
-      result: '+30% к выручке за 3 месяца',
+      result: '+30-60% к выручке за 3 месяца',
       badge: null
     }
   ];
@@ -74,7 +91,7 @@ const PricingSection = ({ scrollToSection }: PricingSectionProps) => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {plans.map((plan, index) => (
               <Card 
                 key={index} 
@@ -127,35 +144,35 @@ const PricingSection = ({ scrollToSection }: PricingSectionProps) => {
 
                   <Button 
                     size="lg" 
-                    className={`w-full font-black text-lg py-6 ${
+                    className={`w-full font-black text-base py-6 ${
                       plan.popular 
                         ? 'bg-amber-500 hover:bg-amber-600 text-slate-900 shadow-xl' 
                         : ''
                     }`}
                     onClick={() => scrollToSection('contact')}
                   >
-                    {plan.popular ? 'ВЫБРАТЬ ⭐' : 'ВЫБРАТЬ'}
+                    {plan.popular ? 'ЗАПОЛНИТЬ БРИФ 🚀' : 'ЗАПОЛНИТЬ БРИФ'}
                   </Button>
                 </CardContent>
               </Card>
             ))}
           </div>
 
-          <Card className="border-2 border-amber-500 bg-amber-50">
-            <CardContent className="p-8 text-center">
-              <p className="text-lg font-bold text-amber-900 mb-4">
-                💡 НЕ УВЕРЕНЫ, ЧТО ВЫБРАТЬ?
-              </p>
-              <p className="text-foreground mb-6">
-                Начните с <span className="font-black">экспресс-диагностики за 35,000₽</span> — приеду на 1 день, дам обратную связь и рекомендации. Потом решите, нужно ли продолжать.
+          <Card className="border-4 border-primary bg-gradient-to-br from-primary/10 via-primary/5 to-background shadow-2xl">
+            <CardContent className="p-10 text-center space-y-6">
+              <Icon name="Lightbulb" className="mx-auto text-primary" size={56} />
+              <h3 className="text-3xl sm:text-4xl font-black text-foreground">
+                Не знаете, с чего начать?
+              </h3>
+              <p className="text-lg text-foreground max-w-3xl mx-auto leading-relaxed">
+                Начните с <span className="text-primary font-black text-xl">бесплатной консультации 30 минут</span> — расскажите о вашей ситуации, я дам рекомендации и предложу оптимальный формат работы. Никаких обязательств.
               </p>
               <Button 
-                variant="outline" 
                 size="lg"
-                className="font-bold border-2 border-amber-600 text-amber-900 hover:bg-amber-100"
+                className="font-black text-xl px-12 py-8 bg-amber-500 hover:bg-amber-600 text-slate-900 shadow-xl"
                 onClick={() => scrollToSection('contact')}
               >
-                Заказать экспресс-диагностику
+                ЗАПОЛНИТЬ БРИФ НА КОНСУЛЬТАЦИЮ →
               </Button>
             </CardContent>
           </Card>

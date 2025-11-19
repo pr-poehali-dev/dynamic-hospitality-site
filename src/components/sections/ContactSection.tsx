@@ -24,12 +24,12 @@ const ContactSection = () => {
                   <div className="inline-block p-3 bg-primary rounded-full mb-2">
                     <Icon name="Gift" className="text-white" size={40} />
                   </div>
-                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground">Бесплатная консультация 30 минут!</h2>
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground">Заполните бриф — начнём работать!</h2>
                   <p className="text-lg sm:text-xl text-foreground">
-                    Разберем вашу ситуацию и определим точки роста — <span className="text-primary font-black">без оплаты</span>
+                    Расскажите о вашем ресторане и задачах. Я проанализирую и предложу <span className="text-primary font-black">оптимальный формат работы</span>
                   </p>
                   <p className="text-lg text-muted-foreground">
-                    Запишитесь сейчас — <strong className="text-primary">мест ограничено!</strong>
+                    Отвечаю в течение <strong className="text-primary">24 часов</strong>. Первая консультация — бесплатно!
                   </p>
                 </div>
               </div>

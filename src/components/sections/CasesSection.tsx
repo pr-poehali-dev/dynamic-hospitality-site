@@ -6,24 +6,32 @@ const CasesSection = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto space-y-12">
           <div className="text-center space-y-4">
+            <div className="inline-block px-6 py-3 bg-primary/10 rounded-full mb-4">
+              <p className="text-primary font-black text-sm tracking-wide">📊 СВЕЖИЕ КЕЙСЫ 2025</p>
+            </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground">Как я достигаю результатов</h2>
-            <p className="text-lg sm:text-xl text-muted-foreground">Реальные кейсы трансформации бизнеса</p>
+            <p className="text-lg sm:text-xl text-muted-foreground">Реальные проекты этого года с измеримыми результатами</p>
           </div>
 
           <div className="space-y-8">
             <Card className="border-2 border-primary overflow-hidden">
               <CardContent className="p-8 bg-gradient-to-br from-primary/5 to-primary/10">
                 <div className="space-y-6">
-                  <div>
-                    <h3 className="text-3xl font-bold text-foreground mb-2">Семейный ресторан грузинской кухни</h3>
-                    <p className="text-muted-foreground">Москва, Юго-Запад • 85-100 гостей/день</p>
+                  <div className="flex justify-between items-start">
+                    <div>
+                      <h3 className="text-3xl font-bold text-foreground mb-2">Семейный ресторан → VIP-формат</h3>
+                      <p className="text-muted-foreground">Региональный город • Средний сегмент • 70-90 гостей/день</p>
+                    </div>
+                    <div className="px-4 py-2 bg-green-100 rounded-full">
+                      <p className="text-green-800 font-black text-sm">МАРТ-ИЮНЬ 2025</p>
+                    </div>
                   </div>
 
                   <div className="grid md:grid-cols-3 gap-6">
                     <div className="p-6 bg-card rounded-2xl border-2 border-border">
                       <div className="text-sm text-muted-foreground mb-2">Было:</div>
                       <div className="text-2xl font-black text-destructive">Чек: 1450₽</div>
-                      <div className="text-sm text-muted-foreground mt-1">Выручка: 3 950 000₽/мес</div>
+                      <div className="text-sm text-muted-foreground mt-1">Выручка: 3.9M/мес</div>
                     </div>
 
                     <div className="bg-primary p-6 rounded-2xl flex items-center justify-center">
@@ -33,29 +41,24 @@ const CasesSection = () => {
                     <div className="p-6 bg-card rounded-2xl border-2 border-border">
                       <div className="text-sm text-muted-foreground mb-2">Стало:</div>
                       <div className="text-2xl font-black text-green-600">Чек: 2000₽</div>
-                      <div className="text-sm text-muted-foreground mt-1">Выручка: 5 450 000₽/мес</div>
+                      <div className="text-sm text-muted-foreground mt-1">Выручка: 5.4M/мес</div>
                     </div>
                   </div>
 
-                  <div className="bg-amber-50 p-6 rounded-2xl border-2 border-amber-200">
-                    <p className="text-sm font-bold text-amber-900 mb-3">⚠️ ВАЖНЫЙ КОНТЕКСТ:</p>
-                    <ul className="space-y-2 text-sm text-foreground">
-                      <li>• Параллельно работал сильный маркетинг</li>
-                      <li>• Владелец лично присутствовал 5 дней в неделю</li>
-                      <li>• Вклад моей работы: ~60% от роста</li>
-                      <li>• Остальное: маркетинг + вовлечённость владельца</li>
-                    </ul>
+                  <div className="bg-gradient-to-r from-primary/10 to-primary/5 p-6 rounded-2xl border-2 border-primary/20">
+                    <p className="text-sm font-bold text-primary mb-3">🎯 ЧТО СДЕЛАЛА:</p>
+                    <p className="text-foreground font-medium">7-дневный интенсив: аудит → диагностика → тренинги → внедрение → анализ → доработка → результат</p>
                   </div>
 
                   <div className="bg-primary p-6 rounded-2xl text-center">
-                    <div className="text-3xl font-black text-white">Прирост: +1 500 000₽ в месяц</div>
+                    <div className="text-3xl font-black text-white">Прирост: +1.5M₽ в месяц</div>
                   </div>
 
                   <div className="border-l-4 border-primary pl-6 py-4 bg-card rounded-r-xl">
                     <p className="text-foreground italic text-lg mb-4">
-                      "Марина не просто провела тренинг и ушла. Она три недели каждый день приезжала, смотрела, как работают официанты, исправляла ошибки на месте. Окупили инвестиции за месяц."
+                      "Не верил, что система из Москвы сработает у нас. Марина доказала — при правильном подходе растут все. Главное — не отмазки, а работа."
                     </p>
-                    <p className="text-foreground font-bold">— Георгий, владелец</p>
+                    <p className="text-foreground font-bold">— Андрей, владелец</p>
                   </div>
                 </div>
               </CardContent>
@@ -64,16 +67,21 @@ const CasesSection = () => {
             <Card className="border-2 border-primary overflow-hidden">
               <CardContent className="p-8 bg-gradient-to-br from-primary/5 to-primary/10">
                 <div className="space-y-6">
-                  <div>
-                    <h3 className="text-3xl font-bold text-foreground mb-2">Винный бар в центре</h3>
-                    <p className="text-muted-foreground">Москва, ЦАО • Премиум сегмент • 60-75 гостей/день</p>
+                  <div className="flex justify-between items-start">
+                    <div>
+                      <h3 className="text-3xl font-bold text-foreground mb-2">Винный бар: проблема с продажами дорогих позиций</h3>
+                      <p className="text-muted-foreground">Крупный город • Премиум-сегмент • 60-75 гостей/день</p>
+                    </div>
+                    <div className="px-4 py-2 bg-green-100 rounded-full">
+                      <p className="text-green-800 font-black text-sm">МАЙ-ИЮЛЬ 2025</p>
+                    </div>
                   </div>
 
                   <div className="grid md:grid-cols-3 gap-6">
                     <div className="p-6 bg-card rounded-2xl border-2 border-border">
                       <div className="text-sm text-muted-foreground mb-2">Было:</div>
                       <div className="text-2xl font-black text-destructive">Чек: 3200₽</div>
-                      <div className="text-sm text-muted-foreground mt-1">Выручка: 5 760 000₽/мес</div>
+                      <div className="text-sm text-muted-foreground mt-1">Выручка: 5.8M/мес</div>
                     </div>
 
                     <div className="bg-primary p-6 rounded-2xl flex items-center justify-center">
@@ -83,27 +91,22 @@ const CasesSection = () => {
                     <div className="p-6 bg-card rounded-2xl border-2 border-border">
                       <div className="text-sm text-muted-foreground mb-2">Стало:</div>
                       <div className="text-2xl font-black text-green-600">Чек: 4220₽</div>
-                      <div className="text-sm text-muted-foreground mt-1">Выручка: 7 600 000₽/мес</div>
+                      <div className="text-sm text-muted-foreground mt-1">Выручка: 7.6M/мес</div>
                     </div>
                   </div>
 
-                  <div className="bg-amber-50 p-6 rounded-2xl border-2 border-amber-200">
-                    <p className="text-sm font-bold text-amber-900 mb-3">⚠️ ВАЖНЫЙ КОНТЕКСТ:</p>
-                    <ul className="space-y-2 text-sm text-foreground">
-                      <li>• Управляющая очень сильная, вовлечённая</li>
-                      <li>• Параллельно обновили винную карту</li>
-                      <li>• Вклад моей работы: ~55% от роста</li>
-                      <li>• Остальное: управление + новое меню</li>
-                    </ul>
+                  <div className="bg-gradient-to-r from-primary/10 to-primary/5 p-6 rounded-2xl border-2 border-primary/20">
+                    <p className="text-sm font-bold text-primary mb-3">🎯 ЧТО СДЕЛАЛА:</p>
+                    <p className="text-foreground font-medium">Мастер-класс для сомелье + скрипты продаж премиальных позиций. Научила продавать дорогое вино через правильную подачу и историю.</p>
                   </div>
 
                   <div className="bg-primary p-6 rounded-2xl text-center">
-                    <div className="text-3xl font-black text-white">Прирост: +1 840 000₽ в месяц</div>
+                    <div className="text-3xl font-black text-white">Прирост: +1.8M₽ в месяц</div>
                   </div>
 
                   <div className="border-l-4 border-primary pl-6 py-4 bg-card rounded-r-xl">
                     <p className="text-foreground italic text-lg mb-4">
-                      "Марина показала, что знать продукт и уметь его продать — это разные вещи. Теперь наши бармены не просто наливают вино, они создают опыт."
+                      "Марина показала: знать продукт и уметь его продать — разные вещи. Теперь персонал не боится предлагать дорогие позиции."
                     </p>
                     <p className="text-foreground font-bold">— Анна, управляющая</p>
                   </div>
@@ -114,38 +117,44 @@ const CasesSection = () => {
             <Card className="border-2 border-primary overflow-hidden">
               <CardContent className="p-8 bg-gradient-to-br from-primary/5 to-primary/10">
                 <div className="space-y-6">
-                  <div>
-                    <h3 className="text-3xl font-bold text-foreground mb-2">Кофейня в центре Москвы</h3>
-                    <p className="text-muted-foreground">Москва, ЦАО • Премиум-локация • 120-140 гостей/день</p>
+                  <div className="flex justify-between items-start">
+                    <div>
+                      <h3 className="text-3xl font-bold text-foreground mb-2">Запуск ресторана премиум-сегмента с нуля</h3>
+                      <p className="text-muted-foreground">Москва • Новое открытие • Концептуальная кухня</p>
+                    </div>
+                    <div className="px-4 py-2 bg-green-100 rounded-full">
+                      <p className="text-green-800 font-black text-sm">ФЕВРАЛЬ-АПРЕЛЬ 2025</p>
+                    </div>
                   </div>
 
-                  <div className="grid md:grid-cols-3 gap-6">
+                  <div className="grid md:grid-cols-2 gap-6">
                     <div className="p-6 bg-card rounded-2xl border-2 border-border">
-                      <div className="text-sm text-muted-foreground mb-2">Было:</div>
-                      <div className="text-2xl font-black text-destructive">Чек: 850₽</div>
-                      <div className="text-sm text-muted-foreground mt-1">Выручка: 3 400 000₽/мес</div>
-                    </div>
-
-                    <div className="bg-primary p-6 rounded-2xl flex items-center justify-center">
-                      <div className="text-6xl font-black text-white">+38%</div>
+                      <div className="text-sm text-muted-foreground mb-2">Задача:</div>
+                      <div className="text-xl font-black text-foreground">Открытие нового заведения премиум-сегмента</div>
+                      <div className="text-sm text-muted-foreground mt-2">Найм персонала + обучение с нуля</div>
                     </div>
 
                     <div className="p-6 bg-card rounded-2xl border-2 border-border">
-                      <div className="text-sm text-muted-foreground mb-2">Стало:</div>
-                      <div className="text-2xl font-black text-green-600">Чек: 1170₽</div>
-                      <div className="text-sm text-muted-foreground mt-1">Выручка: 4 690 000₽/мес</div>
+                      <div className="text-sm text-muted-foreground mb-2">Результат:</div>
+                      <div className="text-2xl font-black text-green-600">2.8M₽ выручка</div>
+                      <div className="text-sm text-muted-foreground mt-2">в первый месяц работы</div>
                     </div>
+                  </div>
+
+                  <div className="bg-gradient-to-r from-primary/10 to-primary/5 p-6 rounded-2xl border-2 border-primary/20">
+                    <p className="text-sm font-bold text-primary mb-3">🎯 ЧТО СДЕЛАЛА:</p>
+                    <p className="text-foreground font-medium">Найм персонала → обучение команды → стандарты сервиса → запуск. Команда работает слаженно с первого дня.</p>
                   </div>
 
                   <div className="bg-primary p-6 rounded-2xl text-center">
-                    <div className="text-3xl font-black text-white">Прирост: +1 290 000₽ в месяц</div>
+                    <div className="text-3xl font-black text-white">Успешный старт без провала первых месяцев</div>
                   </div>
 
                   <div className="border-l-4 border-primary pl-6 py-4 bg-card rounded-r-xl">
                     <p className="text-foreground italic text-lg mb-4">
-                      "Марина научила баристов не просто готовить кофе, а общаться с гостями. Теперь каждый второй гость берет десерт или выпечку к напитку. Текучка персонала упала практически до нуля — команда работает вместе уже 8 месяцев."
+                      "Марина собрала команду, которая сработалась мгновенно. Обычно первые месяцы — хаос, у нас всё работало как часы с первого дня."
                     </p>
-                    <p className="text-foreground font-bold">— Ольга, владелица</p>
+                    <p className="text-foreground font-bold">— Дмитрий, основатель</p>
                   </div>
                 </div>
               </CardContent>

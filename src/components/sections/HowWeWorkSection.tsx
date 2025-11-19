@@ -5,44 +5,44 @@ const HowWeWorkSection = () => {
   const steps = [
     {
       number: '1',
-      icon: 'Phone',
-      title: 'Первичная консультация',
-      description: 'Бесплатно, 30 минут. Обсудим вашу ситуацию',
+      icon: 'FileText',
+      title: 'Заполните бриф',
+      description: 'Расскажите о ресторане, задачах и ситуации',
       color: 'from-blue-500 to-cyan-600'
     },
     {
       number: '2',
-      icon: 'Search',
-      title: 'Диагностика',
-      description: 'Приезжаю, смотрю работу, общаюсь с командой',
+      icon: 'Phone',
+      title: 'Консультация',
+      description: 'Созвонимся, обсудим детали — бесплатно!',
       color: 'from-purple-500 to-violet-600'
     },
     {
       number: '3',
-      icon: 'FileText',
+      icon: 'Clipboard',
       title: 'Предложение',
-      description: 'План работы + цена + сроки + гарантии',
+      description: 'Подберу формат работы + цена + сроки + гарантии',
       color: 'from-orange-500 to-amber-600'
     },
     {
       number: '4',
       icon: 'GraduationCap',
-      title: 'Обучение',
-      description: 'Тренинг/аудит/сопровождение по выбранному формату',
+      title: 'Работа',
+      description: 'Аудит/тренинг/интенсив/сопровождение',
       color: 'from-green-500 to-emerald-600'
     },
     {
       number: '5',
       icon: 'TrendingUp',
       title: 'Результат',
-      description: 'Замеры чека, фидбек, корректировки',
+      description: 'Измеряем чек, анализируем, корректируем',
       color: 'from-teal-500 to-cyan-600'
     },
     {
       number: '6',
       icon: 'MessageCircle',
       title: 'Поддержка',
-      description: '30 дней на связи после тренинга',
+      description: 'Остаюсь на связи — помогаю закрепить систему',
       color: 'from-rose-500 to-pink-600'
     }
   ];
@@ -53,10 +53,10 @@ const HowWeWorkSection = () => {
         <div className="max-w-6xl mx-auto space-y-16">
           <div className="text-center space-y-4">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground">
-              Как я трансформирую ваше заведение за 90 дней
+              Как мы начнём работать
             </h2>
             <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
-              Прозрачный процесс с измеримым результатом на каждом этапе
+              Простой путь от заполнения брифа до результата
             </p>
           </div>
 
