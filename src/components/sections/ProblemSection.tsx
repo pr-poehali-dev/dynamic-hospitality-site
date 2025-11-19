@@ -7,10 +7,10 @@ const ProblemSection = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto space-y-12">
           <div className="text-center space-y-4">
-            <h2 className="text-4xl md:text-5xl font-black text-foreground">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground">
               Почему ваши сотрудники не продают?
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-lg sm:text-xl text-muted-foreground">
               Вы потратили миллионы на создание проекта
             </p>
           </div>

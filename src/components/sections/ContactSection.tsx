@@ -24,8 +24,8 @@ const ContactSection = () => {
                   <div className="inline-block p-3 bg-primary rounded-full mb-2">
                     <Icon name="Gift" className="text-white" size={40} />
                   </div>
-                  <h2 className="text-4xl md:text-5xl font-black text-foreground">Бесплатная консультация 30 минут!</h2>
-                  <p className="text-xl text-foreground">
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground">Бесплатная консультация 30 минут!</h2>
+                  <p className="text-lg sm:text-xl text-foreground">
                     Разберем вашу ситуацию и определим точки роста — <span className="text-primary font-black">без оплаты</span>
                   </p>
                   <p className="text-lg text-muted-foreground">

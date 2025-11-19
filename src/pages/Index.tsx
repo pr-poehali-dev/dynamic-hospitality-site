@@ -61,24 +61,17 @@ const Index = () => {
       <Navigation scrollToSection={scrollToSection} />
       <HeroSection scrollToSection={scrollToSection} />
       <SocialProofSection />
-      <LeadMagnetSection />
       <LossesSection />
       <ProblemSection />
-      <ProblemsSection />
       <QuizDiagnostic />
       <CasesSection />
       <BeforeAfterSection />
       <RealitySection />
       <HonestROISection />
-      <ExpectationsSection />
-      <HonestySection />
       <PricingSection scrollToSection={scrollToSection} />
-      <NotForYouSection />
       <WhyMeSection />
-      <HowWeWorkSection />
       <TestimonialsSection />
-      <AboutSection scrollToSection={scrollToSection} />
-      <BlogPreviewSection />
+      <HowWeWorkSection />
       <ContactSection />
       <FooterSection />
     </div>

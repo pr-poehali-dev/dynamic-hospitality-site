@@ -8,24 +8,24 @@ const TestimonialsSection = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto space-y-12">
           <div className="text-center space-y-4">
-            <h2 className="text-5xl font-black text-foreground">Что говорят клиенты</h2>
-            <p className="text-muted-foreground">Реальные истории трансформации бизнеса</p>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground">Что говорят клиенты</h2>
+            <p className="text-lg sm:text-xl text-muted-foreground">Реальные истории трансформации бизнеса</p>
           </div>
 
           <div className="space-y-8">
             <Card className="border-2 hover:border-primary transition-all duration-300">
-              <CardContent className="p-8">
-                <div className="flex items-start gap-6">
-                  <div className="w-20 h-20 rounded-full bg-primary flex items-center justify-center text-white text-3xl font-bold flex-shrink-0">
+              <CardContent className="p-6 sm:p-8">
+                <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-primary flex items-center justify-center text-white text-2xl sm:text-3xl font-bold flex-shrink-0">
                     АМ
                   </div>
                   <div className="space-y-4 flex-1">
                     <div>
-                      <h4 className="text-2xl font-bold text-foreground">Алексей Морозов</h4>
-                      <p className="text-muted-foreground">Владелец ресторана "Seasons", Санкт-Петербург</p>
+                      <h4 className="text-xl sm:text-2xl font-bold text-foreground">Алексей Морозов</h4>
+                      <p className="text-sm sm:text-base text-muted-foreground">Владелец ресторана "Seasons", Санкт-Петербург</p>
                     </div>
-                    <div className="border-l-4 border-primary pl-6">
-                      <p className="text-foreground italic text-lg leading-relaxed">
+                    <div className="border-l-4 border-primary pl-4 sm:pl-6">
+                      <p className="text-foreground italic text-base sm:text-lg leading-relaxed">
                         "Я скептически относился к консультантам, но решил рискнуть — заведение откровенно проседало. То, что выявил аудит, было для меня шоком: оказалось, половина моих маркетинговых расходов уходила впустую, а официанты работали по принципам 90-х годов. За три месяца после внедрения рекомендаций мы не просто вышли из минуса — прибыль выросла в 2.4 раза! Самое ценное — это был не разовый эффект. Выстроенная система работает до сих пор, спустя полтора года. Это инвестиция, которая окупилась уже в первый месяц."
                       </p>
                     </div>

@@ -10,8 +10,8 @@ const LossesSection = () => {
             <div className="inline-block px-6 py-2 bg-red-100 rounded-full mb-4">
               <span className="text-red-700 font-bold text-sm">⚠️ СКОЛЬКО ВЫ ТЕРЯЕТЕ КАЖДЫЙ ДЕНЬ</span>
             </div>
-            <h2 className="text-5xl font-black text-foreground">Цена ошибок персонала</h2>
-            <p className="text-xl text-muted-foreground">Конкретные потери в рублях, о которых вы не подозреваете</p>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground">Цена ошибок персонала</h2>
+            <p className="text-lg sm:text-xl text-muted-foreground">Конкретные потери в рублях, о которых вы не подозреваете</p>
           </div>
 
           <Card className="border-4 border-red-300 bg-white shadow-2xl">

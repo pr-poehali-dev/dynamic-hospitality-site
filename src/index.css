@@ -95,6 +95,26 @@
   }
 }
 
+@layer utilities {
+  @media (max-width: 640px) {
+    .container {
+      @apply px-4;
+    }
+
+    section {
+      @apply py-16;
+    }
+
+    h1 {
+      @apply leading-tight;
+    }
+
+    h2 {
+      @apply leading-tight;
+    }
+  }
+}
+
 .calendar-wrapper .react-calendar {
   width: 100%;
   border: none;

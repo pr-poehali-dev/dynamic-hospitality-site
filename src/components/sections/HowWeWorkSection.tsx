@@ -52,10 +52,10 @@ const HowWeWorkSection = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto space-y-16">
           <div className="text-center space-y-4">
-            <h2 className="text-5xl font-black text-foreground">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground">
               Как я трансформирую ваше заведение за 90 дней
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
               Прозрачный процесс с измеримым результатом на каждом этапе
             </p>
           </div>

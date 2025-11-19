@@ -66,10 +66,10 @@ const PricingSection = ({ scrollToSection }: PricingSectionProps) => {
       <div className="container mx-auto px-6">
         <div className="max-w-7xl mx-auto space-y-12">
           <div className="text-center space-y-4">
-            <h2 className="text-5xl md:text-6xl font-black text-foreground">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-foreground">
               Что вы получите (и сколько на этом заработаете)
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
               Выберите формат, который подходит вашей ситуации
             </p>
           </div>

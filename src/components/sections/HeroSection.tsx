@@ -22,36 +22,29 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
             <p className="text-slate-900 font-black text-sm tracking-wide">⭐ 13 ЛЕТ ОПЫТА • 50+ ПРОЕКТОВ • ГАРАНТИЯ</p>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-black text-white leading-tight drop-shadow-2xl">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-white leading-tight drop-shadow-2xl">
             Увеличу средний чек в вашем ресторане на 30% за 90 дней
           </h1>
           
           <div className="bg-gradient-to-r from-amber-400 to-orange-500 p-1 rounded-2xl inline-block">
-            <div className="bg-slate-900 px-8 py-4 rounded-xl">
-              <p className="text-2xl md:text-3xl text-amber-400 font-black">
+            <div className="bg-slate-900 px-6 sm:px-8 py-3 sm:py-4 rounded-xl">
+              <p className="text-xl sm:text-2xl md:text-3xl text-amber-400 font-black">
                 ИЛИ ВЕРНУ ДЕНЬГИ
               </p>
             </div>
           </div>
           
-          <p className="text-xl md:text-2xl text-white font-bold leading-relaxed drop-shadow-lg">
+          <p className="text-lg sm:text-xl md:text-2xl text-white font-bold leading-relaxed drop-shadow-lg">
             Системный подход к обучению персонала HoReCa. Работала в Marriott, Hilton, Four Seasons. Без шаблонов и волшебных таблеток.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 pt-6">
+          <div className="flex flex-col gap-4 pt-6">
             <Button 
               size="lg" 
-              className="text-xl px-12 py-8 font-black shadow-2xl hover:scale-105 transition-transform bg-amber-500 hover:bg-amber-600 text-slate-900 border-4 border-amber-300" 
+              className="w-full sm:w-auto text-lg sm:text-xl px-8 sm:px-12 py-6 sm:py-8 font-black shadow-2xl hover:scale-105 transition-transform bg-amber-500 hover:bg-amber-600 text-slate-900 border-4 border-amber-300" 
               onClick={() => scrollToSection('contact')}
             >
               ПОЛУЧИТЬ БЕСПЛАТНЫЙ АУДИТ →
-            </Button>
-            <Button 
-              size="lg" 
-              className="text-xl px-12 py-8 font-black border-4 border-white bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm" 
-              onClick={() => scrollToSection('results')}
-            >
-              Смотреть кейсы
             </Button>
           </div>
         </div>
