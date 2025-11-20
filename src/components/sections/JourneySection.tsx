@@ -1,137 +1,199 @@
+import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
 
 const JourneySection = () => {
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+
   const timeline = [
     {
-      years: '2009-2015',
-      title: 'Старт карьеры',
-      icon: 'Coffee',
-      items: [
-        'Официантка, хостес, бармен в премиум-ресторанах',
-        'Научилась понимать гостей и продавать'
-      ],
+      shortTitle: 'Инсайдер премиум-сегмента',
+      shortDesc: '15 лет опыта в гостеприимстве',
+      fullDesc: '15 лет в HoReCa на всех стадиях: запуски с нуля, ребрендинги, популярные рестораны. Управляющая в Marriott, Radisson, Four Seasons. Закрытые мероприятия с первыми лицами государства.',
+      highlight: 'В 2025 году рынок HoReCa вырос на 24% в РФ. Но большинство заведений продолжают работать по старым схемам. Я помогаю взять свою долю этого роста.',
+      icon: 'Building2',
       color: 'from-amber-500 to-orange-600'
     },
     {
-      years: '2015-2019',
-      title: 'Рост до управляющей',
-      icon: 'Building',
-      items: [
-        'Отели: Marriott, Radisson, Four Seasons',
-        'Организация VIP-мероприятий и закрытых событий',
-        'Работа с первыми лицами государства'
-      ],
+      shortTitle: 'Не теоретик, а практик',
+      shortDesc: 'Прошла путь от официантки до управляющей',
+      fullDesc: 'Начинала с линейных позиций: официантка, хостес, бармен. Росла внутри компаний, понимая бизнес на всех уровнях. Управляла командами в Marriott, Radisson, Four Seasons.',
+      highlight: '85% моих клиентов отмечают рост выручки уже в первые 30 дней после внедрения системы.',
+      icon: 'Trophy',
       color: 'from-blue-500 to-cyan-600'
     },
     {
-      years: '2019-2022',
-      title: 'Уникальные проекты',
+      shortTitle: 'Авторская методика',
+      shortDesc: '7-дневный интенсив трансформации',
+      fullDesc: 'Разработала собственную систему обучения персонала на основе 15-летнего опыта. Метод проверен на десятках заведений — от камерных баров до крупных ресторанов.',
+      highlight: 'Средний результат клиентов: +5 млн ₽ к годовой выручке без увеличения рекламного бюджета.',
       icon: 'Sparkles',
-      items: [
-        'Развитие эксклюзивных клубов',
-        'Запуски ресторанов с нуля',
-        'Ребрендинги популярных заведений'
-      ],
       color: 'from-purple-500 to-violet-600'
     },
     {
-      years: '2022-2024',
-      title: 'Имиджевый клуб',
-      icon: 'Crown',
-      items: [
-        'Куратор VIP-клуба с эксклюзивным сервисом',
-        'Работа с избранными гостями',
-        'Разработка собственной системы обучения'
-      ],
-      color: 'from-rose-500 to-pink-600'
-    },
-    {
-      years: '2025-сейчас',
-      title: 'MARICO PRO',
-      icon: 'Rocket',
-      items: [
-        'Помогаю ресторанам внедрять мою систему',
-        'Гарантирую результат — или возвращаю деньги',
-        '7-дневный интенсив — авторская методика'
-      ],
+      shortTitle: 'Гарантия результата',
+      shortDesc: 'Работаю на результат, не на процесс',
+      fullDesc: 'Если через 90 дней вы не увидите рост выручки минимум на 15% — верну 100% стоимости услуг. Это единственная система в России с такой гарантией.',
+      highlight: '🔥 За 2024 год ни один клиент не попросил возврат средств. Результат есть у всех.',
+      icon: 'Shield',
       color: 'from-green-500 to-emerald-600'
     }
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-br from-background via-muted/30 to-background">
-      <div className="container mx-auto px-6">
-        <div className="max-w-6xl mx-auto space-y-16">
-          <div className="text-center space-y-4">
-            <div className="inline-block px-6 py-3 bg-primary/10 rounded-full mb-4">
-              <p className="text-primary font-black text-sm tracking-wide">📍 МОЙ ПУТЬ</p>
+    <section className="py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-amber-500 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500 rounded-full blur-3xl"></div>
+      </div>
+      
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="max-w-4xl mx-auto space-y-12">
+          <div className="text-center space-y-4 animate-fade-in">
+            <div className="inline-block px-6 py-3 bg-amber-500/20 backdrop-blur-sm rounded-full border-2 border-amber-500 mb-4">
+              <p className="text-amber-400 font-black text-sm tracking-wide">📍 КАК Я ПРОШЛА ПУТЬ</p>
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground">
-              Как я прошла весь HoReCa изнутри
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white">
+              От официантки до эксперта №1
             </h2>
-            <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
-              15 лет от линейного персонала до создания собственной системы обучения
+            <p className="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto">
+              15 лет практики в премиум HoReCa — каждый этап стал основой для авторской методики
             </p>
           </div>
 
-          <div className="space-y-8">
-            {timeline.map((period, index) => (
-              <Card 
-                key={index} 
-                className="border-2 hover:border-primary transition-all duration-300 hover:shadow-xl group"
+          <div className="space-y-6">
+            {timeline.map((step, index) => (
+              <div
+                key={index}
+                className="animate-slide-down"
+                style={{ 
+                  animationDelay: `${index * 0.15}s`,
+                  marginLeft: `${index * 20}px`,
+                  maxWidth: `calc(100% - ${index * 20}px)`
+                }}
               >
-                <CardContent className="p-8">
-                  <div className="flex flex-col md:flex-row gap-6 items-start">
-                    <div className="flex-shrink-0">
-                      <div className={`w-24 h-24 rounded-2xl bg-gradient-to-br ${period.color} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform`}>
-                        <Icon name={period.icon} className="text-white" size={48} />
-                      </div>
-                    </div>
-                    
-                    <div className="flex-1 space-y-4">
-                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-                        <h3 className="text-2xl sm:text-3xl font-black text-foreground">
-                          {period.title}
-                        </h3>
-                        <div className={`inline-block px-5 py-2 rounded-full bg-gradient-to-r ${period.color} text-white font-black text-sm shadow-md`}>
-                          {period.years}
-                        </div>
+                <Card 
+                  className={`border-2 border-slate-700 bg-slate-800/80 backdrop-blur-sm transition-all duration-500 hover:scale-[1.02] ${
+                    expandedIndex === index ? 'shadow-2xl shadow-amber-500/20' : 'hover:shadow-xl'
+                  }`}
+                >
+                  <CardContent className="p-6">
+                    <div 
+                      className="flex items-start gap-4 cursor-pointer"
+                      onClick={() => setExpandedIndex(expandedIndex === index ? null : index)}
+                    >
+                      <div className={`flex-shrink-0 w-16 h-16 rounded-xl bg-gradient-to-br ${step.color} flex items-center justify-center shadow-lg transition-transform duration-300 ${
+                        expandedIndex === index ? 'scale-110 rotate-6' : ''
+                      }`}>
+                        <Icon name={step.icon as any} className="text-white" size={32} />
                       </div>
                       
-                      <ul className="space-y-3">
-                        {period.items.map((item, idx) => (
-                          <li key={idx} className="flex items-start gap-3">
-                            <div className={`mt-1 w-2 h-2 rounded-full bg-gradient-to-r ${period.color} flex-shrink-0`} />
-                            <p className="text-base sm:text-lg text-foreground leading-relaxed">
-                              {item}
-                            </p>
-                          </li>
-                        ))}
-                      </ul>
+                      <div className="flex-1 space-y-2">
+                        <div className="flex items-center justify-between gap-3">
+                          <h3 className="text-xl sm:text-2xl font-black text-white">
+                            {step.shortTitle}
+                          </h3>
+                          <div className={`transition-transform duration-300 ${
+                            expandedIndex === index ? 'rotate-180' : ''
+                          }`}>
+                            <Icon name="ChevronDown" className="text-amber-400" size={24} />
+                          </div>
+                        </div>
+                        <p className="text-base text-slate-300">
+                          {step.shortDesc}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                </CardContent>
-              </Card>
+
+                    <div 
+                      className={`overflow-hidden transition-all duration-500 ${
+                        expandedIndex === index ? 'max-h-96 opacity-100 mt-6' : 'max-h-0 opacity-0'
+                      }`}
+                    >
+                      <div className="space-y-4 pl-20 pr-4">
+                        <div className="h-px bg-gradient-to-r from-transparent via-slate-600 to-transparent"></div>
+                        
+                        <p className="text-base text-slate-200 leading-relaxed animate-fade-in">
+                          {step.fullDesc}
+                        </p>
+                        
+                        <div className={`p-6 rounded-xl bg-gradient-to-br ${step.color} shadow-2xl animate-bounce-in`}>
+                          <p className="text-lg font-bold text-white leading-relaxed">
+                            {step.highlight}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
             ))}
           </div>
 
-          <Card className="border-4 border-primary bg-gradient-to-br from-primary/10 via-primary/5 to-background shadow-2xl">
+          <Card className="border-4 border-amber-500 bg-gradient-to-br from-amber-500/20 via-orange-500/10 to-slate-800/80 backdrop-blur-sm shadow-2xl animate-pulse-slow mt-16">
             <CardContent className="p-10 text-center space-y-6">
-              <Icon name="TrendingUp" className="mx-auto text-primary" size={56} />
-              <h3 className="text-3xl sm:text-4xl font-black text-foreground">
-                Не теоретик, а практик
+              <div className="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center shadow-2xl">
+                <Icon name="TrendingUp" className="text-white" size={48} />
+              </div>
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-white">
+                Готовы повторить мой успех в своём заведении?
               </h3>
-              <p className="text-lg sm:text-xl text-foreground max-w-3xl mx-auto leading-relaxed">
-                Я знаю HoReCa изнутри — от кухни до VIP-залов. Прошла все позиции: от официантки до управляющей в премиум-сегменте. 
-                <span className="block mt-4 text-primary font-black text-2xl">
-                  Теперь помогаю другим строить успешные рестораны
-                </span>
+              <p className="text-lg text-slate-200 max-w-2xl mx-auto leading-relaxed">
+                Всё, что работает у меня — буду внедрять у вас. Без воды, только практика.
               </p>
             </CardContent>
           </Card>
         </div>
       </div>
+
+      <style>{`
+        @keyframes slide-down {
+          from {
+            opacity: 0;
+            transform: translateY(-30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes bounce-in {
+          0% {
+            opacity: 0;
+            transform: scale(0.9) translateY(-20px);
+          }
+          60% {
+            transform: scale(1.05) translateY(0);
+          }
+          100% {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+          }
+        }
+
+        @keyframes pulse-slow {
+          0%, 100% {
+            box-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
+          }
+          50% {
+            box-shadow: 0 0 40px rgba(245, 158, 11, 0.6);
+          }
+        }
+
+        .animate-slide-down {
+          animation: slide-down 0.6s ease-out forwards;
+          opacity: 0;
+        }
+
+        .animate-bounce-in {
+          animation: bounce-in 0.5s ease-out forwards;
+        }
+
+        .animate-pulse-slow {
+          animation: pulse-slow 3s ease-in-out infinite;
+        }
+      `}</style>
     </section>
   );
 };
