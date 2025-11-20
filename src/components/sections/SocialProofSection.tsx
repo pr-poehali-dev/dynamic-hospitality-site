@@ -10,8 +10,8 @@ const SocialProofSection = () => {
     },
     {
       icon: 'Briefcase',
-      value: '8 проектов',
-      label: 'Реализовано в 2025',
+      value: '8',
+      label: 'Завершённых проектов в 2025',
       color: 'text-green-600'
     },
     {

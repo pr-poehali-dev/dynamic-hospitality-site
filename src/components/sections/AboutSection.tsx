@@ -24,7 +24,7 @@ const AboutSection = ({ scrollToSection }: AboutSectionProps) => {
               
               <div className="bg-primary/5 border-l-4 border-primary p-6 rounded-r-xl">
                 <p className="text-foreground text-lg font-semibold">
-                  13 лет в общепите. Работала только в премиальных ресторанах, международных отелях: Marriott, Hilton, Four Seasons, Radisson.
+                  13 лет в общепите. От официанта до куратора закрытого клуба в Москве, аналогов которому нет. Работала только в премиальных ресторанах и международных отелях.
                 </p>
               </div>
 
