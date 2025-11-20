@@ -1,6 +1,6 @@
 import { Card, CardContent } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
-import BookingCalendar from '@/components/BookingCalendar';
+import BriefForm from '@/components/BriefForm';
 
 const ContactSection = () => {
   return (
@@ -52,7 +52,7 @@ const ContactSection = () => {
           </Card>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <BookingCalendar />
+            <BriefForm />
 
             <div className="space-y-6">
               <Card className="border-2 border-gray-700 bg-gray-800">

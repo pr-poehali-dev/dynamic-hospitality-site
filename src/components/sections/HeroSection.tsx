@@ -27,7 +27,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
           </h1>
           
           <p className="text-base sm:text-lg md:text-xl text-white/90 font-normal leading-relaxed drop-shadow-lg max-w-2xl">
-            Прошла путь от линейного персонала до управляющей в Marriott, Radisson, Four Seasons. С 2025 года делюсь авторской системой, которая работает.
+            От линейного персонала до управляющей в Marriott, Radisson, Four Seasons. С 2025 года помогаю ресторанам расти через авторскую методику.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-3 pt-4">
