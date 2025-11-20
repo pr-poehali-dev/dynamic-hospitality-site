@@ -3,18 +3,20 @@ import Icon from '@/components/ui/icon';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useLanguage } from '@/contexts/LanguageContext';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 
-const socialNetworks = [
+const getSocialNetworks = (t: (key: string) => string) => [
   {
-    name: 'Группа в VK',
+    name: t('social.vk'),
     icon: 'Users',
-    url: 'https://vk.com/marico_pro',
+    url: 'https://vk.com/marico_su?from=groups',
     color: 'from-blue-600 to-blue-700'
   },
   {
-    name: 'Instagram',
+    name: t('social.instagram'),
     icon: 'Instagram',
-    url: 'https://instagram.com/marico.su',
+    url: 'https://www.instagram.com/malinochka__marina?igsh=MXNzdzR3Z3MxM25kOQ%3D%3D&utm_source=qr',
     color: 'from-pink-500 to-rose-500'
   },
   {
@@ -24,19 +26,19 @@ const socialNetworks = [
     color: 'from-blue-500 to-indigo-600'
   },
   {
-    name: 'Telegram Канал',
+    name: t('social.telegram'),
     icon: 'Send',
-    url: 'https://t.me/marico_channel',
+    url: 'https://t.me/marico_pro',
     color: 'from-blue-400 to-cyan-500'
   },
   {
-    name: 'Max Канал',
+    name: t('social.max'),
     icon: 'Radio',
-    url: 'https://max.ru/marico',
+    url: 'https://t.me/marico_pro',
     color: 'from-purple-500 to-violet-600'
   },
   {
-    name: 'Блог',
+    name: t('social.blog'),
     icon: 'BookOpen',
     url: '/blog',
     color: 'from-amber-500 to-orange-600',
@@ -44,27 +46,27 @@ const socialNetworks = [
   }
 ];
 
-const quickContacts = [
+const getQuickContacts = (t: (key: string) => string) => [
   {
-    name: 'WhatsApp',
+    name: t('contact.whatsapp'),
     icon: 'MessageCircle',
     url: 'https://wa.me/79182858216',
     color: 'text-green-500'
   },
   {
-    name: 'Telegram',
+    name: t('contact.telegram'),
     icon: 'Send',
     url: 'https://t.me/malinochka_marina',
     color: 'text-blue-500'
   },
   {
-    name: 'Max',
+    name: t('contact.max'),
     icon: 'MessageSquare',
-    url: 'https://max.ru/marico',
+    url: 'https://wa.me/79182858216',
     color: 'text-purple-500'
   },
   {
-    name: 'Email',
+    name: t('contact.email'),
     icon: 'Mail',
     url: 'mailto:malinochkamarina@gmail.com',
     color: 'text-amber-500'
@@ -72,6 +74,9 @@ const quickContacts = [
 ];
 
 const Contact = () => {
+  const { t } = useLanguage();
+  const socialNetworks = getSocialNetworks(t);
+  const quickContacts = getQuickContacts(t);
   const currentUrl = `${window.location.origin}/contact`;
   const contactDescription = 'Свяжитесь с Мариной MARICO PRO — экспертом по продажам и сервису в HoReCa. Instagram, Telegram, VK, Max, Email. Работаю по всей России.';
   
@@ -94,7 +99,7 @@ const Contact = () => {
               MARICO PRO
             </Link>
             <Link to="/" className="text-sm font-medium text-amber-400 hover:text-white transition-colors">
-              ← Назад на главную
+              ← {t('nav.back')}
             </Link>
           </div>
         </div>
@@ -106,7 +111,7 @@ const Contact = () => {
           <div className="flex gap-12">
             {[...Array(3)].map((_, i) => (
               <span key={i} className="text-lg md:text-xl font-bold text-slate-900 px-6">
-                ✈️ Не важно где вы находишься — ваш сервис может быть лучше чем в Москве • Прилечу в любую точку России • 15 лет опыта • Marriott • Radisson • Four Seasons
+                {t('marquee.text')}
               </span>
             ))}
           </div>
@@ -121,10 +126,10 @@ const Contact = () => {
             <div className="space-y-8 animate-fade-in">
               <div className="text-center space-y-4">
                 <h1 className="text-4xl md:text-5xl font-black text-white">
-                  Мои социальные сети
+                  {t('contact.title')}
                 </h1>
                 <p className="text-xl text-amber-400">
-                  Выбирайте удобную площадку — следите за новостями и получайте лайфхаки
+                  {t('contact.subtitle')}
                 </p>
               </div>
 
@@ -182,10 +187,10 @@ const Contact = () => {
                   <Icon name="Zap" size={48} className="text-amber-400" />
                 </div>
                 <h2 className="text-3xl md:text-4xl font-black text-white">
-                  Готовы обсудить ваш проект?
+                  {t('contact.quick.title')}
                 </h2>
                 <p className="text-xl text-slate-300">
-                  Выберите удобный способ связи — отвечу в течение 2 часов
+                  {t('contact.quick.subtitle')}
                 </p>
               </div>
 
@@ -213,12 +218,15 @@ const Contact = () => {
                   <CardContent className="p-8">
                     <div className="space-y-4">
                       <Icon name="Clock" size={32} className="text-amber-400 mx-auto" />
-                      <p className="text-lg text-white font-semibold">
-                        ⚡ Среднее время ответа: 2 часа
-                      </p>
-                      <p className="text-sm text-slate-400">
-                        Работаю ежедневно с 10:00 до 22:00 по МСК
-                      </p>
+                      <div className="space-y-2">
+                        <div className="flex items-center gap-2 justify-center">
+                          <Icon name="Clock" size={20} className="text-amber-400" />
+                          <h3 className="text-xl font-bold text-white">{t('contact.hours.title')}</h3>
+                        </div>
+                        <p className="text-slate-300">{t('contact.hours.text')}</p>
+                        <p className="text-2xl font-black text-amber-400">{t('contact.hours.time')}</p>
+                        <p className="text-sm text-slate-400">{t('contact.hours.weekend')}</p>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
@@ -228,6 +236,7 @@ const Contact = () => {
           </div>
         </div>
       </section>
+      <LanguageSwitcher />
     </div>
   );
 };

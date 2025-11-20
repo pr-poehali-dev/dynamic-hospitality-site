@@ -338,7 +338,7 @@ const FAQ = () => {
                     </div>
                     <span className="text-sm font-semibold text-foreground">WhatsApp</span>
                   </a>
-                  <a href="https://max.ru/marico" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 hover:scale-110 transition-transform">
+                  <a href="https://wa.me/79182858216" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 hover:scale-110 transition-transform">
                     <div className="w-16 h-16 rounded-full bg-purple-500 hover:bg-purple-600 flex items-center justify-center shadow-lg">
                       <Icon name="MessageSquare" className="text-white" size={32} />
                     </div>

@@ -379,7 +379,7 @@ const Blog = () => {
                     </a>
                   </Button>
                   <Button size="lg" variant="outline" className="font-semibold border-2" asChild>
-                    <a href="https://max.ru/marico" target="_blank" rel="noopener noreferrer">
+                    <a href="https://t.me/marico_pro" target="_blank" rel="noopener noreferrer">
                       <Icon name="MessageSquare" className="mr-2" size={20} />
                       Канал в Max
                     </a>
@@ -398,7 +398,7 @@ const Blog = () => {
             <p className="text-white/80">Продажи и сервис — одна система.</p>
             <div className="flex justify-center gap-4 flex-wrap">
               <Button variant="ghost" size="icon" className="text-white hover:text-primary" asChild>
-                <a href="https://www.instagram.com/marico_pro?igsh=eXljY2RqbHJtdjM4&utm_source=qr" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/malinochka__marina?igsh=MXNzdzR3Z3MxM25kOQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
                   <Icon name="Instagram" size={24} />
                 </a>
               </Button>
@@ -408,7 +408,7 @@ const Blog = () => {
                 </a>
               </Button>
               <Button variant="ghost" size="icon" className="text-white hover:text-primary" asChild>
-                <a href="https://vk.com/marico_pro" target="_blank" rel="noopener noreferrer">
+                <a href="https://vk.com/marico_su?from=groups" target="_blank" rel="noopener noreferrer">
                   <Icon name="Mail" size={24} />
                 </a>
               </Button>
