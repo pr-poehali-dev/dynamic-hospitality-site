@@ -95,7 +95,7 @@ const WhyMeSection = () => {
                 Не важно, где вы находитесь — в Москве, Иркутске или любом другом городе. Москва для многих эталон, но это не отмазка для других регионов. <span className="text-primary font-black text-2xl">Я готова заработать для каждого ресторатора</span>, потому что знаю: при правильном подходе растут все.
               </p>
               <div className="pt-4">
-                <p className="text-3xl font-black text-primary">Гарантия +30% к чеку или возврат средств</p>
+                <p className="text-3xl font-black text-primary">Работаю на результат — измеримый рост за 90 дней</p>
               </div>
             </CardContent>
           </Card>
