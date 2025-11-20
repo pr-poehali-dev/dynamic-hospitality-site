@@ -17,18 +17,35 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
       </div>
       
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
-        <div className="max-w-3xl space-y-5 animate-fade-in">
+        <div className="max-w-3xl space-y-6 animate-fade-in">
           <div className="inline-block px-4 py-1.5 bg-amber-400/90 backdrop-blur-sm rounded-full shadow-lg">
-            <p className="text-slate-900 font-bold text-xs tracking-wider">15 ЛЕТ • VIP-КЛУБЫ • ПРЕМИУМ HoReCa</p>
+            <p className="text-slate-900 font-bold text-xs tracking-wider">15 ЛЕТ В ПРЕМИУМ HoReCa</p>
           </div>
           
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight drop-shadow-xl">
-            +5 млн ₽ к выручке без рекламы
-          </h1>
+          <div className="space-y-4">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight drop-shadow-xl">
+              Ваши официанты не умеют продавать
+            </h1>
+            
+            <p className="text-xl sm:text-2xl text-amber-400 font-semibold drop-shadow-lg">
+              А должны приносить +5 млн ₽ к выручке в год
+            </p>
+          </div>
           
-          <p className="text-base sm:text-lg md:text-xl text-white/90 font-normal leading-relaxed drop-shadow-lg max-w-2xl">
-            Просто учу персонал продавать. Без дополнительных затрат на маркетинг. Ваша команда становится главным инструментом роста.
-          </p>
+          <div className="space-y-3 text-base sm:text-lg text-white/90 leading-relaxed drop-shadow-lg">
+            <p className="flex items-start gap-3">
+              <span className="text-amber-400 font-bold text-xl">→</span>
+              <span><strong className="text-white">Для собственников ресторанов и управляющих</strong>, которые хотят увеличить средний чек без затрат на рекламу</span>
+            </p>
+            <p className="flex items-start gap-3">
+              <span className="text-amber-400 font-bold text-xl">→</span>
+              <span><strong className="text-white">Обучаю вашу команду техникам продаж</strong> через авторскую методику на основе 15 лет в Marriott, Radisson, Four Seasons</span>
+            </p>
+            <p className="flex items-start gap-3">
+              <span className="text-amber-400 font-bold text-xl">→</span>
+              <span><strong className="text-white">Сервис становится продажей</strong> — мягко, естественно, без давления на гостей</span>
+            </p>
+          </div>
           
           <div className="flex flex-col sm:flex-row gap-3 pt-4">
             <Button 
@@ -36,7 +53,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
               className="w-full sm:w-auto text-base px-8 py-6 font-semibold shadow-xl hover:scale-105 transition-transform bg-amber-500 hover:bg-amber-600 text-slate-900" 
               onClick={() => scrollToSection('contact')}
             >
-              Подобрать решение
+              Записаться на консультацию
             </Button>
             <Button 
               size="lg" 
@@ -44,7 +61,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
               className="w-full sm:w-auto text-base px-8 py-6 font-semibold shadow-xl hover:scale-105 transition-transform bg-white/10 backdrop-blur-sm text-white border-2 border-white/50 hover:bg-white/20" 
               onClick={() => scrollToSection('services')}
             >
-              Смотреть услуги
+              Смотреть программы
             </Button>
           </div>
         </div>

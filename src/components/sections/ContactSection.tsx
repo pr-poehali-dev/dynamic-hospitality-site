@@ -1,6 +1,6 @@
 import { Card, CardContent } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
-import BriefForm from '@/components/BriefForm';
+import BookingBrief from '@/components/BookingBrief';
 
 const ContactSection = () => {
   return (
@@ -24,9 +24,9 @@ const ContactSection = () => {
                   <div className="inline-block p-3 bg-primary rounded-full mb-2">
                     <Icon name="Gift" className="text-white" size={40} />
                   </div>
-                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground">Заполните бриф — начнём работать!</h2>
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground">Запишитесь на консультацию</h2>
                   <p className="text-lg sm:text-xl text-foreground">
-                    Расскажите о вашем ресторане и задачах. Я проанализирую и предложу <span className="text-primary font-black">оптимальный формат работы</span>
+                    Выберите удобное время и расскажите о задачах. Я подготовлю <span className="text-primary font-black">персональные рекомендации</span>
                   </p>
                   <p className="text-lg text-muted-foreground">
                     Отвечаю в течение <strong className="text-primary">24 часов</strong>. Первая консультация — бесплатно!
@@ -52,7 +52,7 @@ const ContactSection = () => {
           </Card>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <BriefForm />
+            <BookingBrief />
 
             <div className="space-y-6">
               <Card className="border-2 border-gray-700 bg-gray-800">
