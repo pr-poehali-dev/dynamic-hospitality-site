@@ -18,50 +18,45 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
       
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="max-w-3xl space-y-6 animate-fade-in">
-          <div className="inline-block px-4 py-1.5 bg-amber-400/90 backdrop-blur-sm rounded-full shadow-lg">
-            <p className="text-slate-900 font-bold text-xs tracking-wider">15 ЛЕТ В ПРЕМИУМ HoReCa</p>
+          <div className="inline-block px-4 py-2 bg-amber-500 backdrop-blur-sm rounded-full shadow-lg border-2 border-white">
+            <p className="text-white font-bold text-sm tracking-wider">💎 ЭКСПЕРТ ПРЕМИУМ HoReCa</p>
           </div>
           
-          <div className="space-y-4">
+          <div className="space-y-6">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight drop-shadow-xl">
-              Ваши официанты не умеют продавать
+              Превращаю официантов<br />в машины продаж
             </h1>
             
-            <p className="text-xl sm:text-2xl text-amber-400 font-semibold drop-shadow-lg">
-              А должны приносить +5 млн ₽ к выручке в год
+            <p className="text-2xl sm:text-3xl text-amber-400 font-bold drop-shadow-lg">
+              Результат: +5 млн ₽ к выручке
             </p>
-          </div>
-          
-          <div className="space-y-3 text-base sm:text-lg text-white/90 leading-relaxed drop-shadow-lg">
-            <p className="flex items-start gap-3">
-              <span className="text-amber-400 font-bold text-xl">→</span>
-              <span><strong className="text-white">Для собственников ресторанов и управляющих</strong>, которые хотят увеличить средний чек без затрат на рекламу</span>
+            
+            <p className="text-lg sm:text-xl text-white/90 drop-shadow-lg">
+              <span className="text-amber-400 font-bold">Для кого:</span> Собственники ресторанов премиум-сегмента
             </p>
-            <p className="flex items-start gap-3">
-              <span className="text-amber-400 font-bold text-xl">→</span>
-              <span><strong className="text-white">Обучаю вашу команду техникам продаж</strong> через авторскую методику на основе 15 лет в Marriott, Radisson, Four Seasons</span>
-            </p>
-            <p className="flex items-start gap-3">
-              <span className="text-amber-400 font-bold text-xl">→</span>
-              <span><strong className="text-white">Сервис становится продажей</strong> — мягко, естественно, без давления на гостей</span>
-            </p>
+            
+            <div className="inline-block bg-white/10 backdrop-blur-sm border border-white/30 rounded-xl px-6 py-3">
+              <p className="text-base sm:text-lg text-white font-semibold">
+                🚀 Метод: Интенсив «7 дней» — полная трансформация команды
+              </p>
+            </div>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-3 pt-4">
             <Button 
               size="lg" 
-              className="w-full sm:w-auto text-base px-8 py-6 font-semibold shadow-xl hover:scale-105 transition-transform bg-amber-500 hover:bg-amber-600 text-slate-900" 
-              onClick={() => scrollToSection('contact')}
+              className="w-full sm:w-auto text-base px-8 py-6 font-semibold shadow-xl hover:scale-105 transition-transform bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white" 
+              onClick={() => scrollToSection('gift')}
             >
-              Записаться на консультацию
+              🎁 Забрать подарок
             </Button>
             <Button 
               size="lg" 
               variant="outline"
               className="w-full sm:w-auto text-base px-8 py-6 font-semibold shadow-xl hover:scale-105 transition-transform bg-white/10 backdrop-blur-sm text-white border-2 border-white/50 hover:bg-white/20" 
-              onClick={() => scrollToSection('services')}
+              onClick={() => scrollToSection('contact')}
             >
-              Смотреть программы
+              Записаться на консультацию
             </Button>
           </div>
         </div>

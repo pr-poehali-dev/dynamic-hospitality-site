@@ -12,6 +12,7 @@ import FooterSection from '@/components/sections/FooterSection';
 import JourneySection from '@/components/sections/JourneySection';
 import FloatingCTA from '@/components/FloatingCTA';
 import MarqueeText from '@/components/MarqueeText';
+import GiftForm from '@/components/GiftForm';
 
 const Index = () => {
   const scrollToSection = (id: string) => {
@@ -52,12 +53,20 @@ const Index = () => {
           '⭐ 15 лет в премиум HoReCa',
           '📈 +5 млн ₽ к выручке',
           '🎯 Работаю по всей России',
+          '👥 Ваши официанты не умеют продавать',
           '💪 Интенсив "7 дней"',
-          '✅ 0 возвратов денег',
+          '✅ Прозрачный результат',
           '🏛️ Marriott • Radisson • Four Seasons'
         ]} 
       />
       <SocialProofSection />
+      <section id="gift" className="py-24 bg-gradient-to-b from-slate-50 to-white">
+        <div className="container mx-auto px-6">
+          <div className="max-w-2xl mx-auto">
+            <GiftForm />
+          </div>
+        </div>
+      </section>
       <JourneySection />
       <WhyMeSection />
       <CasesSection />

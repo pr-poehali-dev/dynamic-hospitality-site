@@ -31,8 +31,8 @@ const FloatingCTA = ({ scrollToContact }: FloatingCTAProps) => {
         onClick={scrollToContact}
         className="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold shadow-2xl px-8 py-6 text-lg rounded-full hover:scale-105 transition-all duration-300 flex items-center gap-3"
       >
-        <Icon name="Sparkles" size={24} />
-        Заполнить бриф
+        <Icon name="Calendar" size={24} />
+        Записаться
       </Button>
     </div>
   );
