@@ -17,7 +17,7 @@ const SocialProofSection = () => {
     {
       icon: 'Users',
       value: '120+',
-      label: 'Сотрудников обучено в 2024',
+      label: 'Сотрудников обучено в 2025',
       color: 'text-amber-600'
     },
     {
@@ -29,20 +29,20 @@ const SocialProofSection = () => {
   ];
 
   return (
-    <section className="py-12 bg-slate-900 border-y-4 border-amber-500">
+    <section className="py-10 bg-slate-900 border-y border-amber-500/30">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {stats.map((stat, index) => (
-            <div key={index} className="text-center space-y-3 animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+            <div key={index} className="text-center space-y-2 animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
               <div className="flex justify-center">
-                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-500 shadow-xl flex items-center justify-center transform hover:scale-110 transition-transform">
-                  <Icon name={stat.icon} className="text-slate-900" size={40} />
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 shadow-lg flex items-center justify-center transform hover:scale-105 transition-transform">
+                  <Icon name={stat.icon} className="text-slate-900" size={24} />
                 </div>
               </div>
-              <div className={`text-5xl md:text-6xl font-black text-white drop-shadow-lg`}>
+              <div className="text-3xl md:text-4xl font-bold text-white">
                 {stat.value}
               </div>
-              <div className="text-sm md:text-base text-amber-300 font-bold uppercase tracking-wider">
+              <div className="text-xs md:text-sm text-amber-300/80 font-medium uppercase tracking-wide">
                 {stat.label}
               </div>
             </div>

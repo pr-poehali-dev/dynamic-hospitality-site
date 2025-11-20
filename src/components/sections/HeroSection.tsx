@@ -17,34 +17,34 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
       </div>
       
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
-        <div className="max-w-3xl space-y-6 sm:space-y-8 animate-fade-in">
-          <div className="inline-block px-4 sm:px-6 py-2 sm:py-3 bg-amber-400 rounded-full shadow-xl">
-            <p className="text-slate-900 font-black text-xs sm:text-sm tracking-wide">🔥 15 ЛЕТ • VIP-КЛУБЫ • ПРЕМИУМ-РЕСТОРАНЫ • ПЕРВЫЕ ЛИЦА</p>
+        <div className="max-w-3xl space-y-5 animate-fade-in">
+          <div className="inline-block px-4 py-1.5 bg-amber-400/90 backdrop-blur-sm rounded-full shadow-lg">
+            <p className="text-slate-900 font-bold text-xs tracking-wider">15 ЛЕТ • VIP-КЛУБЫ • ПРЕМИУМ HoReCa</p>
           </div>
           
-          <h1 className="text-3xl sm:text-5xl md:text-7xl font-black text-white leading-tight drop-shadow-2xl pr-4">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight drop-shadow-xl">
             Увеличу средний чек в вашем ресторане на 30% за 90 дней
           </h1>
           
-          <div className="bg-gradient-to-r from-amber-400 to-orange-500 p-1 rounded-xl sm:rounded-2xl inline-block max-w-fit">
-            <div className="bg-slate-900 px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 rounded-lg sm:rounded-xl">
-              <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-amber-400 font-black whitespace-nowrap">
-                ИЛИ ВЕРНУ ДЕНЬГИ
-              </p>
-            </div>
-          </div>
-          
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white font-bold leading-relaxed drop-shadow-lg pr-4">
-            Прошла весь путь HoReCa изнутри — от линейного персонала до управляющей в Marriott, Radisson, Four Seasons. С 2025 года делюсь авторской системой, которая реально работает.
+          <p className="text-base sm:text-lg md:text-xl text-white/90 font-normal leading-relaxed drop-shadow-lg max-w-2xl">
+            Прошла путь от линейного персонала до управляющей в Marriott, Radisson, Four Seasons. С 2025 года делюсь авторской системой, которая работает.
           </p>
           
-          <div className="flex flex-col gap-4 pt-6">
+          <div className="flex flex-col sm:flex-row gap-3 pt-4">
             <Button 
               size="lg" 
-              className="w-full sm:w-auto text-lg sm:text-xl px-8 sm:px-12 py-6 sm:py-8 font-black shadow-2xl hover:scale-105 transition-transform bg-amber-500 hover:bg-amber-600 text-slate-900 border-4 border-amber-300" 
+              className="w-full sm:w-auto text-base px-8 py-6 font-semibold shadow-xl hover:scale-105 transition-transform bg-amber-500 hover:bg-amber-600 text-slate-900" 
               onClick={() => scrollToSection('contact')}
             >
-              ЗАПОЛНИТЬ БРИФ НА КОНСУЛЬТАЦИЮ →
+              Подобрать решение
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline"
+              className="w-full sm:w-auto text-base px-8 py-6 font-semibold shadow-xl hover:scale-105 transition-transform bg-white/10 backdrop-blur-sm text-white border-2 border-white/50 hover:bg-white/20" 
+              onClick={() => scrollToSection('services')}
+            >
+              Смотреть услуги
             </Button>
           </div>
         </div>
