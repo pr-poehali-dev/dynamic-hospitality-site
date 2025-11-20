@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -81,45 +80,36 @@ Email: ${formData.email}
 
   if (isSuccess) {
     return (
-      <Card className="border-2 border-primary">
-        <CardContent className="p-8">
-          <div className="text-center space-y-6 py-8">
-            <div className="w-24 h-24 rounded-full bg-green-100 flex items-center justify-center mx-auto">
-              <Icon name="Gift" className="text-green-600" size={64} />
-            </div>
-            <h3 className="text-3xl font-black text-foreground">Отлично!</h3>
-            <p className="text-xl text-foreground">
-              Чек-лист отправлен на вашу почту 📧
-            </p>
-            <div className="bg-amber-50 p-4 rounded-lg border-2 border-amber-300">
-              <p className="text-sm text-foreground">
-                Проверьте папку «Спам», если письмо не пришло в течение 5 минут
-              </p>
-            </div>
-            <Button variant="outline" onClick={handleReset} className="mt-4">
-              Закрыть
-            </Button>
-          </div>
-        </CardContent>
-      </Card>
+      <div className="text-center space-y-6 py-8">
+        <div className="w-24 h-24 rounded-full bg-green-100 flex items-center justify-center mx-auto">
+          <Icon name="Gift" className="text-green-600" size={64} />
+        </div>
+        <h3 className="text-3xl font-black text-foreground">Отлично!</h3>
+        <p className="text-xl text-foreground">
+          Чек-лист отправлен на вашу почту 📧
+        </p>
+        <div className="bg-amber-50 p-4 rounded-lg border-2 border-amber-300">
+          <p className="text-sm text-foreground">
+            Проверьте папку «Спам», если письмо не пришло в течение 5 минут
+          </p>
+        </div>
+      </div>
     );
   }
 
   return (
-    <Card className="border-2 border-primary">
-      <CardContent className="p-8">
-        <div className="space-y-6">
-          <div className="text-center space-y-3">
-            <div className="w-16 h-16 rounded-full bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center mx-auto">
-              <Icon name="Gift" className="text-white" size={32} />
-            </div>
-            <h3 className="text-2xl font-black text-foreground">Забрать подарок</h3>
-            <p className="text-muted-foreground">
-              Получите бесплатный чек-лист «10 техник увеличения среднего чека»
-            </p>
-          </div>
+    <div className="space-y-6">
+      <div className="text-center space-y-3">
+        <div className="w-16 h-16 rounded-full bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center mx-auto">
+          <Icon name="Gift" className="text-white" size={32} />
+        </div>
+        <h3 className="text-2xl font-black text-foreground">Забрать подарок</h3>
+        <p className="text-muted-foreground">
+          Получите бесплатный чек-лист «10 техник увеличения среднего чека»
+        </p>
+      </div>
 
-          <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
               <Label htmlFor="gift-name">Ваше имя *</Label>
               <Input
@@ -167,13 +157,11 @@ Email: ${formData.email}
               </Label>
             </div>
 
-            <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
-              {isSubmitting ? 'Отправка...' : '🎁 Получить чек-лист'}
-            </Button>
-          </form>
-        </div>
-      </CardContent>
-    </Card>
+        <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
+          {isSubmitting ? 'Отправка...' : '🎁 Получить чек-лист'}
+        </Button>
+      </form>
+    </div>
   );
 };
 

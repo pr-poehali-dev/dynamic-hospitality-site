@@ -1,10 +1,20 @@
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
+import GiftForm from '@/components/GiftForm';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog';
 
 interface HeroSectionProps {
   scrollToSection: (id: string) => void;
 }
 
 const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
+  const [isGiftModalOpen, setIsGiftModalOpen] = useState(false);
+
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-primary/20 to-slate-800">
       <div className="absolute inset-0">
@@ -46,7 +56,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
             <Button 
               size="lg" 
               className="w-full sm:w-auto text-base px-8 py-6 font-semibold shadow-xl hover:scale-105 transition-transform bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white" 
-              onClick={() => scrollToSection('gift')}
+              onClick={() => setIsGiftModalOpen(true)}
             >
               🎁 Забрать подарок
             </Button>
@@ -62,21 +72,15 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
         </div>
       </div>
       
-      {/* Мигающие стрелочки для прокрутки */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
-        <button 
-          onClick={() => scrollToSection('gift')}
-          className="flex flex-col items-center gap-2 text-white hover:text-amber-400 transition-colors"
-          aria-label="Прокрутить вниз"
-        >
-          <svg className="w-8 h-8 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
-          <svg className="w-8 h-8 animate-pulse" style={{ animationDelay: '0.2s' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
-        </button>
-      </div>
+      {/* Модальное окно с формой подарка */}
+      <Dialog open={isGiftModalOpen} onOpenChange={setIsGiftModalOpen}>
+        <DialogContent className="max-w-2xl">
+          <DialogHeader>
+            <DialogTitle className="sr-only">Забрать подарок</DialogTitle>
+          </DialogHeader>
+          <GiftForm />
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
