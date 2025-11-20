@@ -24,11 +24,11 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
           
           <div className="space-y-6">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight drop-shadow-xl">
-              Превращаю официантов<br />в машины продаж
+              Прокачаю твой персонал
             </h1>
             
             <p className="text-2xl sm:text-3xl text-amber-400 font-bold drop-shadow-lg">
-              Результат: +5 млн ₽ к выручке
+              +5 млн к выручке. Без рекламы
             </p>
             
             <p className="text-lg sm:text-xl text-white/90 drop-shadow-lg">
