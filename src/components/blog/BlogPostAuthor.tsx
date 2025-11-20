@@ -24,7 +24,7 @@ const BlogPostAuthor = () => {
             </p>
             <div className="flex gap-3">
               <Button variant="outline" size="sm" asChild>
-                <a href="https://instagram.com/marico.su" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/malinochka__marina?igsh=MXNzdzR3Z3MxM25kOQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
                   <Icon name="Instagram" size={16} className="mr-2" />
                   Instagram
                 </a>

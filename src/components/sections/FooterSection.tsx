@@ -106,7 +106,7 @@ const FooterSection = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="https://instagram.com/marico.su" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors">
+                  <a href="https://www.instagram.com/malinochka__marina?igsh=MXNzdzR3Z3MxM25kOQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors">
                     <Icon name="Camera" size={18} className="text-pink-400" />
                     Instagram
                   </a>
@@ -131,7 +131,7 @@ const FooterSection = () => {
               <div className="mt-6 p-4 bg-slate-800 rounded-lg">
                 <p className="text-xs text-slate-400">
                   📍 Москва и вся Россия<br/>
-                  ⏰ Ежедневно 10:00-22:00 МСК
+                  ⏰ Понедельник—Пятница 10:00-19:00 МСК
                 </p>
               </div>
             </div>
@@ -150,12 +150,12 @@ const FooterSection = () => {
               </a>
             </Button>
             <Button variant="ghost" size="icon" className="text-slate-400 hover:text-white hover:bg-slate-800" asChild>
-              <a href="https://instagram.com/marico.su" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/malinochka__marina?igsh=MXNzdzR3Z3MxM25kOQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
                 <Icon name="Camera" size={24} />
               </a>
             </Button>
             <Button variant="ghost" size="icon" className="text-slate-400 hover:text-white hover:bg-slate-800" asChild>
-              <a href="https://vk.com/marico_pro" target="_blank" rel="noopener noreferrer">
+              <a href="https://vk.com/marico_su?from=groups" target="_blank" rel="noopener noreferrer">
                 <Icon name="Users" size={24} />
               </a>
             </Button>
@@ -167,7 +167,7 @@ const FooterSection = () => {
               © 2025 MARICO PRO. Все права защищены.
             </p>
             <p className="text-slate-600 text-xs mt-2">
-              ИП Малиновская Марина Сергеевна • ИНН: 231234567890
+              ИП Малиночка Марина Дмитриевна • ИНН: 231234567890
             </p>
           </div>
         </div>

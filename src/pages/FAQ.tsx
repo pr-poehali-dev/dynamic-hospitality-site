@@ -261,7 +261,7 @@ const FAQ = () => {
               
               <div className="space-y-4">
                 <div className="inline-block px-6 py-3 bg-amber-100 border-2 border-amber-500 rounded-full">
-                  <p className="text-amber-900 font-black text-sm">⚠️ БЕЗ ПРИУКРАС И ВОЛШЕБСТВА</p>
+                  <p className="text-amber-900 font-black text-sm">⚠️ БЕЗ ПРИУКРАС И ВОЛШЕБНЫХ ОБЕЩАНИЙ</p>
                 </div>
                 <h1 className="text-5xl md:text-6xl font-black text-foreground leading-tight">
                   Честные ответы на неудобные вопросы

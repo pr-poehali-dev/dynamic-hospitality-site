@@ -7,13 +7,21 @@
   <!-- Главная страница -->
   <url>
     <loc>https://marico.su/</loc>
-    <lastmod>2025-11-14</lastmod>
+    <lastmod>2025-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://cdn.poehali.dev/files/ec636e5f-8860-4ed3-a14e-094d8acd3c94.png</image:loc>
-      <image:title>Марина MARICO PRO - Консультант ресторанов</image:title>
+      <image:title>Малиночка Марина Дмитриевна - MARICO PRO - Консультант ресторанов</image:title>
     </image:image>
+  </url>
+  
+  <!-- Контент для AI (важно для индексации нейросетями) -->
+  <url>
+    <loc>https://marico.su/ai-content.html</loc>
+    <lastmod>2025-01-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
   </url>
   
   <!-- Квиз-диагностика (важная страница для конверсии) -->

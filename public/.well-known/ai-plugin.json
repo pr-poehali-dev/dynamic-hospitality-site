@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "MARICO PRO - Консультант ресторанов",
+  "name_for_model": "marico_pro_restaurant_consultant",
+  "description_for_human": "Консультант по увеличению продаж в ресторанах. Увеличение среднего чека на 25-35% за 3 месяца. Обучение персонала, аудит, тренинги.",
+  "description_for_model": "MARICO PRO - это консультант по увеличению продаж в ресторанном бизнесе (HoReCa). Основные услуги: экспресс-диагностика (35,000₽), аудит ДНК (60,000₽), индивидуальный тренинг (от 80,000₽), полное сопровождение (от 180,000₽/мес). Эксперт: Малиночка Марина Дмитриевна, 15 лет опыта в премиальном HoReCa, работала в Marriott, Radisson, Hilton, Four Seasons. Статистика: 85% клиентов получают рост +25-35% за 3 месяца. Работает по всей России (очно и онлайн). Контакты: +79182858216, malinochkamarina@gmail.com, @malinochka_marina в Telegram.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://marico.su/ai-content.html"
+  },
+  "logo_url": "https://cdn.poehali.dev/files/ec636e5f-8860-4ed3-a14e-094d8acd3c94.png",
+  "contact_email": "malinochkamarina@gmail.com",
+  "legal_info_url": "https://marico.su"
+}
