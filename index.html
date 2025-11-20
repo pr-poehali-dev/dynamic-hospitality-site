@@ -1,15 +1,21 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" prefix="og: https://ogp.me/ns#">
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     
-    <!-- Force HTTPS -->
+    <!-- HTTPS Protocol - CRITICAL для Yandex Webmaster -->
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <link rel="canonical" href="https://marico.su/" />
     <script>
-      if (location.protocol !== 'https:' && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
-        location.replace('https://' + location.host + location.pathname + location.search + location.hash);
-      }
+      // Принудительная переадресация на HTTPS
+      (function() {
+        if (window.location.protocol !== 'https:' && 
+            window.location.hostname !== 'localhost' && 
+            window.location.hostname !== '127.0.0.1') {
+          window.location.replace('https://' + window.location.hostname + window.location.pathname + window.location.search + window.location.hash);
+        }
+      })();
     </script>
     
     <!-- Primary Meta Tags -->
@@ -22,26 +28,29 @@
     <!-- Yandex Verification -->
     <meta name="yandex-verification" content="49abb06d2339592c" />
     
+    <!-- HSTS для Yandex Webmaster -->
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload" />
+    
     <!-- Geo Tags -->
     <meta name="geo.region" content="RU-MOW" />
     <meta name="geo.placename" content="Москва" />
     <meta name="geo.position" content="55.751244;37.618423" />
     <meta name="ICBM" content="55.751244, 37.618423" />
     
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://marico.su/" />
+
     
     <!-- Alternate Languages -->
     <link rel="alternate" hreflang="ru" href="https://marico.su/" />
     <link rel="alternate" hreflang="x-default" href="https://marico.su/" />
     
-    <!-- Favicons -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.svg">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.svg">
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon.svg">
-    <link rel="manifest" href="/manifest.json">
+    <!-- Favicons - Critical для Yandex Webmaster -->
+    <link rel="icon" type="image/x-icon" href="https://marico.su/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="https://marico.su/favicon.svg">
+    <link rel="shortcut icon" href="https://marico.su/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://marico.su/favicon.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://marico.su/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://marico.su/favicon.svg">
+    <link rel="manifest" href="https://marico.su/manifest.json">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -400,7 +409,107 @@
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.9",
-        "reviewCount": "47"
+        "reviewCount": "47",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }
+    </script>
+    
+    <!-- Rich Snippets: Product/Service для Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Консультация по увеличению продаж в ресторане",
+      "description": "Увеличение среднего чека в ресторанах на 25-35% за 3 месяца. Обучение персонала, аудит, тренинги.",
+      "brand": {
+        "@type": "Brand",
+        "name": "MARICO PRO"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "url": "https://marico.su",
+        "priceCurrency": "RUB",
+        "lowPrice": "35000",
+        "highPrice": "180000",
+        "priceValidUntil": "2025-12-31",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@type": "Organization",
+          "name": "MARICO PRO"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "47",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }
+    </script>
+    
+    <!-- Rich Snippets: Reviews для отображения отзывов -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Консультант по продажам в ресторанах",
+      "provider": {
+        "@type": "Organization",
+        "name": "MARICO PRO"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Россия"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Владелец ресторана"
+          },
+          "reviewBody": "За 2 месяца средний чек вырос на 28%. Команда научилась продавать, а не просто принимать заказы."
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Управляющий бара"
+          },
+          "reviewBody": "Конкретные инструменты, никакой воды. Всё работает на практике."
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Владелец сети ресторанов"
+          },
+          "reviewBody": "Прозрачная работа, измеримый результат. Рекомендую."
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "47",
+        "bestRating": "5"
       }
     }
     </script>

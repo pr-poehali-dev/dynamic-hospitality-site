@@ -13,6 +13,7 @@ import JourneySection from '@/components/sections/JourneySection';
 import BlogSection from '@/components/sections/BlogSection';
 import FloatingCTA from '@/components/FloatingCTA';
 import MarqueeText from '@/components/MarqueeText';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 const Index = () => {
   const scrollToSection = (id: string) => {
@@ -86,6 +87,7 @@ const Index = () => {
       />
       <FooterSection />
       <FloatingCTA scrollToContact={() => scrollToSection('contact')} />
+      <LanguageSwitcher />
     </div>
   );
 };
