@@ -2,30 +2,16 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '@/components/sections/Navigation';
 import HeroSection from '@/components/sections/HeroSection';
 import SocialProofSection from '@/components/sections/SocialProofSection';
-import AboutSection from '@/components/sections/AboutSection';
-import ProblemSection from '@/components/sections/ProblemSection';
-import AboutMeSection from '@/components/sections/AboutMeSection';
 import WhyMeSection from '@/components/sections/WhyMeSection';
-import ProblemsSection from '@/components/sections/ProblemsSection';
 import CasesSection from '@/components/sections/CasesSection';
-import BeforeAfterSection from '@/components/sections/BeforeAfterSection';
-import HonestySection from '@/components/sections/HonestySection';
-import ServicesSection from '@/components/sections/ServicesSection';
-import NotForYouSection from '@/components/sections/NotForYouSection';
-import ExpectationsSection from '@/components/sections/ExpectationsSection';
-import HowWeWorkSection from '@/components/sections/HowWeWorkSection';
-import ROICalculator from '@/components/sections/ROICalculator';
+import ServicesAccordion from '@/components/sections/ServicesAccordion';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
-import BlogPreviewSection from '@/components/sections/BlogPreviewSection';
+import HowWeWorkSection from '@/components/sections/HowWeWorkSection';
 import ContactSection from '@/components/sections/ContactSection';
 import FooterSection from '@/components/sections/FooterSection';
-import LeadMagnetSection from '@/components/sections/LeadMagnetSection';
-import PricingSection from '@/components/sections/PricingSection';
-import QuizDiagnostic from '@/components/sections/QuizDiagnostic';
-import LossesSection from '@/components/sections/LossesSection';
-import RealitySection from '@/components/sections/RealitySection';
-import HonestROISection from '@/components/sections/HonestROISection';
 import JourneySection from '@/components/sections/JourneySection';
+import FloatingCTA from '@/components/FloatingCTA';
+import MarqueeText from '@/components/MarqueeText';
 
 const Index = () => {
   const scrollToSection = (id: string) => {
@@ -35,7 +21,7 @@ const Index = () => {
 
   const homeUrl = window.location.origin;
   const homeTitle = 'Консультант по увеличению продаж в ресторанах | Марина MARICO PRO';
-  const homeDescription = 'Увеличиваю средний чек в ресторанах на 30% за 90 дней. 15 лет в премиум HoReCa. Работала в Marriott, Radisson, Four Seasons. Авторская методика "7 дней" — готовая система обучения персонала. Гарантия результата или возврат денег.';
+  const homeDescription = '+5 млн ₽ к выручке без рекламы. 15 лет в премиум HoReCa. Управляющая в Marriott, Radisson, Four Seasons. Авторская методика обучения персонала. Прозрачный результат за 90 дней.';
 
   return (
     <div className="min-h-screen bg-background">
@@ -61,15 +47,26 @@ const Index = () => {
       
       <Navigation scrollToSection={scrollToSection} />
       <HeroSection scrollToSection={scrollToSection} />
+      <MarqueeText 
+        text={[
+          '⭐ 15 лет в премиум HoReCa',
+          '📈 +5 млн ₽ к выручке',
+          '🎯 Работаю по всей России',
+          '💪 Интенсив "7 дней"',
+          '✅ 0 возвратов денег',
+          '🏛️ Marriott • Radisson • Four Seasons'
+        ]} 
+      />
       <SocialProofSection />
       <JourneySection />
       <WhyMeSection />
       <CasesSection />
-      <PricingSection scrollToSection={scrollToSection} />
+      <ServicesAccordion />
       <TestimonialsSection />
       <HowWeWorkSection />
       <ContactSection />
       <FooterSection />
+      <FloatingCTA scrollToContact={() => scrollToSection('contact')} />
     </div>
   );
 };

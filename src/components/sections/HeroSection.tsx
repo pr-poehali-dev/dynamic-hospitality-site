@@ -23,11 +23,11 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
           </div>
           
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight drop-shadow-xl">
-            Увеличу средний чек в вашем ресторане на 30% за 90 дней
+            +5 млн ₽ к выручке без рекламы
           </h1>
           
           <p className="text-base sm:text-lg md:text-xl text-white/90 font-normal leading-relaxed drop-shadow-lg max-w-2xl">
-            От линейного персонала до управляющей в Marriott, Radisson, Four Seasons. С 2025 года помогаю ресторанам расти через авторскую методику.
+            Просто учу персонал продавать. Без дополнительных затрат на маркетинг. Ваша команда становится главным инструментом роста.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-3 pt-4">
