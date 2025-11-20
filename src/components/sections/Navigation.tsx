@@ -30,7 +30,7 @@ const Navigation = ({ scrollToSection }: NavigationProps) => {
           <div className="hidden md:flex items-center gap-6">
             <Link to="/services" className="text-sm font-medium hover:text-primary transition-colors">Услуги</Link>
             <Link to="/cases" className="text-sm font-medium hover:text-primary transition-colors">Кейсы</Link>
-            <Link to="/quiz" className="text-sm font-medium text-primary hover:underline transition-colors">📋 Консультация</Link>
+            <Link to="/quiz" className="text-sm font-medium text-primary hover:underline transition-colors">Консультация</Link>
             <Link to="/blog" className="text-sm font-medium hover:text-primary transition-colors">Блог</Link>
             <Link to="/faq" className="text-sm font-medium hover:text-primary transition-colors">FAQ</Link>
             <Button asChild size="sm">
@@ -69,7 +69,7 @@ const Navigation = ({ scrollToSection }: NavigationProps) => {
               className="block w-full text-left py-2 text-sm font-bold text-primary hover:underline transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              📋 Консультация
+              Консультация
             </Link>
             <Link 
               to="/blog" 
