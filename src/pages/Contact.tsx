@@ -46,10 +46,10 @@ const socialNetworks = [
 
 const quickContacts = [
   {
-    name: 'Instagram',
-    icon: 'Instagram',
-    url: 'https://instagram.com/marico.su',
-    color: 'text-pink-500'
+    name: 'WhatsApp',
+    icon: 'MessageCircle',
+    url: 'https://wa.me/79182858216',
+    color: 'text-green-500'
   },
   {
     name: 'Telegram',
