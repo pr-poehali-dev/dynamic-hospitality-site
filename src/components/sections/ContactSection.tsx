@@ -74,48 +74,52 @@ const ContactSection = () => {
               <Card className="border-2 border-gray-700 bg-gray-800">
                 <CardContent className="p-8 space-y-6">
                   <h3 className="text-2xl font-bold text-white">Напишите мне:</h3>
-                  <div className="space-y-4">
+                  <div className="flex justify-center gap-6">
                     <a 
                       href="https://t.me/malinochka_marina" 
-                      className="flex items-center gap-4 p-4 bg-gray-700 rounded-xl hover:shadow-lg transition-all group border border-gray-600"
+                      className="flex flex-col items-center gap-2 group"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <div className="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center">
-                        <Icon name="MessageCircle" className="text-white" size={24} />
+                      <div className="w-16 h-16 rounded-full bg-blue-500 flex items-center justify-center hover:scale-110 transition-transform shadow-lg">
+                        <Icon name="MessageCircle" className="text-white" size={32} />
                       </div>
-                      <div className="flex-1">
-                        <div className="font-semibold text-white group-hover:text-primary">Telegram</div>
-                        <div className="text-sm text-gray-400">@malinochka_marina</div>
-                      </div>
-                      <Icon name="ArrowRight" className="text-primary" size={20} />
+                      <span className="text-sm text-gray-400 group-hover:text-white transition-colors font-medium">Telegram</span>
                     </a>
 
                     <a 
-                      href="https://instagram.com/marico.su"
-                      className="flex items-center gap-4 p-4 bg-gray-700 rounded-xl hover:shadow-lg transition-all group border border-gray-600"
+                      href="https://wa.me/79182858216"
+                      className="flex flex-col items-center gap-2 group"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
-                        <Icon name="Camera" className="text-white" size={24} />
+                      <div className="w-16 h-16 rounded-full bg-green-500 flex items-center justify-center hover:scale-110 transition-transform shadow-lg">
+                        <Icon name="Phone" className="text-white" size={32} />
                       </div>
-                      <div className="flex-1">
-                        <div className="font-semibold text-white group-hover:text-primary">Instagram</div>
-                        <div className="text-sm text-gray-400">@marico.su</div>
+                      <span className="text-sm text-gray-400 group-hover:text-white transition-colors font-medium">WhatsApp</span>
+                    </a>
+
+                    <a 
+                      href="https://max.ru/marico"
+                      className="flex flex-col items-center gap-2 group"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <div className="w-16 h-16 rounded-full bg-purple-500 flex items-center justify-center hover:scale-110 transition-transform shadow-lg">
+                        <Icon name="MessageSquare" className="text-white" size={32} />
                       </div>
-                      <Icon name="ArrowRight" className="text-primary" size={20} />
+                      <span className="text-sm text-gray-400 group-hover:text-white transition-colors font-medium">Max</span>
                     </a>
                   </div>
                   
                   <div className="border-t-2 border-gray-700 pt-6 mt-6 space-y-4">
                     <div className="flex items-center gap-3 text-gray-300">
                       <Icon name="MapPin" size={20} className="text-primary" />
-                      <span>📍 Работаю в Москве и МО</span>
+                      <span>📍 Работаю в Москве и всей России</span>
                     </div>
                     <div className="flex items-center gap-3 text-gray-300">
-                      <Icon name="Globe" size={20} className="text-primary" />
-                      <span>🌐 Онлайн для регионов</span>
+                      <Icon name="Building" size={20} className="text-primary" />
+                      <span>🏛️ Онлайн или у вас на площадке</span>
                     </div>
                   </div>
                 </CardContent>
