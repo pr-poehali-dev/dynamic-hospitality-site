@@ -21,8 +21,8 @@ const FAQ = () => {
 
   const faqCategories = [
     {
-      category: 'Честные ответы',
-      icon: 'MessageCircleQuestion',
+      category: 'О результатах и гарантиях',
+      icon: 'Target',
       questions: [
         {
           question: 'Вы гарантируете результат?',
@@ -48,7 +48,7 @@ const FAQ = () => {
 • Изучаю каждого сотрудника лично
 • Создаю индивидуальную программу
 
-Плюс вы платите за 13 лет опыта в премиальном HoReCa (Marriott, Hilton, Four Seasons).
+Плюс вы платите за 13 лет опыта в премиальном HoReCa. От официанта до куратора закрытого клуба в Москве, аналогов которому нет.
 
 **Если вам нужно дешевле** — есть онлайн-курсы за 5-10к. Но там не будет персонализации и поддержки.`
         },
@@ -134,6 +134,93 @@ const FAQ = () => {
 
 Для аудита и тренингов предпочтительна очная работа — так эффективнее.`
         },
+        }
+      ]
+    },
+    {
+      category: 'О стоимости и форматах',
+      icon: 'DollarSign',
+      questions: [
+        {
+          question: 'Почему так дорого?',
+          answer: `Потому что **я не использую шаблоны**.
+
+Перед каждым проектом я:
+• Анализирую именно ВАШУ ситуацию
+• Изучаю каждого сотрудника лично
+• Создаю индивидуальную программу
+
+Плюс вы платите за 13 лет опыта в премиальном HoReCa. От официанта до куратора закрытого клуба в Москве, аналогов которому нет.
+
+**Если вам нужно дешевле** — есть онлайн-курсы за 5-10к. Но там не будет персонализации и поддержки.`
+        },
+        {
+          question: 'Могу я сначала попробовать дешевле?',
+          answer: `**ДА! Есть экспресс-диагностика за 35,000₽.**
+
+Приеду на 1 день, посмотрю вашу работу, дам обратную связь и рекомендации.
+
+Возможно, вам вообще не нужна полноценная работа — иногда хватает просто указать на слепые зоны.
+
+После диагностики вы сами решите, нужно ли продолжать.`
+        },
+        {
+          question: 'Что если у меня маленькая команда (3-5 человек)?',
+          answer: `Отлично! С маленькой командой проще работать.
+
+**Для вас подойдёт:**
+• Экспресс-диагностика (35,000₽)
+• Краткий тренинг (50,000₽, 1 день)
+• Онлайн-консультации (2,990₽/мес)
+
+Не нужны сложные системы — даю только то, что реально работает и легко внедряется.`
+        },
+        {
+          question: 'А если я владелец сети из 5+ заведений?',
+          answer: `Для сетей работаю по другой схеме:
+
+**1. Пилот** — выбираем одно заведение для тестирования системы
+**2. Масштабирование** — адаптируем под остальные точки
+**3. Обучение управляющих** — они сами внедряют систему
+
+Цена зависит от количества заведений и глубины работы. Обсуждаем индивидуально.`
+        }
+      ]
+    },
+    {
+      category: 'О специализации',
+      icon: 'Building2',
+      questions: [
+        {
+          question: 'Вы работаете с фастфудом?',
+          answer: `**НЕТ.** У меня нет экспертизы в фастфуде — это другая специфика.
+
+**Я работаю с:**
+✓ Премиальные и средне-премиальные рестораны
+✓ Бары и лаунжи
+✓ Отели с рестораном
+✓ Кафе (средний чек от 1000₽)
+
+**❌ НЕ работаю с:**
+- Фастфуд и стритфуд
+- Доставка без зала
+- Заведения с чеком ниже 500₽`
+        },
+        {
+          question: 'Вы работаете в регионах или только в Москве?',
+          answer: `**Работаю по всей России.**
+
+**Очно:** выезжаю в любой город (командировочные оплачиваются отдельно)
+**Онлайн:** консультации, аудит по видео, разбор ситуаций
+
+Для аудита и тренингов предпочтительна очная работа — так эффективнее.`
+        }
+      ]
+    },
+    {
+      category: 'Документы и работа',
+      icon: 'FileText',
+      questions: [
         {
           question: 'Какие документы вы предоставляете после оплаты?',
           answer: `После оплаты вы получаете:
@@ -237,19 +324,33 @@ const FAQ = () => {
                   Остались вопросы?
                 </h2>
                 <p className="text-xl text-muted-foreground">
-                  Напишите мне напрямую — отвечу честно и без воды
+                  Свяжитесь со мной удобным способом — отвечу честно и без воды
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button size="lg" className="text-lg px-8 py-6 font-bold">
-                    <Icon name="Send" size={20} className="mr-2" />
-                    Написать в Telegram
-                  </Button>
-                  <Link to="/">
-                    <Button size="lg" variant="outline" className="text-lg px-8 py-6 font-bold border-2 w-full">
-                      Вернуться на главную
-                    </Button>
-                  </Link>
+                <div className="flex justify-center gap-6">
+                  <a href="https://t.me/malinochka_marina" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 hover:scale-110 transition-transform">
+                    <div className="w-16 h-16 rounded-full bg-blue-500 hover:bg-blue-600 flex items-center justify-center shadow-lg">
+                      <Icon name="MessageCircle" className="text-white" size={32} />
+                    </div>
+                    <span className="text-sm font-semibold text-foreground">Telegram</span>
+                  </a>
+                  <a href="https://wa.me/79182858216" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 hover:scale-110 transition-transform">
+                    <div className="w-16 h-16 rounded-full bg-green-500 hover:bg-green-600 flex items-center justify-center shadow-lg">
+                      <Icon name="Phone" className="text-white" size={32} />
+                    </div>
+                    <span className="text-sm font-semibold text-foreground">WhatsApp</span>
+                  </a>
+                  <a href="https://max.ru/marico" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 hover:scale-110 transition-transform">
+                    <div className="w-16 h-16 rounded-full bg-purple-500 hover:bg-purple-600 flex items-center justify-center shadow-lg">
+                      <Icon name="MessageSquare" className="text-white" size={32} />
+                    </div>
+                    <span className="text-sm font-semibold text-foreground">Max</span>
+                  </a>
                 </div>
+                <Link to="/">
+                  <Button size="lg" variant="outline" className="text-lg px-8 py-6 font-bold border-2 mt-4">
+                    Вернуться на главную
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           </div>

@@ -379,9 +379,9 @@ const Blog = () => {
                     </a>
                   </Button>
                   <Button size="lg" variant="outline" className="font-semibold border-2" asChild>
-                    <a href="https://instagram.com/marico.su" target="_blank" rel="noopener noreferrer">
-                      <Icon name="Instagram" className="mr-2" size={20} />
-                      Instagram
+                    <a href="https://max.ru/marico" target="_blank" rel="noopener noreferrer">
+                      <Icon name="MessageSquare" className="mr-2" size={20} />
+                      Канал в Max
                     </a>
                   </Button>
                 </div>
