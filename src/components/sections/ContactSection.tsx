@@ -55,6 +55,18 @@ const ContactSection = () => {
             </CardContent>
           </Card>
 
+          {/* Мигающие стрелочки перед формой */}
+          <div className="flex justify-center mb-12 animate-bounce">
+            <div className="flex flex-col items-center gap-2 text-primary">
+              <svg className="w-8 h-8 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
+              <svg className="w-8 h-8 animate-pulse" style={{ animationDelay: '0.2s' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
+            </div>
+          </div>
+
           <div className="grid md:grid-cols-2 gap-8">
             <BookingBrief />
 
@@ -128,22 +140,6 @@ const ContactSection = () => {
                 </CardContent>
               </Card>
             </div>
-          </div>
-          
-          {/* Мигающие стрелочки для прокрутки вниз */}
-          <div className="flex justify-center mt-16 animate-bounce">
-            <button 
-              onClick={scrollDown}
-              className="flex flex-col items-center gap-2 text-primary hover:text-foreground transition-colors"
-              aria-label="Прокрутить вниз"
-            >
-              <svg className="w-8 h-8 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-              </svg>
-              <svg className="w-8 h-8 animate-pulse" style={{ animationDelay: '0.2s' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-              </svg>
-            </button>
           </div>
         </div>
       </div>

@@ -130,15 +130,15 @@ const JourneySection = () => {
             ))}
           </div>
 
-          <Card className="border-4 border-amber-500 bg-gradient-to-br from-amber-500/20 via-orange-500/10 to-slate-800/80 backdrop-blur-sm shadow-2xl animate-pulse-slow mt-16">
+          <Card className="border-2 border-slate-700 bg-slate-800/50 backdrop-blur-sm shadow-lg hover:shadow-xl transition-shadow mt-16">
             <CardContent className="p-10 text-center space-y-6">
-              <div className="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center shadow-2xl">
-                <Icon name="TrendingUp" className="text-white" size={48} />
+              <div className="w-16 h-16 mx-auto rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center shadow-lg">
+                <Icon name="TrendingUp" className="text-white" size={32} />
               </div>
-              <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-white">
+              <h3 className="text-2xl sm:text-3xl font-black text-white">
                 Готовы повторить мой успех в своём заведении?
               </h3>
-              <p className="text-lg text-slate-200 max-w-2xl mx-auto leading-relaxed">
+              <p className="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
                 Всё, что работает у меня — буду внедрять у вас. Без воды, только практика.
               </p>
             </CardContent>
