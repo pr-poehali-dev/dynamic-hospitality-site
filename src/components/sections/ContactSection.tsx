@@ -3,8 +3,12 @@ import Icon from '@/components/ui/icon';
 import BookingBrief from '@/components/BookingBrief';
 
 const ContactSection = () => {
+  const scrollDown = () => {
+    window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
+  };
+
   return (
-    <section id="contact" className="py-24 bg-card">
+    <section id="contact" className="py-24 bg-card relative">
       <div className="container mx-auto px-6">
         <div className="max-w-5xl mx-auto">
           <Card className="border-4 border-primary bg-gradient-to-br from-primary/10 to-background mb-12 shadow-2xl">
@@ -126,6 +130,22 @@ const ContactSection = () => {
             </div>
           </div>
         </div>
+      </div>
+      
+      {/* Мигающие стрелочки для прокрутки вниз */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <button 
+          onClick={scrollDown}
+          className="flex flex-col items-center gap-2 text-primary hover:text-foreground transition-colors"
+          aria-label="Прокрутить вниз"
+        >
+          <svg className="w-8 h-8 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
+          <svg className="w-8 h-8 animate-pulse" style={{ animationDelay: '0.2s' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
+        </button>
       </div>
     </section>
   );
