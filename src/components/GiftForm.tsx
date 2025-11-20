@@ -153,7 +153,7 @@ Email: ${formData.email}
                 required
               />
               <Label htmlFor="gift-consent" className="text-xs text-muted-foreground cursor-pointer leading-relaxed">
-                Даю согласие на отправку чек-листа и обработку персональных данных
+                Нажимая «этот флажок», вы соглашаетесь с Пользовательским соглашением и обработкой данных в соответствии с Политикой конфиденциальности
               </Label>
             </div>
 

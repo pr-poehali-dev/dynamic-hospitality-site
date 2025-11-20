@@ -27,7 +27,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
       </div>
       
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
-        <div className="max-w-3xl space-y-6 animate-fade-in">
+        <div className="max-w-3xl space-y-8 animate-fade-in pt-8">
           <div className="inline-block px-4 py-2 bg-amber-500 backdrop-blur-sm rounded-full shadow-lg border-2 border-white">
             <p className="text-white font-bold text-sm tracking-wider">💎 ЭКСПЕРТ ПРЕМИУМ HoReCa</p>
           </div>
@@ -47,7 +47,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
             
             <div className="inline-block bg-white/10 backdrop-blur-sm border border-white/30 rounded-xl px-6 py-3">
               <p className="text-base sm:text-lg text-white font-semibold">
-                🚀 Метод: Интенсив «7 дней» — полная трансформация команды
+                💎 Формат: Интенсив «7 дней» — полная трансформация команды
               </p>
             </div>
           </div>
