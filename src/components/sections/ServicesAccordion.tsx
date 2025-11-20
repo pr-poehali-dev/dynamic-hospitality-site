@@ -55,7 +55,7 @@ const ServicesAccordion = () => {
       id: 'intensive',
       icon: 'Zap',
       title: 'Интенсив "7 дней"',
-      price: 'от 120 000₽',
+      price: 'от 90 000₽',
       shortDesc: 'Комплексная трансформация команды за неделю',
       duration: '7 дней',
       features: [
@@ -74,7 +74,7 @@ const ServicesAccordion = () => {
       id: 'support',
       icon: 'LineChart',
       title: 'Полное сопровождение',
-      price: 'от 180 000₽/мес',
+      price: 'от 150 000₽/мес',
       shortDesc: 'Становлюсь вашим внешним директором по продажам',
       duration: 'от 3 месяцев',
       features: [
@@ -202,6 +202,31 @@ const ServicesAccordion = () => {
               </Card>
             ))}
           </div>
+
+          <Card className="border-4 border-primary bg-gradient-to-br from-primary/10 via-primary/5 to-white shadow-2xl mt-12">
+            <CardContent className="p-10 text-center space-y-6">
+              <div className="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-primary to-amber-600 flex items-center justify-center shadow-2xl">
+                <Icon name="Sparkles" className="text-white" size={48} />
+              </div>
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-foreground">
+                Не нашли подходящий формат?
+              </h3>
+              <p className="text-lg text-foreground max-w-2xl mx-auto leading-relaxed">
+                Каждый бизнес уникален. Я подберу индивидуальное решение под ваши задачи и потребности — от разовых консультаций до комплексных программ.
+              </p>
+              <Button 
+                size="lg"
+                className="text-lg px-10 py-6 shadow-xl hover:scale-105 transition-transform"
+                onClick={scrollToContact}
+              >
+                <Icon name="MessageCircle" className="mr-2" size={24} />
+                Записаться на консультацию
+              </Button>
+              <p className="text-sm text-muted-foreground">
+                Первая консультация бесплатно • Отвечаю в течение 24 часов
+              </p>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>

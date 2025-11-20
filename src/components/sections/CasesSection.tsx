@@ -1,242 +1,175 @@
+import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import Icon from '@/components/ui/icon';
+import { Link } from 'react-router-dom';
 
 const CasesSection = () => {
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+
+  const cases = [
+    {
+      title: '+187% к выручке',
+      subtitle: 'Премиальный ресторан',
+      location: 'Москва • Премиум-сегмент • 120+ гостей/день',
+      period: 'ФЕВРАЛЬ-МАЙ 2025',
+      wasCheck: '4200₽',
+      wasRevenue: '12.5M/мес',
+      nowCheck: '6850₽',
+      nowRevenue: '35.9M/мес',
+      growth: '+187%',
+      whatDid: 'Полная трансформация сервиса: переобучение персонала, внедрение премиум-стандартов, новые техники продаж. Научила команду продавать дорогие позиции естественно.',
+      result: '+23.4M₽ к годовой выручке',
+      quote: 'Марина полностью изменила подход команды к продажам. Теперь это не просто ресторан — это опыт.',
+      author: 'Дмитрий, владелец',
+      color: 'from-amber-500 to-orange-600'
+    },
+    {
+      title: '+38% средний чек',
+      subtitle: 'Семейный ресторан',
+      location: 'Региональный город • Средний сегмент • 70-90 гостей/день',
+      period: 'МАРТ-ИЮНЬ 2025',
+      wasCheck: '1450₽',
+      wasRevenue: '3.9M/мес',
+      nowCheck: '2000₽',
+      nowRevenue: '5.4M/мес',
+      growth: '+38%',
+      whatDid: '7-дневный интенсив: аудит → диагностика → тренинги → внедрение → анализ → доработка → результат. Научила официантов продавать через ценность, а не давление.',
+      result: '+1.5M₽ в месяц',
+      quote: 'Не верил, что система из Москвы сработает у нас. Марина доказала — при правильном подходе растут все.',
+      author: 'Андрей, владелец',
+      color: 'from-blue-500 to-cyan-600'
+    },
+    {
+      title: '+32% рост продаж',
+      subtitle: 'Винный бар',
+      location: 'Крупный город • Премиум-сегмент • 60-75 гостей/день',
+      period: 'МАЙ-ИЮЛЬ 2025',
+      wasCheck: '3200₽',
+      wasRevenue: '5.8M/мес',
+      nowCheck: '4220₽',
+      nowRevenue: '7.6M/мес',
+      growth: '+32%',
+      whatDid: 'Мастер-класс для сомелье + скрипты продаж премиальных позиций. Научила продавать дорогое вино через правильную подачу и историю.',
+      result: '+1.8M₽ в месяц',
+      quote: 'Марина показала: знать продукт и уметь его продать — разные вещи. Теперь персонал не боится предлагать дорогие позиции.',
+      author: 'Анна, управляющая',
+      color: 'from-purple-500 to-violet-600'
+    }
+  ];
+
   return (
-    <section id="results" className="py-24 bg-white">
+    <section id="results" className="py-24 bg-gradient-to-br from-slate-50 via-white to-slate-100">
       <div className="container mx-auto px-6">
-        <div className="max-w-6xl mx-auto space-y-12">
-          <div className="text-center space-y-4">
-            <div className="inline-block px-6 py-3 bg-primary/10 rounded-full mb-4">
+        <div className="max-w-4xl mx-auto space-y-12">
+          <div className="text-center space-y-4 animate-fade-in">
+            <div className="inline-block px-6 py-3 bg-primary/10 rounded-full border-2 border-primary mb-4">
               <p className="text-primary font-black text-sm tracking-wide">📊 СВЕЖИЕ КЕЙСЫ 2025</p>
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground">Как я достигаю результатов</h2>
-            <p className="text-lg sm:text-xl text-muted-foreground">Реальные проекты этого года с измеримыми результатами</p>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground">
+              Как я достигаю результатов
+            </h2>
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
+              Реальные проекты этого года с измеримыми результатами
+            </p>
           </div>
 
-          <div className="space-y-8">
-            <Card className="border-2 border-primary overflow-hidden">
-              <CardContent className="p-8 bg-gradient-to-br from-primary/5 to-primary/10">
-                <div className="space-y-6">
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <h3 className="text-3xl font-bold text-foreground mb-2">Семейный ресторан → VIP-формат</h3>
-                      <p className="text-muted-foreground">Региональный город • Средний сегмент • 70-90 гостей/день</p>
+          <div className="space-y-6">
+            {cases.map((caseItem, index) => (
+              <Card 
+                key={index}
+                className={`border-2 border-border bg-white transition-all duration-500 hover:scale-[1.02] ${
+                  expandedIndex === index ? 'shadow-2xl shadow-primary/20 border-primary' : 'hover:shadow-xl'
+                }`}
+              >
+                <CardContent className="p-6">
+                  <div 
+                    className="cursor-pointer"
+                    onClick={() => setExpandedIndex(expandedIndex === index ? null : index)}
+                  >
+                    <div className="flex items-start justify-between gap-4 mb-4">
+                      <div className="flex-1">
+                        <div className="flex items-center gap-3 mb-2">
+                          <div className={`px-4 py-2 rounded-xl bg-gradient-to-r ${caseItem.color} text-white font-black text-2xl shadow-lg`}>
+                            {caseItem.growth}
+                          </div>
+                          <div className={`transition-transform duration-300 ${
+                            expandedIndex === index ? 'rotate-180' : ''
+                          }`}>
+                            <Icon name="ChevronDown" className="text-primary" size={32} />
+                          </div>
+                        </div>
+                        <h3 className="text-2xl font-black text-foreground mb-1">
+                          {caseItem.subtitle}
+                        </h3>
+                        <p className="text-sm text-muted-foreground">{caseItem.location}</p>
+                      </div>
+                      <div className="px-4 py-2 bg-green-100 rounded-full">
+                        <p className="text-green-800 font-black text-xs">{caseItem.period}</p>
+                      </div>
                     </div>
-                    <div className="px-4 py-2 bg-green-100 rounded-full">
-                      <p className="text-green-800 font-black text-sm">МАРТ-ИЮНЬ 2025</p>
-                    </div>
-                  </div>
 
-                  <div className="grid md:grid-cols-3 gap-6">
-                    <div className="p-6 bg-card rounded-2xl border-2 border-border">
-                      <div className="text-sm text-muted-foreground mb-2">Было:</div>
-                      <div className="text-2xl font-black text-destructive">Чек: 1450₽</div>
-                      <div className="text-sm text-muted-foreground mt-1">Выручка: 3.9M/мес</div>
-                    </div>
-
-                    <div className="bg-primary p-6 rounded-2xl flex items-center justify-center">
-                      <div className="text-6xl font-black text-white">+38%</div>
-                    </div>
-
-                    <div className="p-6 bg-card rounded-2xl border-2 border-border">
-                      <div className="text-sm text-muted-foreground mb-2">Стало:</div>
-                      <div className="text-2xl font-black text-green-600">Чек: 2000₽</div>
-                      <div className="text-sm text-muted-foreground mt-1">Выручка: 5.4M/мес</div>
-                    </div>
-                  </div>
-
-                  <div className="bg-gradient-to-r from-primary/10 to-primary/5 p-6 rounded-2xl border-2 border-primary/20">
-                    <p className="text-sm font-bold text-primary mb-3">🎯 ЧТО СДЕЛАЛА:</p>
-                    <p className="text-foreground font-medium">7-дневный интенсив: аудит → диагностика → тренинги → внедрение → анализ → доработка → результат</p>
-                  </div>
-
-                  <div className="bg-primary p-6 rounded-2xl text-center">
-                    <div className="text-3xl font-black text-white">Прирост: +1.5M₽ в месяц</div>
-                  </div>
-
-                  <div className="border-l-4 border-primary pl-6 py-4 bg-card rounded-r-xl">
-                    <p className="text-foreground italic text-lg mb-4">
-                      "Не верил, что система из Москвы сработает у нас. Марина доказала — при правильном подходе растут все. Главное — не отмазки, а работа."
-                    </p>
-                    <p className="text-foreground font-bold">— Андрей, владелец</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 border-primary overflow-hidden">
-              <CardContent className="p-8 bg-gradient-to-br from-primary/5 to-primary/10">
-                <div className="space-y-6">
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <h3 className="text-3xl font-bold text-foreground mb-2">Винный бар: проблема с продажами дорогих позиций</h3>
-                      <p className="text-muted-foreground">Крупный город • Премиум-сегмент • 60-75 гостей/день</p>
-                    </div>
-                    <div className="px-4 py-2 bg-green-100 rounded-full">
-                      <p className="text-green-800 font-black text-sm">МАЙ-ИЮЛЬ 2025</p>
+                    <div className="grid grid-cols-3 gap-4">
+                      <div className="p-4 bg-slate-50 rounded-xl border border-border">
+                        <div className="text-xs text-muted-foreground mb-1">Было:</div>
+                        <div className="text-lg font-black text-destructive">{caseItem.wasCheck}</div>
+                      </div>
+                      <div className={`p-4 rounded-xl bg-gradient-to-br ${caseItem.color} flex items-center justify-center`}>
+                        <Icon name="TrendingUp" className="text-white" size={32} />
+                      </div>
+                      <div className="p-4 bg-green-50 rounded-xl border border-green-200">
+                        <div className="text-xs text-muted-foreground mb-1">Стало:</div>
+                        <div className="text-lg font-black text-green-600">{caseItem.nowCheck}</div>
+                      </div>
                     </div>
                   </div>
 
-                  <div className="grid md:grid-cols-3 gap-6">
-                    <div className="p-6 bg-card rounded-2xl border-2 border-border">
-                      <div className="text-sm text-muted-foreground mb-2">Было:</div>
-                      <div className="text-2xl font-black text-destructive">Чек: 3200₽</div>
-                      <div className="text-sm text-muted-foreground mt-1">Выручка: 5.8M/мес</div>
+                  <div 
+                    className={`overflow-hidden transition-all duration-500 ${
+                      expandedIndex === index ? 'max-h-[800px] opacity-100 mt-6' : 'max-h-0 opacity-0'
+                    }`}
+                  >
+                    <div className="space-y-4">
+                      <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
+                      
+                      <div className="grid md:grid-cols-2 gap-4">
+                        <div className="p-4 bg-slate-50 rounded-xl border border-border">
+                          <div className="text-xs text-muted-foreground mb-2">Выручка до:</div>
+                          <div className="text-xl font-black text-foreground">{caseItem.wasRevenue}</div>
+                        </div>
+                        <div className="p-4 bg-green-50 rounded-xl border border-green-200">
+                          <div className="text-xs text-muted-foreground mb-2">Выручка после:</div>
+                          <div className="text-xl font-black text-green-600">{caseItem.nowRevenue}</div>
+                        </div>
+                      </div>
+
+                      <div className="bg-primary/5 p-5 rounded-xl border-2 border-primary/20">
+                        <p className="text-xs font-bold text-primary mb-2">🎯 ЧТО СДЕЛАЛА:</p>
+                        <p className="text-sm text-foreground leading-relaxed">{caseItem.whatDid}</p>
+                      </div>
+
+                      <div className={`p-5 rounded-xl bg-gradient-to-br ${caseItem.color} shadow-xl text-center`}>
+                        <p className="text-2xl font-black text-white">{caseItem.result}</p>
+                      </div>
+
+                      <div className="border-l-4 border-primary pl-5 py-3 bg-slate-50 rounded-r-xl">
+                        <p className="text-foreground italic mb-2">"{caseItem.quote}"</p>
+                        <p className="text-sm text-foreground font-bold">— {caseItem.author}</p>
+                      </div>
                     </div>
-
-                    <div className="bg-primary p-6 rounded-2xl flex items-center justify-center">
-                      <div className="text-6xl font-black text-white">+32%</div>
-                    </div>
-
-                    <div className="p-6 bg-card rounded-2xl border-2 border-border">
-                      <div className="text-sm text-muted-foreground mb-2">Стало:</div>
-                      <div className="text-2xl font-black text-green-600">Чек: 4220₽</div>
-                      <div className="text-sm text-muted-foreground mt-1">Выручка: 7.6M/мес</div>
-                    </div>
-                  </div>
-
-                  <div className="bg-gradient-to-r from-primary/10 to-primary/5 p-6 rounded-2xl border-2 border-primary/20">
-                    <p className="text-sm font-bold text-primary mb-3">🎯 ЧТО СДЕЛАЛА:</p>
-                    <p className="text-foreground font-medium">Мастер-класс для сомелье + скрипты продаж премиальных позиций. Научила продавать дорогое вино через правильную подачу и историю.</p>
-                  </div>
-
-                  <div className="bg-primary p-6 rounded-2xl text-center">
-                    <div className="text-3xl font-black text-white">Прирост: +1.8M₽ в месяц</div>
-                  </div>
-
-                  <div className="border-l-4 border-primary pl-6 py-4 bg-card rounded-r-xl">
-                    <p className="text-foreground italic text-lg mb-4">
-                      "Марина показала: знать продукт и уметь его продать — разные вещи. Теперь персонал не боится предлагать дорогие позиции."
-                    </p>
-                    <p className="text-foreground font-bold">— Анна, управляющая</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 border-primary overflow-hidden">
-              <CardContent className="p-8 bg-gradient-to-br from-primary/5 to-primary/10">
-                <div className="space-y-6">
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <h3 className="text-3xl font-bold text-foreground mb-2">Запуск ресторана премиум-сегмента с нуля</h3>
-                      <p className="text-muted-foreground">Москва • Новое открытие • Концептуальная кухня</p>
-                    </div>
-                    <div className="px-4 py-2 bg-green-100 rounded-full">
-                      <p className="text-green-800 font-black text-sm">ФЕВРАЛЬ-АПРЕЛЬ 2025</p>
-                    </div>
-                  </div>
-
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="p-6 bg-card rounded-2xl border-2 border-border">
-                      <div className="text-sm text-muted-foreground mb-2">Задача:</div>
-                      <div className="text-xl font-black text-foreground">Открытие нового заведения премиум-сегмента</div>
-                      <div className="text-sm text-muted-foreground mt-2">Найм персонала + обучение с нуля</div>
-                    </div>
-
-                    <div className="p-6 bg-card rounded-2xl border-2 border-border">
-                      <div className="text-sm text-muted-foreground mb-2">Результат:</div>
-                      <div className="text-2xl font-black text-green-600">2.8M₽ выручка</div>
-                      <div className="text-sm text-muted-foreground mt-2">в первый месяц работы</div>
-                    </div>
-                  </div>
-
-                  <div className="bg-gradient-to-r from-primary/10 to-primary/5 p-6 rounded-2xl border-2 border-primary/20">
-                    <p className="text-sm font-bold text-primary mb-3">🎯 ЧТО СДЕЛАЛА:</p>
-                    <p className="text-foreground font-medium">Найм персонала → обучение команды → стандарты сервиса → запуск. Команда работает слаженно с первого дня.</p>
-                  </div>
-
-                  <div className="bg-primary p-6 rounded-2xl text-center">
-                    <div className="text-3xl font-black text-white">Успешный старт без провала первых месяцев</div>
-                  </div>
-
-                  <div className="border-l-4 border-primary pl-6 py-4 bg-card rounded-r-xl">
-                    <p className="text-foreground italic text-lg mb-4">
-                      "Марина собрала команду, которая сработалась мгновенно. Обычно первые месяцы — хаос, у нас всё работало как часы с первого дня."
-                    </p>
-                    <p className="text-foreground font-bold">— Дмитрий, основатель</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <Card className="border-2 bg-gradient-to-br from-card to-primary/5">
-                <CardContent className="p-6 space-y-4">
-                  <div className="flex justify-center mb-2">
-                    <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center shadow-lg">
-                      <span className="text-white text-3xl font-black">+187%</span>
-                    </div>
-                  </div>
-                  <h4 className="text-xl font-bold text-foreground text-center">Премиальный ресторан</h4>
-                  <div className="bg-muted/50 p-4 rounded-lg">
-                    <p className="text-foreground text-sm leading-relaxed">
-                      Рост выручки за 4 месяца. Средний чек с 3 200₽ до 5 800₽ благодаря новой концепции подачи и обучению персонала.
-                    </p>
-                  </div>
-                  <div className="pt-3 border-t border-border">
-                    <p className="text-xs text-primary font-bold uppercase tracking-wide">Переформатирование меню и система допродаж</p>
                   </div>
                 </CardContent>
               </Card>
+            ))}
+          </div>
 
-              <Card className="border-2 bg-gradient-to-br from-card to-amber-50">
-                <CardContent className="p-6 space-y-4">
-                  <div className="flex justify-center mb-2">
-                    <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center shadow-lg">
-                      <span className="text-white text-3xl font-black">4.9⭐</span>
-                    </div>
-                  </div>
-                  <h4 className="text-xl font-bold text-foreground text-center">Сеть кафе, 5 локаций</h4>
-                  <div className="bg-muted/50 p-4 rounded-lg">
-                    <p className="text-foreground text-sm leading-relaxed">
-                      Рейтинг вырос с 3.8 до 4.9 за 2 месяца. Негативные отзывы сократились на 94%. Поток гостей +65%.
-                    </p>
-                  </div>
-                  <div className="pt-3 border-t border-border">
-                    <p className="text-xs text-amber-600 font-bold uppercase tracking-wide">Перестройка сервиса и работа с отзывами</p>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="border-2 bg-gradient-to-br from-card to-green-50">
-                <CardContent className="p-6 space-y-4">
-                  <div className="flex justify-center mb-2">
-                    <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center shadow-lg">
-                      <span className="text-white text-3xl font-black">-78%</span>
-                    </div>
-                  </div>
-                  <h4 className="text-xl font-bold text-foreground text-center">Семейный ресторан</h4>
-                  <div className="bg-muted/50 p-4 rounded-lg">
-                    <p className="text-foreground text-sm leading-relaxed">
-                      Снижение текучести персонала. За год уволился 1 сотрудник. До этого — 2-3 человека каждый месяц.
-                    </p>
-                  </div>
-                  <div className="pt-3 border-t border-border">
-                    <p className="text-xs text-green-600 font-bold uppercase tracking-wide">Корпоративная культура и система обучения</p>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="border-2 bg-gradient-to-br from-card to-blue-50">
-                <CardContent className="p-6 space-y-4">
-                  <div className="flex justify-center mb-2">
-                    <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center shadow-lg">
-                      <span className="text-white text-3xl font-black">+52%</span>
-                    </div>
-                  </div>
-                  <h4 className="text-xl font-bold text-foreground text-center">Бистро в Сити</h4>
-                  <div className="bg-muted/50 p-4 rounded-lg">
-                    <p className="text-foreground text-sm leading-relaxed">
-                      Рост среднего чека с 1650₽ до 2510₽ за 6 недель. Обучение персонала работе с бизнес-ланчами и предложениями дня.
-                    </p>
-                  </div>
-                  <div className="pt-3 border-t border-border">
-                    <p className="text-xs text-blue-600 font-bold uppercase tracking-wide">Скрипты продаж и таргетированные предложения</p>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
+          <div className="text-center pt-8">
+            <Link to="/cases">
+              <Button size="lg" className="text-lg px-10 py-6 shadow-xl hover:scale-105 transition-transform">
+                Смотреть все кейсы
+                <Icon name="ArrowRight" className="ml-2" size={20} />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
